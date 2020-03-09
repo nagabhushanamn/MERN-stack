@@ -1,0 +1,83 @@
+
+
+
+------------------------------------------------------------------
+why we need javascript language?
+------------------------------------------------------------------
+
+    => client-side (ui) application  : runtime ( browser )
+    => sever-side application        : runtime ( Node.js )  
+
+    +
+
+    => Mobile native application
+
+------------------------------------------------------------------ 
+
+
+------------------------------------------------------------------
+javascript features
+------------------------------------------------------------------
+
+=> flexibility
+    - dynamic
+    - FP & OOP    
+=> by default, all IO operations are non-blocking/asynchrnous
+=> by default, single-threaded process / light-weight process , but can execute concurrent actions   
+
+------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------
+javascript standarnd
+------------------------------------------------------------------
+
+=> ECMAScript community
+    - specs
+
+    current version: ES6
+
+------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------
+How to run javascript program ?
+------------------------------------------------------------------
+
+=> using javascript runtime/engine
+
+client ( browser ) envi :
+--------------------------
+
+    a. chrome  => v8 ( c++ )
+    b. firefox => rhino ( java ) / spider monkey
+    c. IE/Edge => chakra
+    d. Safari  => Nitro
+
+
+other envi :
+--------------------------
+
+    a. Node.js => v8 ( c++ )
+    b. JVM     => rhino / nashorn
+    ...
+
+------------------------------------------------------------------
+//  Hello World
+------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------
+//  javascript : level-1 topics
+------------------------------------------------------------------
+
+ => data types
+ => scopes / execution context
+ => FP ( imp topic )
+ => OOP
+ => data structures ( list/array , set , map)
+
+ -----------------------------------------------------------------
