@@ -57,16 +57,16 @@ var resultString = `the sume of 1 and 2 is ${1 + 2}`
 //-------------------------------------------------
 
 var count = 12
-var cost=12.12
+var cost = 12.12
 
 
 //-------------------------------------------------
 // boolean
 //-------------------------------------------------
 
-var isFinished=false
-if(isFinished){console.log("yes")}
-else {console.log("not yet")}
+var isFinished = false
+if (isFinished) { console.log("yes") }
+else { console.log("not yet") }
 
 /**
  * 
@@ -77,3 +77,21 @@ else {console.log("not yet")}
  *  reference : https://dorey.github.io/JavaScript-Equality-Table/
  * 
  */
+
+//-------------------------------------------------
+ //Q1
+//-------------------------------------------------
+
+// function getFood() {
+//     return ""
+// }
+
+// var food = getFood()
+
+// if (food) {
+//     console.log("yummy with " + food)
+// } else {
+//     console.log("oops")
+// }
+
+//-------------------------------------------------
