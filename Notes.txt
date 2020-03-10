@@ -75,7 +75,8 @@ other envi :
 ------------------------------------------------------------------
 
  => data types
- => scopes / execution context
+ => literal-style objects
+ => scopes / execution-context
  => FP ( imp topic )
  => OOP
  => data structures ( list/array , set , map)
