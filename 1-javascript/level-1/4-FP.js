@@ -5,9 +5,7 @@ console.log("---------------------------")
 console.log('- FP -')
 console.log("---------------------------")
 
-//---------------------------------------------------
-// how create/define function ?
-//---------------------------------------------------
+
 
 /**
  *
@@ -17,6 +15,9 @@ console.log("---------------------------")
  *
  */
 
+//---------------------------------------------------
+// how create/define function ?
+//---------------------------------------------------
 /**
  *
  *  2 ways
@@ -29,8 +30,6 @@ console.log("---------------------------")
  *  way-2 : function expression  / Anonymous function
  *
  *          => function will get create at scope execution-phase
- *
- *
  */
 
 //---------------------------------------------------
@@ -39,10 +38,10 @@ console.log("---------------------------")
 
 // console.log(add1(12,13))//
 
-// function add1(n1, n2) {
-//     let result = n1 + n2
-//     return result
-// }
+function add1(n1, n2) {
+    let result = n1 + n2
+    return result
+}
 
 // console.log(add1(12,13))//
 
@@ -50,11 +49,12 @@ console.log("---------------------------")
 //---------------------------------------------------
 // way-2 : function expression / Anonymous function
 //---------------------------------------------------
+
 // console.log(add2(12,13))//
 
-// var add2 = function (n1, n2) {
-//     return n1 + n2
-// }
+let add2 = function (n1, n2) {
+    return n1 + n2
+}
 
 // console.log(add2(12,13))//
 
@@ -67,22 +67,17 @@ console.log("---------------------------")
  *
  *  imp-note:
  *
- *  function can take sero or many params,
- *  not restricted by argument names
+ *  function can take zero or more params,not restricted by argument names
  *
  */
 
-// let arguments={
-//     0:10,
-//     1:20
-// }
 
-// function f1(a, b) {
-//     console.log(arguments[0])
-//     console.log(arguments[1])
-//     console.log(arguments[2])
-//     console.log(arguments[3])
-// }
+function f1(a, b) {
+    console.log(arguments[0])
+    console.log(arguments[1])
+    console.log(arguments[2])
+    console.log(arguments[3])
+}
 
 // f1(10,20,30,40)
 // f1()
@@ -92,43 +87,44 @@ console.log("---------------------------")
 //----------------------------------
 
 
-// function sum() {
-//     let len = arguments.length,
-//         result = 0,
-//         i = 0;
-//     while (i < len) {
-//         result += arguments[i]
-//         i++
-//     }
-//     return result
-// }
+function sum() {
+    let len = arguments.length,
+        result = 0,
+        i = 0;
+    while (i < len) {
+        result += arguments[i]
+        i++
+    }
+    return result
+}
 
 
 //----------------------------------
 // can we do method overloading in JS ? No
 //----------------------------------
 
-// function getLunch() {
-//     return "No lunch"
-// }
-// function getLunch(pay) {
-//     //..
-//     return "biryani"
-// }
-// function getLunch(pay,extra) {
-//     //..
-//     return "biryani" +"  soft-drink"
-// }
+function getLunch() {
+    return "No lunch"
+}
+function getLunch(pay) {
+    //..
+    return "biryani"
+}
+function getLunch(pay, extra) {
+    //..
+    return "biryani" + "  soft-drink"
+}
 
+// console.log(getLunch())
 
-// function getLunch() {
-//     if (arguments.length === 0)
-//         return "No Lunch"
-//     if (arguments.length === 1)
-//         return "Biryani"
-//     if (arguments.length === 2)
-//         return "biryani" + "  soft-drink"
-// }
+function getLunch() {
+    if (arguments.length === 0)
+        return "No Lunch"
+    if (arguments.length === 1)
+        return "Biryani"
+    if (arguments.length === 2)
+        return "biryani" + "  soft-drink"
+}
 
 // console.log(getLunch())
 
@@ -181,10 +177,11 @@ function f2(a = 1, b = 2, ...c) {
  */
 
 
-// function greet() {
-//     console.log("hello")
-// }
-// let sayHello = greet
+function greet() {
+    console.log("hello")
+}
+let sayHello = greet
+
 // sayHello()
 
 //----------------------------------------------------
@@ -212,7 +209,7 @@ let tn_greet = function () {
 // greet(tn_greet)
 
 //-------------
-// Abudhabi state
+// arabic country
 //-------------
 let ar_greet = function () {
     console.log("أهلا بك")
@@ -261,39 +258,8 @@ function teach() {
 // learnFn()
 // learnFn()
 
-//-----------------------------------------------
-
-// debugger
-// function eat(f) {
-//     console.log("==========")
-//     if (f)
-//         f()
-//     else
-//         console.log("Nothing to eat")
-//     console.log("==========")
-// }
-// let veg = function () { console.log("veg") }
-// eat(veg)
-
-//-----------------------------------------------
+//----------------------------------------------------
 
 
-// function tng(){
-//     console.log("................")
-//     let frontEndWork=function(){
-//         console.log("UI....")
-//     }
-//     return frontEndWork
-// }
-
-// let work=tng()
-// work()
-// work()
-// work()
-// work()
-// work()
-// let newWork=tng()
-
-//--------------------------------------------------
 
 
