@@ -31,26 +31,26 @@ function isVeg(foodName) {
 function isNonVeg(foodName) {
     return foodName.startsWith("n")
 }
-function isEle(itemName) {
-    return itemName.startsWith("e")
-}
-function isStationary(itemName) {
-    return itemName.startsWith("s")
-}
+// function isEle(itemName) {
+//     return itemName.startsWith("e")
+// }
+// function isStationary(itemName) {
+//     return itemName.startsWith("s")
+// }
 
 // HOF
 function wrapper(f1, f2) {
     return function (name) {
-        return f1(name) && f2(name)
+        return f1(name) || f2(name)
     }
 }
 
 
 let isFood = wrapper(isVeg, isNonVeg)
-console.log(isFood("stone"))
+console.log(isFood("veg"))
 
-let isItem = wrapper(isEle, isStationary)
-console.log(isFood("ele"))
+// let isItem = wrapper(isEle, isStationary)
+// console.log(isFood("ele"))
 
 
 
