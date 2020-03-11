@@ -76,7 +76,7 @@ Naming conventions
 keywords ==> lower-case
 Types ( class ) ==> pascal-case : A____B___C___  e.g JavaEmployee
 variables/functions ==> camel-case : ____B____C____ e.g studName, addNumbers()
-constant values     ==> upper-case , e.g const PI=3.14  
+constant number values     ==> upper-case , e.g const PI=3.14  
 file-names          ==> lower-case , data-types.js
 
 -------------------------------------------------------------------
