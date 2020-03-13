@@ -259,7 +259,156 @@ function teach() {
 // learnFn()
 
 //----------------------------------------------------
+// Higher Order Function / Function Composition
+//----------------------------------------------------
+
+/**
+ *   // why we need ?
+ * 
+ *      to solve 2 design issues ?
+ * 
+ *      => code duplication
+ *      => code tight-coupling
+ */
+
+// -------------------------------------
+// code without hof
+// -------------------------------------
+//  function hello(){
+//      console.log("hello..")
+//      console.log('☺️')
+//  }
+//  function hi(){
+//      console.log("hi")
+//      console.log("☺️")
+//  }
+
+//  hello()
+//  hi()
+
+// -------------------------------------
+// code with hof
+// -------------------------------------
+
+// e.g HOF
+function withEmoji(f) {
+    return function () {
+        f()
+        console.log('😀')
+    }
+}
+
+function hello() {
+    console.log("hello")
+}
+function hi() {
+    console.log("hi")
+}
+
+let helloWithEmoji = withEmoji(hello);
+// hello()
+// helloWithEmoji()
+
+
+//----------------------------------------------------
+// Function Closure
+//----------------------------------------------------
+
+/**
+ * 
+ * A closure is a function having access to the parent scope, 
+ * even after the parent function has closed.
+ * 
+ * 
+ */
+
+function teach(sub) {
+    console.log("teaching " + sub)
+    let notes = sub + "-notes"
+    let fun = "bla bla"
+    let learn = function () {
+        console.log("learning with " + notes)
+    }
+    //learn()
+    console.log("teaching ends")
+    return learn
+}
+
+// let learnFn = teach("javascript");
+// learnFn()
+// learnFn()
+// learnFn()
+
+//----------------------------------------------------
+//  when / where we need closure ?
+//----------------------------------------------------
+
+// #1 : to abstract public behav of any module
+
+/**
+ *   e.g counter module
+ * 
+ *    - increment
+ *    - get
+ *   
+ */
+
+
+// in global-scope
+
+// self-executable function / IIFE ( immediatly invokable function expression)
+
+// const counter = (function () {
+//     console.log("init()")
+//     let count = 0  // private
+//     // public 
+//     function increment() {
+//         count++
+//     }
+//     function get() {
+//         return count
+//     }
+//     return {
+//         inc: increment,
+//         get: get
+//     }
+// })();
+
+
+//-----------------------------------------------------
 
 
 
+/** 
+ * 
+ *  in javascript , global-scope is bad
+ * 
+ *  i.e any variable, 
+ *  function in global scope are accesible to anyone ( e.g hacker )
+ * 
+*/
 
+// self-executable function / IIFE 
+
+/**
+ * 
+ *  why/where we need ?
+ * 
+ *  => any initilization that to happen only once in .js file,
+ *     later it will be a closure to all child function(s)
+ * 
+ */
+
+const obj = (function setup() {
+
+    console.log("setup..")
+    let name = "IIFE"
+    let say = function () {
+        console.log("im " + name)
+    }
+    return {
+        sayName: say
+    }
+
+})()
+obj.sayName()
