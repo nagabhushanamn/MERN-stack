@@ -195,3 +195,4 @@ nag_askQues()
 let ki_tnr = { name: 'Kishore' }
 nag_askQues.call(ki_tnr) // it never happened, becoz arrow function cannot bind with any other object
 
+// ----------------------------------------------------------
