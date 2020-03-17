@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+</head>
+
+<body>
+    <hr />
+    <h1>HTML Form</h1>
+    <hr />
+
+    <form>
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <br />
+    <form novalidate>
+        <input autofocus required placeholder="username" />
+        <input type="password" placeholder="password" />
+        <button>login</button>
+    </form>
+
+    <hr />
+
+    <form>
+        <input type="hidden" name="secret" value="1234" />
+        Name : <input type="text" value="Nag" readonly size="50"/>
+        <br />
+        Password : <input type="password" maxlength="5" pattern="[A-Za-z]{5}"/>
+        <br />
+        Gender : <input type="radio" value="male" name="gender" checked /> Male
+        <input type="radio" value="female" name="gender" /> Female
+        <br />
+        Languages: <input type="checkbox" value="english" name="lang" checked /> English
+        <input type="checkbox" value="tamil" name="lang" /> Tamil
+        <input type="checkbox" value="telugu" name="lang" /> Telugu
+        <input type="checkbox" value="kannada" name="lang" /> Kannada
+        <br />
+        Country : <select size="3" multiple disabled>
+            <option>india</option>
+            <option selected>china</option>
+            <option>UAE</option>
+        </select>
+        <br />
+        Address : <textarea rows="5" cols="35"></textarea>
+        <br />
+        Pic : <input type="file" />
+        <br />
+        <input type="reset" value="RESET" />
+        <!-- <input type="submit" value="SUBMIT"/> -->
+        <button>SUBMIT</button>
+    </form>
+
+
+    <hr />
+
+    <!-- HTML5 Form Controls -->
+
+    <form>
+        Mobile : <input type="number" />
+        <br />
+        Range :0 <input id="price" type="" value="0" min="0" max="50" step="5" /> 50
+                 <output>0</output> 
+        <br />
+        date : <input type="date" />
+        <br />
+        date time : <input type="datetime" />
+        <br />
+        Time : <input type="time" />
+        <br />
+        Month : <input type="month" />
+        <br />
+        Week : <input type="week" />
+        <br />
+        URL : <input type="url" />
+        <br />
+        Tel : <input type="tel" />
+        <br />
+        search : <input type="search" />
+        <br />
+        Email : <input type="email" />
+        <br />
+        Color : <input type="color" />
+
+        <br />
+        city : <input list="cities" />
+        <datalist id="cities">
+            <option>chennai</option>
+            <option>bengalore</option>
+            <option>pune</option>
+            <option>mumbai</option>
+        </datalist>
+
+    </form>
+
+
+    <hr />
+
+
+
+
+</body>
+
+</html>
