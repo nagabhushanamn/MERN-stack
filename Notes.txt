@@ -103,12 +103,12 @@ FronT-End
 ------------------------------------
 => HTML
 => CSS
-=> bootstrap
+=> bootstrap : css framework
 => javascript
     - es5
     - es6
 => tools
-=> react.js + redux
+=> react.js + redux : javascript F.W
 
 ------------------------------------
 
