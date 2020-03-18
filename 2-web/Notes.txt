@@ -38,3 +38,92 @@ HTML ELEMENTS
     1. heading elements
 
 ------------------------------------------------------
+
+
+
+UI
+
+    - data/content + style
+    - HTML + CSS ( cascade style sheet )
+
+
+----------------------------------------------
+// 1. How to apply css ?
+----------------------------------------------
+
+
+how to apply style to HTML elements ?
+
+    
+    3 ways
+
+    way-1 : inline style
+    -----------------------
+
+    syntax  :
+
+    style ="style-property1:value;style-property2:value"
+
+    way-2 : internal style
+    -----------------------
+
+    syntax :
+
+    <head>
+        <style>
+          /* 
+            => select HTML Element(s)
+            => define stylestyle definition 
+          */
+        </style>
+    </head>
+
+
+    way-3 : external style  ( recommended )
+    ----------------------------------------
+
+    syntax:
+    --------
+
+    <head>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+
+
+-------------------------------------------------------
+ 2. How to select HTML elements  = CSS selector
+-------------------------------------------------------
+
+=> by tag-name
+=> by tag-id
+=> by tag-class-name
+
+reference : https://www.w3schools.com/cssref/trysel.asp
+
+
+syntax:
+-------
+
+selector:filter{
+    //......
+}
+
+
+--------------------------------------------------------
+3 . CSS - box model
+--------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
