@@ -80,9 +80,7 @@ selector:filter{
 what will learn today? 
 
     - Box-model review
-   
     - Normal document flow
-    
     - Floating Elements
     - Clearing floats
     - Floating columns
@@ -91,5 +89,5 @@ what will learn today?
     - Absolute position
     - Fixed position
     - z-index & stacking order
-    - flex box
-    - gid
+   
+
