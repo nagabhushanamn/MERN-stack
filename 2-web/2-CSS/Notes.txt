@@ -1,46 +1,6 @@
 
 
 
-HTML
---------
-
-    - structure of web-page
-
-
---------------------------------------------------
-Tag / HTML-Element 
---------------------------------------------------
-
-2 types tags/elements
-----------------------
-
-    => without body ==> without child(s)
-        e.g <input/> , <hr/> , <br/>
-    => with body    ==> with child
-        e.g 
-        <head>
-            <title>HTML</title>
-        </head>
-
-how to customise HTML elements ?
----------------------------------
-
-    ==> using attributes/properties
-
-        e.g <input type="number"/>
-
------------------------------------------------------
-
-
-HTML ELEMENTS
---------------
-
-    1. heading elements
-
-------------------------------------------------------
-
-
-
 UI
 
     - data/content + style
@@ -113,23 +73,23 @@ selector:filter{
 3 . CSS - box model
 --------------------------------------------------------
 
---------------------------------------------------------
-4 . CSS - layout
---------------------------------------------------------
-
-    - float
-    - position
-    - flex
-    - grid
-
-
---------------------------------------------------------
-5 . CSS - media quries
---------------------------------------------------------
-
---------------------------------------------------------
-6 . CSS - responsive web design
---------------------------------------------------------
 
 
 
+
+what will learn today? 
+
+    - Box-model review
+   
+    - Normal document flow
+    
+    - Floating Elements
+    - Clearing floats
+    - Floating columns
+    - Text columns without float
+    - Relative position
+    - Absolute position
+    - Fixed position
+    - z-index & stacking order
+    - flex box
+    - gid

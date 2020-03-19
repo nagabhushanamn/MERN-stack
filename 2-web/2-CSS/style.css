@@ -1,0 +1,39 @@
+
+
+
+body{
+    background-color: #eec;
+}
+.wrapper{
+    background-color: #FFF;
+    max-width: 960px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.wrapper::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.service{
+    text-align: center;
+    width: 29.33%;
+    background-color: #eee;
+    margin: 1%;
+    padding: 1%;
+    float: left;
+}
+/* .services::after{
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+.content{
+    clear: left;
+    padding: 10px;
+    background: #ccc;
+}

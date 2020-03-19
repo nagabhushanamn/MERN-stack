@@ -1,0 +1,42 @@
+
+
+
+HTML
+--------
+
+    - structure of web-page
+
+
+--------------------------------------------------
+Tag / HTML-Element 
+--------------------------------------------------
+
+2 types tags/elements
+----------------------
+
+    => without body ==> without child(s)
+        e.g <input/> , <hr/> , <br/>
+    => with body    ==> with child
+        e.g 
+        <head>
+            <title>HTML</title>
+        </head>
+
+how to customise HTML elements ?
+---------------------------------
+
+    ==> using attributes/properties
+
+        e.g <input type="number"/>
+
+-----------------------------------------------------
+
+
+HTML ELEMENTS
+--------------
+
+    1. heading elements
+
+------------------------------------------------------
+
+
