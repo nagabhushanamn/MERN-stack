@@ -1,0 +1,47 @@
+body {
+	color: #fff;
+}
+
+h1 {
+	color: #9799a7;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.container:before, .container:after {
+	content: "";
+	display: table;
+}
+
+.container:after {
+	clear: both;
+}
+
+.container {
+	background: #eaeaed;
+	margin-bottom: 24px;
+	width: 100%;
+}
+
+.container, section, aside {
+	border-radius: 6px;
+}
+
+section, aside {
+	background: #2db34a;
+	color: #fff;
+	margin: 1.858736059%;
+	padding: 20px 0;
+	text-align: center;
+}
+
+section {
+	float: left;
+	width: 63.197026%;
+}
+
+aside {
+	float: right;
+	width: 29.3680297%;
+}

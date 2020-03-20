@@ -1,0 +1,36 @@
+
+body {
+	color: #fff;
+}
+.container:before, .container:after {
+	content: "";
+	display: table;
+}
+.container:after {
+	clear: both;
+}
+.container {
+	background: #eaeaed;
+	width: 538px;
+}
+.container, section, aside {
+	border-radius: 6px;
+}
+section, aside {
+	background: #2db34a;
+	margin: 10px;
+	padding: 20px 0;
+	text-align: center;
+}
+
+section {
+	float: left;
+	width: 340px;
+}
+
+aside {
+	float: right;
+	width: 158px;
+}
+
+

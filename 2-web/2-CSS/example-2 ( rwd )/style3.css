@@ -1,0 +1,43 @@
+
+body {
+	color: #fff;
+}
+
+.container:before, .container:after {
+	content: "";
+	display: table;
+}
+
+.container:after {
+	clear: both;
+}
+
+.container {
+	background: #eaeaed;
+	margin-bottom: 24px;
+}
+
+.container, section, aside {
+	border-radius: 6px;
+}
+
+section, aside {
+	background: #2db34a;
+	color: #fff;
+	margin: 1.858736059%;
+	padding: 20px 0;
+	text-align: center;
+}
+
+
+
+@media all and (min-width: 420px) {
+	section {
+		float: left;
+		width: 63.197026%;
+	}
+	aside {
+		float: right;
+		width: 29.3680297%;
+	}
+}

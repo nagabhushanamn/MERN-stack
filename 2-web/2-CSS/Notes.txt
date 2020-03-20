@@ -71,13 +71,41 @@ reference : https://www.w3schools.com/cssref/trysel.asp
     - Fixed position
     - z-index & stacking order
 
+--------------------------------------------------------
+ 5- CSS - responsive web design ( rwd )
+--------------------------------------------------------
 
---------------------------------------------------------
- 4- CSS - media-quries 
---------------------------------------------------------
+
+Responsive web design is the practice of building 
+a website suitable to work on every device 
+and every screen size, 
+no matter how large or small, mobile or desktop.
+
+
+4 guide-lines
+--------------
+
+#1 -  Flexible Layouts / grids
+
     
+     - Responsive Web Design Formula
 
---------------------------------------------------------
- 5- CSS - responsive web design
---------------------------------------------------------
+        formula : target / context x 100 = result%
+                 (340/538)*100 = 63.197026% 
+
+#2 - Media Queries
+
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+
+
+#3 - Mobile First approach
+
+
+#4 Flexible Multi-Media-content ( images , video )
+
+
+--------------------------------------------------------------
+5- Flex box & Grid Layout module
+--------------------------------------------------------------
+   
 
