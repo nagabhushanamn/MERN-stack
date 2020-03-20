@@ -30,10 +30,6 @@ how to apply style to HTML elements ?
 
     <head>
         <style>
-          /* 
-            => select HTML Element(s)
-            => define stylestyle definition 
-          */
         </style>
     </head>
 
@@ -60,16 +56,6 @@ how to apply style to HTML elements ?
 reference : https://www.w3schools.com/cssref/trysel.asp
 
 
-syntax:
--------
-
-selector:filter{
-    //......
-}
-
-
-
-
 --------------------------------------------------------
 3 . CSS - positioning 
 --------------------------------------------------------
@@ -87,12 +73,11 @@ selector:filter{
 
 
 --------------------------------------------------------
- CSS - media-quries 
+ 4- CSS - media-quries 
 --------------------------------------------------------
     
 
 --------------------------------------------------------
- CSS - responsive
+ 5- CSS - responsive web design
 --------------------------------------------------------
 
-    
