@@ -1,119 +1,109 @@
 
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
-    background-color: #eec;
+    background-color: #f2f2f2;
+
 }
-.wrapper{
-    background-color: #FFF;
+
+main{
     max-width: 960px;
-    padding: 10px;
-    margin: 0 auto;
-    z-index: 0;
+    background-color: #FFF;
+    padding: 20px;
+    margin: 50px auto 0 auto;
 }
 
-.wrapper::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-
-
-.service{
-    text-align: center;
-    width: 29.33%;
-    background-color: #eee;
-    margin: 1%;
-    padding: 1%;
-    float: left;
-    height: 140px;
-    position: relative;
-}
-
-.service:nth-child(1){
-    top: 5px;
-}
-.service:nth-child(2){
-    top: 15px;
-}
-.service:nth-child(3){
-    top: 25px;
-}
-
- .services::after{
+main::after{
     content: "";
     display: block;
     clear: both;
 } 
 
-.services{
-    max-height: 150px;
-    overflow: hidden;
-}
-
-.content{
-    clear: left;
-    padding: 10px;
-    /* background: #ccc; */
-    margin: 20px 1%;
-}
-
-
-.content p{
-    column-count: 3;
-    column-gap: 50px;
-    column-rule: 1px solid gray;
-    text-align: justify;
-}
-
-section,aside{
-    float: left;
-    width: 45%;
-    padding: 1%;
-    margin: 1%;
+.subject{
+    margin: 15px;
+    padding: 15px;
     background-color: #f2f2f2;
-}
-
-.columns::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-
-
-#banner{
-    max-height: 300px;
-    overflow: hidden;
-    margin: 1%;
+    float: left;
+    height: 150px;
+    width: 250px;
+    text-align: left;
     position: relative;
 }
-#banner h2{
-    position: absolute;
-    top: 90px;
-    left: 0;
+
+.subject:nth-child(1){
+    top: 5px;
+}
+
+.subject:nth-child(2){
+    top: 15px;
+}
+
+.subject:nth-child(3){
+    top: 25px;
+}
+
+.subjects{
+    height: 200px;
+    overflow: hidden;
+}
+
+
+
+
+
+.subjects ul{
+    padding: 15px;
+}
+
+.subjects ul li{
+    list-style-type: upper-alpha;
+}
+
+#banner{
+    margin: 10px;
+    position: relative;
+}
+
+#banner img{
     margin: 0;
     width: 100%;
-    color: #fff;
-    text-align: center;
+}
+#banner ul li{
+    list-style-type: none;
+    font-size: 25px;
+    font-family: monospace;
+}
+#banner ul{
+    position: absolute;
+    top: 40px;
+    left:100px;
 }
 
 nav{
-    background-color: #333;
-    /* padding: 5px; */
     position: fixed;
-    left: 0;
-    top: 0px;
     width: 100%;
     z-index: 1;
 }
 
+nav ul{
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul li{
+    list-style-type: none;
+    margin: 10px;
+    float: left;
+    color: white;
+}
 nav ul::after{
     content: "";
     display: block;
     clear: both;
-}
-
-nav li{
-    list-style-type: none;
-    margin: 0 10px;
-    color: #fff;
-    float: right;
 }

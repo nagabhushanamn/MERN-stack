@@ -13,7 +13,6 @@ UI
 
 
 how to apply style to HTML elements ?
-
     
     3 ways
 
@@ -69,17 +68,13 @@ selector:filter{
 }
 
 
+
+
 --------------------------------------------------------
-3 . CSS - box model
+3 . CSS - positioning 
 --------------------------------------------------------
 
-
-
-
-
-what will learn today? 
-
-    - Box-model review
+    - Box model review
     - Normal document flow
     - Floating Elements
     - Clearing floats
@@ -89,5 +84,5 @@ what will learn today?
     - Absolute position
     - Fixed position
     - z-index & stacking order
-   
 
+    

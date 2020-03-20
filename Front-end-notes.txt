@@ -1,7 +1,0 @@
-
-MERN stack
------------
-
-goal:
-
-    => how to develop web-application ?
