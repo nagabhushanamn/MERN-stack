@@ -57,7 +57,7 @@ reference : https://www.w3schools.com/cssref/trysel.asp
 
 
 --------------------------------------------------------
-3 . CSS - positioning 
+3 . CSS - Normal document Flow , Float & Positioning 
 --------------------------------------------------------
 
     - Box model review
@@ -82,18 +82,17 @@ and every screen size,
 no matter how large or small, mobile or desktop.
 
 
-4 guide-lines
---------------
+4 guide-lines / principles
+----------------------------
 
 #1 -  Flexible Layouts / grids
-
     
      - Responsive Web Design Formula
 
         formula : target / context x 100 = result%
                  (340/538)*100 = 63.197026% 
 
-#2 - Media Queries
+#2 - Media Queries ( CSS3 )
 
     - https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 
@@ -104,8 +103,11 @@ no matter how large or small, mobile or desktop.
 #4 Flexible Multi-Media-content ( images , video )
 
 
+
+
 --------------------------------------------------------------
-5- Flex box & Grid Layout module
+5- Flexbox 
 --------------------------------------------------------------
    
 
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
