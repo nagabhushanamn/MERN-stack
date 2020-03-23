@@ -39,11 +39,11 @@ how to apply style to HTML elements ?
 
     syntax:
     --------
-
+     
     <head>
         <link href="style.css" rel="stylesheet"/>
     </head>
-
+ 
 
 -------------------------------------------------------
  2. How to select HTML elements  = CSS selector
