@@ -116,23 +116,23 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 
 
 ---------------------------------------------------------------------------
-Limitations of css : => LESS
+Limitations of css 
 ---------------------------------------------------------------------------
 
     => No variables to hold common data ( color , dimentions , ...)
     => No Mixins
-    => No Nested styled definition
+    => No Nesting styled definition
     => No Arith operators
     => No re-usable functions
 
 
 soln :
 
-    => usisng CSS-preprocessor  ( e.g LESS, SASS , stylush)
+    => usisng css-preprocessor  ( e.g LESS, SASS , stylush)
 
 
     Ref: https://tutorialzine.com/2015/07/learn-less-in-10-minutes-or-less
-
+    
 -----------------------------------------------------------------------------  
 
 
