@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <style>
+    </style>
+</head>
+
+<body>
+
+
+    <progress id="learning_progress" max="100"></progress>
+
+    <script>
+        let learning_progress_ele = document.getElementById("learning_progress")
+        let i = 0
+        let interval = setInterval(() => {
+            if (i < 100) {
+                i += 10
+                learning_progress_ele.value = i
+            }
+            else
+                clearInterval(interval)
+        }, 2000)
+    </script>
+
+    
+
+</body>
+
+</html>
