@@ -106,8 +106,36 @@ no matter how large or small, mobile or desktop.
 
 
 --------------------------------------------------------------
-5- Flexbox 
+5- Flexbox   & Grid Layout
 --------------------------------------------------------------
    
 
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+
+
+---------------------------------------------------------------------------
+Limitations of css : => LESS
+---------------------------------------------------------------------------
+
+    => No variables to hold common data ( color , dimentions , ...)
+    => No Mixins
+    => No Nested styled definition
+    => No Arith operators
+    => No re-usable functions
+
+
+soln :
+
+    => usisng CSS-preprocessor  ( e.g LESS, SASS , stylush)
+
+
+    Ref: https://tutorialzine.com/2015/07/learn-less-in-10-minutes-or-less
+
+-----------------------------------------------------------------------------  
+
+
+
+
+
