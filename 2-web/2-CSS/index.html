@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+
+<body>
+
+    <style>
+        body{
+            text-align: center;
+            background: #fcfcfa;
+            color: #818078;
+        }
+        .container{
+            max-width: 50%;
+            margin: 40px auto;
+        }
+        .hr-text{
+            line-height: 1em;
+            position: relative;
+            outline: 0;
+            border: 0;
+            color: black;
+            text-align: center;
+            height: 1.5em;
+            opacity: .5;
+        }
+        .hr-text::before{
+            content: '';
+            background: linear-gradient(to right,transparent,#818078,transparent);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+        }
+        .hr-text::after{
+            content: attr(data-content);
+            position: relative;
+            display: inline-block;
+            color: black;
+            padding: 0 0.5em;
+            color: #818078;
+            background-color: #fcfcfa;
+        }
+    </style>
+
+    <div class="container">
+        <hr class="hr-text" data-content="AND" />
+        <hr class="hr-text" data-content="OR" />
+    </div>
+
+</body>
+
+</html>
