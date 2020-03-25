@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+
+    <script src="https://kit.fontawesome.com/bff1038fa3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./bootstrap-4.4.1/css/bootstrap.css">
+    <script src="./jquery/jquery-3.4.1.js"></script>
+    <script src="./bootstrap-4.4.1/js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+
+        <a class="navbar-brand" href="#">eat-IT</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <hr />
+    <div class="container">
+        <i class="fa fa-shopping-cart" style="color: lightcoral;"></i>
+        <span class="badge badge-dark">2</span> item(s) in cart
+    </div>
+    <hr />
+
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="items.html">Items</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cart-view.html">Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="orders.html">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+        </ul>
+    </div>
+
+    <hr />
+    <div class="container">
+
+
+        <div class="card">
+            <div class="card-header">
+                Item(s) in cart
+            </div>
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>s.no</th>
+                                <th>item</th>
+                                <th>qty</th>
+                                <th>price</th>
+                                <th>total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-success">
+                                <td>1</td>
+                                <td>Veg</td>
+                                <td>2</td>
+                                <td>&#8377;100.00</td>
+                                <td>&#8377;200.00</td>
+                            </tr>
+                            <tr class="table-danger">
+                                <td>2</td>
+                                <td>Non-Veg</td>
+                                <td>1</td>
+                                <td>&#8377;80.00</td>
+                                <td>&#8377;80.00</td>
+                            </tr>
+                            <tr class="table-success">
+                                <td>3</td>
+                                <td>Veg</td>
+                                <td>2</td>
+                                <td>&#8377;100.00</td>
+                                <td>&#8377;200.00</td>
+                            </tr>
+                            <tr class="table-danger">
+                                <td>4</td>
+                                <td>Non-Veg</td>
+                                <td>1</td>
+                                <td>&#8377;80.00</td>
+                                <td>&#8377;80.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-primary btn-lg">checkout</button>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                Total : &#8377;1000.00 
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

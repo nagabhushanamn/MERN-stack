@@ -65,15 +65,52 @@
     </div>
 
     <hr />
-
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Hello, CTS!</h1>
-            <hr class="my-4" />
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn MERN tech-stack</a>
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-12 col-sm-4 col-md-3">
+                        <img class="img-fluid" src="./images/veg.png" alt="veg logo" />
+                    </div>
+                    <div class="col-12 col-sm-8 col-md-9">
+
+                        <h5>Veg - <small>25-March-2020</small></h5>
+                        <h6>&#8377;100.00</h6>
+                        <button class="btn btn-dark btn-sm">buy</button>
+
+                        <ul class="nav nav-tabs" style="margin-top: 5px;">
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-1" onclick="changeTab(event)" href="#">Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-2" onclick="changeTab(event)" href="#">Ingre..</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="tab-3" onclick="changeTab(event)" href="#">Reviews</a>
+                            </li>
+                        </ul>
+
+                        <div id="panel-1">Veg is yummy</div>
+                        <div id="panel-2">Not Yet</div>
+                        <div id="panel-3">
+                            <div class="alert alert-info">
+                                <span class="badge badge-danger">5</span> &mdash; <span>who1@mail.com</span>
+                                <hr />
+                                <p>sample-review-1</p>
+                            </div>
+                            <div class="alert alert-info">
+                                <span class="badge badge-danger">1</span> &mdash; <span>who2@mail.com</span>
+                                <hr />
+                                <p>sample-review-2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <script src="index.js"></script>
 
 </body>
 
