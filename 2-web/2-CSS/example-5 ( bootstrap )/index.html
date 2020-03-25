@@ -8,7 +8,7 @@
     <title>index</title>
     <link rel="stylesheet" href="./bootstrap-4.4.1/css/bootstrap.css">
 
-    <!-- <script src="https://kit.fontawesome.com/bff1038fa3.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/bff1038fa3.js" crossorigin="anonymous"></script>
 
     <script src="./jquery/jquery-3.4.1.js"></script>
     <script src="./bootstrap-4.4.1/js/bootstrap.js"></script>
@@ -41,8 +41,13 @@
     </nav>
 
     <hr />
+    <div class="container">
+        <i class="fa fa-shopping-cart" style="color: lightcoral;"></i>
+        <span class="badge badge-dark">2</span> item(s) in cart
+    </div>
     <hr />
 
+    <hr />
     <div class="container">
         <div class="list-group">
             <div class="list-group-item">
@@ -51,7 +56,8 @@
                         <img class="img-fluid" src="./images/veg.jpg" alt="veg logo" />
                     </div>
                     <div class="col-12 col-sm-8 col-md-9">
-                        <h5>Veg</h5>
+
+                        <h5>Veg - <small>25-March-2020</small></h5>
                         <h6>&#8377;100.00</h6>
                         <button class="btn btn-dark btn-sm">buy</button>
 
@@ -63,14 +69,24 @@
                                 <a class="nav-link" id="tab-2" onclick="changeTab(event)" href="#">Ingre..</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="tab-3" onclick="changeTab(event)" href="#">Reviews</a>
+                                <a class="nav-link active" id="tab-3" onclick="changeTab(event)" href="#">Reviews</a>
                             </li>
                         </ul>
 
-                        <div id="panel-1">Veg is always yummy</div>
+                        <div id="panel-1">Veg is yummy</div>
                         <div id="panel-2">Not Yet</div>
-                        <div id="panel-3">None Yet</div>
-                        
+                        <div id="panel-3">
+                            <div class="alert alert-info">
+                                <span class="badge badge-danger">5</span> &mdash; <span>who1@mail.com</span>
+                                <hr />
+                                <p>sample-review-1</p>
+                            </div>
+                            <div class="alert alert-info">
+                                <span class="badge badge-danger">1</span> &mdash; <span>who2@mail.com</span>
+                                <hr />
+                                <p>sample-review-2</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
