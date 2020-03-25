@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="./bootstrap-4.4.1/css/bootstrap.css">
+
+    <!-- <script src="https://kit.fontawesome.com/bff1038fa3.js" crossorigin="anonymous"></script> -->
+
+    <script src="./jquery/jquery-3.4.1.js"></script>
+    <script src="./bootstrap-4.4.1/js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+
+        <a class="navbar-brand" href="#">eat-IT</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Items</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <hr />
+    <hr />
+
+    <div class="container">
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-12 col-sm-4 col-md-3">
+                        <img class="img-fluid" src="./images/veg.jpg" alt="veg logo" />
+                    </div>
+                    <div class="col-12 col-sm-8 col-md-9">
+                        <h5>Veg</h5>
+                        <h6>&#8377;100.00</h6>
+                        <button class="btn btn-dark btn-sm">buy</button>
+
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-1" onclick="changeTab(event)" href="#">Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-2" onclick="changeTab(event)" href="#">Ingre..</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tab-3" onclick="changeTab(event)" href="#">Reviews</a>
+                            </li>
+                        </ul>
+
+                        <div id="panel-1">Veg is always yummy</div>
+                        <div id="panel-2">Not Yet</div>
+                        <div id="panel-3">None Yet</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
