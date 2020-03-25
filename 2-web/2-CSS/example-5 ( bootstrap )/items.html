@@ -9,16 +9,16 @@
 
     <script src="https://kit.fontawesome.com/bff1038fa3.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./bootstrap-4.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-4.4.1/dist/css/bootstrap.css">
     <script src="./jquery/jquery-3.4.1.js"></script>
-    <script src="./bootstrap-4.4.1/js/bootstrap.js"></script>
+    <script src="./bootstrap-4.4.1/dist/js/bootstrap.js"></script>
 
 </head>
 
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
 
         <a class="navbar-brand" href="#">eat-IT</a>
 
@@ -66,6 +66,15 @@
 
     <hr />
     <div class="container">
+        <div class="alert alert-warning alert-dismissible fade show">
+            stay in home for safety
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    <hr />
+    <div class="container">
         <div class="list-group">
             <div class="list-group-item">
                 <div class="row">
@@ -102,6 +111,41 @@
                                 <span class="badge badge-danger">1</span> &mdash; <span>who2@mail.com</span>
                                 <hr />
                                 <p>sample-review-2</p>
+                            </div>
+
+                            <button class="btn btn-sm btn-info" data-toggle="collapse" data-target="#review-form" id="new-review-btn">
+                                <i class="fa fa-plus"></i>
+                            </button>
+
+                            <div class="row collapse" id="review-form">
+                                <div class="col-8">
+                                    <div class="card">
+                                        <div class="card-header">Review Form</div>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>stars</label>
+                                                    <select class="form-control">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>author</label>
+                                                    <input type="email" class="form-control" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>body</label>
+                                                    <textarea class="form-control"></textarea>
+                                                </div>
+                                                <button class="btn btn-primary">submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
