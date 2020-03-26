@@ -1,0 +1,17 @@
+
+ul li{
+    float: left;
+    padding: 30px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.content{
+    margin: 100px;
+}

@@ -1,0 +1,26 @@
+
+.red{
+    background-color:red;
+}
+.green{
+    background-color: green;
+    position: sticky;
+    top: 0;
+}
+.blue{
+    background-color: blue;
+}
+
+.box{
+    padding: 20px;
+    width: 25%;
+}
+
+.colors{
+    padding: 50px;
+    width: 75%;
+    height: 500px;
+    border: 1px solid grey;
+    background-color: #DEF;
+    position: relative;
+}

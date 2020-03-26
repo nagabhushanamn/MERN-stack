@@ -1,0 +1,29 @@
+---------------------------------
+Language : javascript
+---------------------------------
+
+    - introduction
+    - data types
+    - scopes / execution-context
+    - FP in javascript
+    - Function binding
+    - OOP
+    - Array
+
+---------------------------------
+UI
+--------------------------------- 
+
+    - HTML
+    - CSS
+        - how to apply style
+        - selectors
+        - basic style properties
+        - floating & positioning
+        - RWD
+        - flex & grid layout
+        - css pre-processors ( less & sass)
+        - bootstrap
+
+---------------------------------------------------------------------
+
