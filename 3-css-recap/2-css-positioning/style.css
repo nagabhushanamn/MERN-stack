@@ -1,26 +1,27 @@
 
-.red{
-    background-color:red;
-}
-.green{
-    background-color: green;
-    position: sticky;
-    top: 0;
-}
-.blue{
-    background-color: blue;
-}
+
+
 
 .box{
-    padding: 20px;
-    width: 25%;
-}
-
-.colors{
-    padding: 50px;
-    width: 75%;
-    height: 500px;
-    border: 1px solid grey;
     background-color: #DEF;
+    padding: 30px;
+    margin: 30px;
     position: relative;
 }
+
+.box h2{
+    font-family: monospace;
+    position: absolute;
+    top: 200px;
+    left: 130px;
+}
+
+.alert{
+    background-color: khaki;
+    padding: 30px;
+    font-family: monospace;
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+}
+

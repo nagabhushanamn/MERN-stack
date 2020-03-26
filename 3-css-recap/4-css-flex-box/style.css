@@ -1,0 +1,28 @@
+
+
+.list-group{
+    width: 80%;
+    height: 500px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    /* 
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    */
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.list-group .list-group-item{
+    width: 25%;
+    height: 25%;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 5px;
+}
+
