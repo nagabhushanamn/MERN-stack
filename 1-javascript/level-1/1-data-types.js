@@ -9,8 +9,8 @@ console.log("---------------------------")
 //----------------------------------------------------------------------------------
 /**
  *
- *  data types
- *  -----------
+ * basic data types
+ *  --------------------
  *
  *  1. simple/primitives  ==> values
  *
@@ -41,6 +41,7 @@ var v;
 
 var name = "Nag"
 var company = 'cognizant'
+
 
 var dynamicString1 = "the trainer " + name + " teaching in " + company
 var dynamicString2 = `the trainer ${name} teaching in ${company}` // string interpolation ( es6 )

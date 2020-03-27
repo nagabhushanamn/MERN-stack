@@ -5,12 +5,8 @@
 why we need javascript language?
 ------------------------------------------------------------------
 
-    => client-side (ui) application  : runtime ( browser )
-    => sever-side application        : runtime ( Node.js )  
-
-    +
-
-    => Mobile native application
+    => client-side (dynamic web-ui) application  : runtime ( browser )
+    => sever-side application                    : runtime ( Node.js )  
 
 ------------------------------------------------------------------ 
 
@@ -22,8 +18,12 @@ javascript features
 => flexibility
     - dynamic
     - FP & OOP    
+
+browser / Node.js
+-----------------    
 => by default, all IO operations are non-blocking/asynchrnous
-=> by default, single-threaded process / light-weight process , but can execute concurrent actions   
+=> by default, single-threaded process / light-weight process,
+   but can execute concurrent actions due to non-blocking IO  
 
 ------------------------------------------------------------------
 
@@ -36,7 +36,8 @@ javascript standarnd
 => ECMAScript community
     - specs
 
-    current version: ES6
+    current version: ECMAScript-2015 or ES6
+                     
 
 ------------------------------------------------------------------
 
@@ -77,23 +78,70 @@ keywords ==> lower-case
 Types ( class ) ==> pascal-case : A____B___C___  e.g JavaEmployee
 variables/functions ==> camel-case : ____B____C____ e.g studName, addNumbers()
 constant number values     ==> upper-case , e.g const PI=3.14  
-file-names          ==> lower-case , data-types.js
+file-names          ==> pascal-case,lower-case , data-types.js
 
 -------------------------------------------------------------------
 
 
 
 ------------------------------------------------------------------
-//  javascript : level-1 topics
+//  core javascript : level-1 topics
 ------------------------------------------------------------------
 
- => data types
- => literal-style objects
- => scopes / execution-context
- => FP ( imp topic )
- => arrow-function 
- => OOP
- 
- => data structures ( list/array , set , map)
+ => basic data types
+ => literal-style objects 
+ => scopes / execution-context  ( how code execuytes )
+ => FP ( imp topic ) , arrow-function ( es6 )
+ => OOP  ( less imp )
+ => data structures ( list/array , set ( es6 )  , map ( es6 ))
 
 -----------------------------------------------------------------
+
+------------------------------------------------------------------
+//  javascript : level-2 topics
+------------------------------------------------------------------
+
+=> modules
+=> package management tools : NPM / YARN
+=> Unit-Testing  : JEST 
+
+------------------------------------------------------------------
+//  javascript : level-3 topics
+------------------------------------------------------------------
+
+Async/Non-blocking Programming
+-----------------------------
+
+=> promise api
+=> reactive programming with javascript
+
+
+
+
+------------------------------------------------------------------
+
+
+How to use javascript with HTML & CSS ?  ( front end )
+--------------------------------------------------------
+
+    -> browser apis
+    -> react.js  => facebook javascript lib 
+
+
+How to use javascript with server-side appln ?  ( back end )
+--------------------------------------------------------
+
+    -> Node.js apis
+    -> Express.js  =>  strongloop/IBM lib 
+
+
+
+
+datasources
+-----------------------------------------------------------
+
+    -> mySQL
+    -> MongoDB
+
+devops tools
+------------------------------------------------------------    
