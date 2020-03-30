@@ -26,7 +26,7 @@
 
  class TodoService{
      constructor(){
-         this.todos=[]
+         this.todos=[] // data structure
      }
      addTodo(title){
          const newTodo=new Todo(title)
@@ -50,6 +50,12 @@
      viewTodos(flag){
          if(flag==="ALL"){
              this.todos.forEach(todo=>console.log(todo))
+         }
+         if(flag==="ACTIVE"){
+
+         }
+         if(flag==="COPLETED"){
+
          }
      }
  }
