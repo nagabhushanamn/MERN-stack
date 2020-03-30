@@ -3,7 +3,6 @@
 
 var arr = []
 
-// i=12
 //---------------------------------------------
 function getF(i) {
     var func = function () {
@@ -22,17 +21,3 @@ fn2(); // 11
 
 
 //-----------------------------------------------
-
-
-
-// let arrr=[]
-
-// let v=12
-// let func=function(){
-//     console.log(100)
-// }
-// arrr.push(v)
-// arrr.push(func)
-
-// console.log(arrr[0])
-// console.log(arr[1]())
