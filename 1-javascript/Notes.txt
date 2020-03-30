@@ -101,9 +101,18 @@ file-names          ==> pascal-case,lower-case , data-types.js
 //  javascript : level-2 topics
 ------------------------------------------------------------------
 
+=> Es6 New-syntax & New APIs 
+    => spread operators
+    => de-structuring
+    => symbols
+    => iterables & generator functions`
+    => for-of loop
+    ........
 => modules
 => package management tools : NPM / YARN
-=> Unit-Testing  : JEST 
+
+
+
 
 ------------------------------------------------------------------
 //  javascript : level-3 topics
@@ -114,13 +123,10 @@ Async/Non-blocking Programming
 
 => promise api
 => reactive programming with javascript
-
-
+=> Unit-Testing  : JEST 
 
 
 ------------------------------------------------------------------
-
-
 How to use javascript with HTML & CSS ?  ( front end )
 --------------------------------------------------------
 

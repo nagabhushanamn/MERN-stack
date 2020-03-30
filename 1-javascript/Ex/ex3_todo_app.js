@@ -52,12 +52,7 @@ class TodoService {
         })
     }
     deleteTodo(id) {
-        // immutable
         this.todos = this.todos.filter(todo => todo.id !== id)
-       
-        // mutate
-        // let idx=this.todos.findIndex(todo=>todo.id===id)
-        // this.todos.splice(idx,1)
     }
     clearCompleted() {
         this.todos = this.todos.filter(todo => !todo.completed)

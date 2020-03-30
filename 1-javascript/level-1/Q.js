@@ -1,21 +1,17 @@
 
-
-
-function Value(x) {
-    this.x
+// Map
+//--------------------------------------
+let obj = {
+    'Nag N': "BMW",
+    Riya: "Benz-toy-car"
 }
+//--------------------------------------
+let owner1 = { name: 'Nag' }
+let owner2 = { name: 'Nag' }
 
-Value.prototype.show = function () {
-    return this.x
-}
-Value.prototype.show_x = function (y) {
-    return this.x + y
-}
+let map1 = new Map()
+map1.set(owner1, "BMW")
+map1.set(owner2, "Benz-toy-car")
 
-let a=function(j,k){
-    return j+k
-}
-
-var v=new Value(5)
-v.show()
-v.show_x(2)
+console.log(map1.get(owner1))
+//--------------------------------------

@@ -14,7 +14,6 @@
  *  -----------------------
  * 
  *   => Array/List
- * 
  *   => set ( ES6 )
  *   => map ( ES6 )
  * 
@@ -231,12 +230,102 @@ let isFiveExist=inp.includes(5)
 
 
 
+
+
+//------------------------------------------------------
+
+// Set
+
+/**
+ * 
+ *  a data structure which includes unique data elements
+ * 
+ */
+
+//------------------------------------------------------
+
+
+// let names=new Set()
+// names.add("Nag")
+// names.add("Indu")
+// names.add("riya")
+// names.add("riya")
+// names.add("diya")
+// names.add("unknown")
+
+// names.delete('unknown')
+// names.clear()
+// names.has("Nag") // true
+// names.forEach(name=>console.log(name))
+
+//------------------------------------------------------
+
+// ?????
+
+// let cars=new Set();
+
+// let car1={name:'bmw',year:2018}
+// let car2={name:'bmw',year:2019}
+// let car3={name:'audi',year:2020}
+
+// cars.add(car1)
+// cars.add(car2)
+// cars.add(car3)
+
+// console.log(cars)
+
+//------------------------------------------------------
+// WeakSet
+//------------------------------------------------------
+
+// let weakSet=new WeakSet();
+
+
+// let x={value:1}
+// let y={value:2}
+// let z={value:3}
+
+// weakSet.add(x)
+// weakSet.add(y)
+// weakSet.add(z)
+
+// y=undefined
+
+
+//------------------------------------------------------
+// Map =>  key/user-identity  +  data-elemeny
+//------------------------------------------------------
+
+
+let map=new Map()
+map.set("Nag",{car:"duster"})
+map.set("Riya",{car:"benz-toy-car"})
+
+
+let weakMap=new WeakMap();
+
+
+
 //-------------------------------------------------------
-// pop , map , keys , ....
+// summary
 //-------------------------------------------------------
-
-
-
-
-
-
+/**
+ * 
+ *  list/array
+ * 
+ *    -> ordered output
+ *    -> index based
+ *    -> to hold duplicate data elements
+ * 
+ *  set
+ * 
+ *   -> keep unique data values
+ * 
+ *  map
+ * 
+ *  -> keep data in memory with user identity (key )
+ * 
+ * 
+ * 
+ * 
+ */
