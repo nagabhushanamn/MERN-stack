@@ -60,6 +60,7 @@ startBtn.addEventListener('click', e => {
     let imgIdx = 1
     let interval = setInterval(() => {
         imgIdx++
+        //let imagePath = 'images/'+imgIdx+'.jpg'
         let imagePath = `images/${imgIdx}.jpg`
         imgTag.src = imagePath
         if (imgIdx === 3) {
@@ -115,7 +116,7 @@ timerBtn.addEventListener('click', e => {
 })
 
 timerResetBtn.addEventListener('click', e => {
-    min = 10;
+    min = Number.parseInt(timerInput.value);
     sec = 0
 })
 

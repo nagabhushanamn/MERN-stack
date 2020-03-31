@@ -11,9 +11,7 @@ dynamic web UI  = HTML + CSS + Javascript
 
 -----------------------------------------------
 
-
 why we need .js programs with HTML-page(s) in browser-envi ?
-
 
 using browser provided 'web-apis', 
 .js programs can bring any dynamic-ui activity to web-page 
@@ -34,7 +32,7 @@ using DOM ( DOCUMENT OBJECT MODEL) API
 
     -> create,retreive,update,delete HTML elements
     -> can change HTML-element's style ( css )
-    -> can change HTML-element's innrer content 
+    -> can change HTML-element's inner content 
     -> can change HTML-element's attributes/properties
     -> can validate all form-fields before submit to server-side-programs
     -> can create rich/user-friendly UI components to HTML-page like calendar,autocomplete,..
