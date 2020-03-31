@@ -50,24 +50,18 @@ setInterval(() => {
 // Ex.
 //-----------------------------------------------------------
 
-let slideImg = document.querySelector('#slide')
+let imgTag = document.querySelector('#slide')
 let startBtn = document.querySelector('#start-btn')
 let stopBtn = document.querySelector('#stop-btn')
-// let images = [
-//     "images/1.jpg",
-//     "images/2.jpg",
-//     "images/3.jpg",
-// ]
 stopBtn.disabled = true
 startBtn.addEventListener('click', e => {
     startBtn.disabled = true
     stopBtn.disabled = false
-    let imgIdx = 0
+    let imgIdx = 1
     let interval = setInterval(() => {
-        //let imagePath = images[imgIdx]
         imgIdx++
         let imagePath = `images/${imgIdx}.jpg`
-        slideImg.src = imagePath
+        imgTag.src = imagePath
         if (imgIdx === 3) {
             imgIdx = 0
         }
