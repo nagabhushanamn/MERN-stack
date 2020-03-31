@@ -16,21 +16,20 @@ console.log('DOM ready..')
 
 // - or -  from HTML-5 , 
 
-let messageBox = document.querySelector('.alert-info')
+let box = document.querySelector('.alert-info')
 let gmBtn = document.querySelector('.btn-primary')
-let gnBtn = document.querySelector('.btn-warning')
 let geBtn = document.querySelector('.btn-danger')
+let gnBtn = document.querySelector('.btn-warning')
 
 gmBtn.addEventListener('click', e => {
-    messageBox.innerHTML = "good morning 🌺"
-})
-gnBtn.addEventListener('click', e => {
-    messageBox.innerHTML = "good noon 🌞"
+    box.innerHTML = "good morning 🌞"
 })
 geBtn.addEventListener('click', e => {
-    messageBox.innerHTML = "good evening ⭐️"
+    box.innerHTML = "good evening 🌞"
 })
-
+gnBtn.addEventListener('click', e => {
+    box.innerHTML = "good night ⭐"
+})
 
 //-----------------------------------------------------------
 // javascript with DOM-api + Timer Api
@@ -51,5 +50,31 @@ setInterval(() => {
 // Ex.
 //-----------------------------------------------------------
 
-// let imgEle=document.querySelector('img')
-// imgEle.src='images/2.jpg'
+let slideImg = document.querySelector('#slide')
+let startBtn = document.querySelector('#start-btn')
+let stopBtn = document.querySelector('#stop-btn')
+let images = [
+    "images/1.jpg",
+    "images/2.jpg",
+    "images/3.jpg",
+]
+stopBtn.disabled = true
+startBtn.addEventListener('click', e => {
+    startBtn.disabled = true
+    stopBtn.disabled = false
+    let imgIdx = 0
+    let interval = setInterval(() => {
+        let imagePath = images[imgIdx]
+        slideImg.src = imagePath
+        imgIdx++
+        if (imgIdx === images.length) {
+            imgIdx = 0
+        }
+    }, 1000)
+    stopBtn.addEventListener('click', e => {
+        stopBtn.disabled = true
+        startBtn.disabled = false
+        clearInterval(interval)
+    })
+})
+
