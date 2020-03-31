@@ -17,7 +17,7 @@ console.log('DOM ready..')
 // - or -  from HTML-5 , 
 
 let box = document.querySelector('.alert-info')
-let gmBtn = document.querySelector('.btn-primary')
+let gmBtn = document.querySelector('.btn-dark')
 let geBtn = document.querySelector('.btn-danger')
 let gnBtn = document.querySelector('.btn-warning')
 
@@ -71,5 +71,51 @@ startBtn.addEventListener('click', e => {
         startBtn.disabled = false
         clearInterval(interval)
     })
+})
+
+
+
+//-----------------------------------------------------------
+// Timer 
+//-----------------------------------------------------------
+
+let timerMinuteEle = document.getElementById('timer-mintue')
+let timerSecondsEle = document.getElementById('timer-seconds')
+let timerBtn = document.getElementById('timer-btn')
+let timerResetBtn = document.getElementById('timer-reset-btn')
+let timerInput = document.getElementById('timer-input')
+
+let isStarted = false
+let min = 0;
+let sec = 0
+let interval = undefined
+timerBtn.addEventListener('click', e => {
+    isStarted = !isStarted
+    timerBtn.innerText = isStarted ? 'stop' : 'start'
+    if (isStarted) {
+        if (timerInput.value) {
+            min = Number.parseInt(timerInput.value)
+            timerInput.disabled=true
+        }
+        interval = setInterval(() => {
+            timerMinuteEle.innerText = min
+            timerSecondsEle.innerText = sec
+            if (sec === 0) { sec = 60; min-- }
+            if (sec <= 60) {
+                sec--
+            }
+            if (min === 0 && sec === 0)
+                clearInterval(interval)
+        }, 1000)
+    }
+    if (!isStarted) {
+        timerInput.disabled=false
+        clearInterval(interval)
+    }
+})
+
+timerResetBtn.addEventListener('click', e => {
+    min = 10;
+    sec = 0
 })
 

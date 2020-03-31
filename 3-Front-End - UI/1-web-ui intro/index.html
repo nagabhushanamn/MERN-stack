@@ -16,7 +16,25 @@
     <hr />
     Time : <span id="time" class="badge badge-danger"></span>
     <hr />
-    <button class="btn btn-primary">GM</button>
+    <input type="number" id="timer-input" size="2" />
+    <hr/>
+
+    <div class="card">
+        <div class="card-header">Timer</div>
+        <div class="card-body">
+            <span class="h1" id="timer-mintue">0</span>m
+            <span class="h1" id="timer-seconds">0</span>s
+        </div>
+        <div class="card-footer">
+            <button id="timer-btn" class="btn btn-sm btn-primary">start</button>
+            <button id="timer-reset-btn" class="btn btn-sm btn-secondary">reset</button>
+        </div>
+    </div>
+
+    
+
+    <hr />
+    <button class="btn btn-dark">GM</button>
     <button class="btn btn-danger">GE</button>
     <button class="btn btn-warning">GN</button>
     <div class="alert alert-info">
