@@ -1,8 +1,8 @@
 
 -----------------------------------------------
 
-static  UI = info/data + style
-dynamic UI = info/data + style + behavior
+static  UI = data + style
+dynamic UI = data + style + behavior
 
 -----------------------------------------------
 
@@ -23,7 +23,7 @@ web-apis ==> w3c standards to use web
 =>  DOM,XHR,Timer
 
 web-apis are implented by browser vendors (chrome,firefox,IE/Edge..) natively,
-absttracted as 'javascript' objects & functions
+abstracted as 'javascript' objects & functions
 
 
 
@@ -43,6 +43,18 @@ using DOM ( DOCUMENT OBJECT MODEL) API
 
 ----------------------------------------------------------------------    
 
+
+using Timer API
+---------------------------------------
+
+    => can execute some actions on timeout or timeinterval
+
+      setTimeout(fn,1000)
+      let interval=setInterval(fn,1000)
+      clearInterval(interval)
+      
+
+---------------------------------------------------------------------      
 
 
 

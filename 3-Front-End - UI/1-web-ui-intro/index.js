@@ -6,29 +6,50 @@ console.log("-index.js-")
 // javascript with DOM-api ( actual html-page in browser)
 //-----------------------------------------------------------
 
-document.addEventListener('DOMContentLoaded', e => {
 
-    let messageBox = document.getElementsByClassName('alert-info')[0];
-    let gmBtn = document.getElementsByClassName('btn-primary')[0];
-    let gnBtn = document.getElementsByClassName('btn-warning')[0];
-    let geBtn = document.getElementsByClassName('btn-danger')[0];
-    let reBtn = document.getElementsByClassName('btn-dark')[0];
+console.log('DOM ready..')
 
-    let originalText = ""
-    gmBtn.addEventListener('click', event => {
-        originalText = messageBox.innerHTML;
-        messageBox.innerHTML = "good morning 🌺"
-    })
-    gnBtn.addEventListener('click', event => {
-        messageBox.innerHTML = "good Noon 🌞"
-    })
-    geBtn.addEventListener('click', event => {
-        messageBox.innerHTML = "good evening ⭐️"
-    })
-    reBtn.addEventListener('click', event => {
-        messageBox.innerHTML = `${originalText}`
-    })
+// let messageBox = document.getElementsByClassName('alert-info')[0];
+// let gmBtn = document.getElementsByClassName('btn-primary')[0];
+// let gnBtn = document.getElementsByClassName('btn-warning')[0];
+// let geBtn = document.getElementsByClassName('btn-danger')[0];
 
+// - or -  from HTML-5 , 
 
+let messageBox = document.querySelector('.alert-info')
+let gmBtn = document.querySelector('.btn-primary')
+let gnBtn = document.querySelector('.btn-warning')
+let geBtn = document.querySelector('.btn-danger')
 
+gmBtn.addEventListener('click', e => {
+    messageBox.innerHTML = "good morning 🌺"
 })
+gnBtn.addEventListener('click', e => {
+    messageBox.innerHTML = "good noon 🌞"
+})
+geBtn.addEventListener('click', e => {
+    messageBox.innerHTML = "good evening ⭐️"
+})
+
+
+//-----------------------------------------------------------
+// javascript with DOM-api + Timer Api
+//-----------------------------------------------------------
+
+// let timeSpan=document.getElementById('time')
+// -or-
+let timeSpan = document.querySelector('#time')
+
+setInterval(() => {
+    let date = new Date()
+    timeSpan.innerHTML = date.toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' })
+}, 1000)
+
+
+
+//-----------------------------------------------------------
+// Ex.
+//-----------------------------------------------------------
+
+// let imgEle=document.querySelector('img')
+// imgEle.src='images/2.jpg'
