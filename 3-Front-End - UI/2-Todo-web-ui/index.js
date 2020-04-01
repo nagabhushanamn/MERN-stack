@@ -84,7 +84,7 @@ function renderTodos(flag) {
                     </div>
                     <div class="col-6">${todo.title}</div>
                     <div class="col-3">
-                        <button onclick="handleDelete(event,${todo.id})" class="btn btn-sm btn-danger float-right">delete</button>
+                        <button onclick="handleDelete(event,${todo.id})" ${todo.completed?'':'disabled'} class="btn btn-sm btn-danger float-right">delete</button>
                     </div>
                 </div>
             </li> 
