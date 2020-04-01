@@ -47,26 +47,30 @@ passwordField.addEventListener('blur', e => {
 // validation on submit 
 //---------------------------------------------------------------------
 
-let loginForm=document.querySelector('form')
-loginForm.addEventListener('submit',e=>{
-    
+let loginForm = document.querySelector('form')
+loginForm.addEventListener('submit', e => {
     e.preventDefault()
-    
+
     let emailField = document.querySelector('#email')
     let emailFeedbackField = document.querySelector('#email-feedback')
-
     let email = emailField.value
 
     if (!email) {
         emailFeedbackField.innerText = "Email is required"
+        //emailField.style.border = "1px solid red"
+        //emailField.className="invalid-border"
+        emailField.classList.add('invalid-border')
         return
     }
 
     let emailPattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
     if (!emailPattern.test(email)) {
         emailFeedbackField.innerText = "Email is invalid"
+        //emailField.style.border = "1px solid red"
+        emailField.classList.add('invalid-border')
         return
     }
+    emailField.classList.remove('invalid-border')
     emailFeedbackField.innerText = ""
 
 })
