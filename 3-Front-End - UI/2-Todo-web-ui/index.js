@@ -28,6 +28,17 @@ class TodoService {
         const newTodo = new Todo(title)
         this.todos = this.todos.concat(newTodo)
     }
+    deleteTodo(id) {
+        this.todos = this.todos.filter(todo => todo.id !== id)
+    }
+    completeTodo(id) {
+        this.todos = this.todos.map(todo => {
+            if (todo.id === id) {
+                todo.completed = !todo.completed
+            }
+            return todo
+        })
+    }
     getTodos(flag) {
         if (flag === 'ALL')
             return this.todos
@@ -52,19 +63,32 @@ newTodoField.addEventListener('keyup', e => {
     }
 })
 
+function handleDelete(event,id) {
+    todoService.deleteTodo(id)
+    renderTodos('ALL')
+}
+
+function handleComplete(event,id) {
+    todoService.completeTodo(id)
+    renderTodos('ALL')
+}
+
 function renderTodos(flag) {
     let todos = todoService.getTodos(flag)
     const todoLiElements = todos.map(todo => {
         return `
-            <li class="list-group-item">
+            <li class="list-group-item ${todo.completed?'bg-success':''}">
                 <div class="row">
-                    <div class="col-3"><input type="checkbox" ${todo.completed ? 'checked' : ''} /></div>
+                    <div class="col-3">
+                        <input onchange="handleComplete(event,${todo.id})" type="checkbox" ${todo.completed ? 'checked' : ''} />
+                    </div>
                     <div class="col-6">${todo.title}</div>
-                    <div class="col-3"><button class="btn btn-sm btn-danger float-right">delete</button></div>
+                    <div class="col-3">
+                        <button onclick="handleDelete(event,${todo.id})" class="btn btn-sm btn-danger float-right">delete</button>
+                    </div>
                 </div>
             </li> 
         `
     })
     document.getElementById('todo-list').innerHTML = todoLiElements.join(" ")
 }
-

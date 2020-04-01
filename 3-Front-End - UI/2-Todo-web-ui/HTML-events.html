@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>events</title>
+    <link rel="stylesheet" href="bootstrap-4.4.1/dist/css/bootstrap.css">
+</head>
+
+<body class="container">
+
+    <hr />
+    <h1>web ui</h1>
+    <hr />
+    <div> Events </div>
+    <hr />
+
+
+    <div class="jumbotron">
+        <button class="btn btn-primary" id="btn1">btn1</button>
+        <button class="btn btn-primary" id="btn2">btn2</button>
+        <button class="btn btn-primary" id="btn3">btn3</button>
+    </div>
+
+    <script>
+
+        //-------------------------------------------------------------
+        // let jumbo=document.querySelector('.jumbotron')
+        // jumbo.addEventListener('click',e=>{
+        //     console.log('handled click event on .jumbotron element')
+        // })
+
+        // let btn1=document.getElementById('btn1')
+        // btn1.addEventListener('click',e=>{
+        //     e.stopPropagation()
+        //     console.log('handled click event on .#btn1 element')
+        // })
+
+        //-------------------------------------------------------------
+        // Event Delegation
+        //-------------------------------------------------------------
+
+        let jumbo=document.querySelector('.jumbotron')
+        jumbo.addEventListener('click',e=>{
+            console.log('handled click event on .jumbotron element - '+e.target.id)
+        })
+
+        //------------------------------------------------------------
+
+
+    </script>
+
+
+</body>
+
+</html>
