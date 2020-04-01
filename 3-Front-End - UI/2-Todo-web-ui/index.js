@@ -65,6 +65,6 @@ function renderTodos(flag) {
             </li> 
         `
     })
-    document.getElementById('todo-list').innerHTML = todoLiElements
+    document.getElementById('todo-list').innerHTML = todoLiElements.join(" ")
 }
 
