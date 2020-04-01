@@ -39,6 +39,13 @@ class TodoService {
             return todo
         })
     }
+    completeAll() {
+        let areAllCompleted = this.todos.every(todo => todo.completed)
+        this.todos = this.todos.map(todo => {
+            todo.completed = !areAllCompleted
+            return todo
+        })
+    }
     getTodos(flag) {
         if (flag === 'ALL')
             return this.todos
@@ -49,8 +56,14 @@ class TodoService {
 // UI
 //-------------------------------------------------------------------------
 const newTodoField = document.querySelector("#new-todo")
+const toggleAllbtn = document.querySelector("#toggle-all")
 
 const todoService = new TodoService()
+
+toggleAllbtn.addEventListener('click', e => {
+    todoService.completeAll()
+    renderTodos('ALL')
+})
 
 newTodoField.addEventListener('keyup', e => {
     if (e.key === 'Enter') {
@@ -63,28 +76,29 @@ newTodoField.addEventListener('keyup', e => {
     }
 })
 
-function handleDelete(event,id) {
+function handleDelete(event, id) {
     todoService.deleteTodo(id)
     renderTodos('ALL')
 }
 
-function handleComplete(event,id) {
+function handleComplete(event, id) {
     todoService.completeTodo(id)
     renderTodos('ALL')
 }
+
 
 function renderTodos(flag) {
     let todos = todoService.getTodos(flag)
     const todoLiElements = todos.map(todo => {
         return `
-            <li class="list-group-item ${todo.completed?'bg-success':''}">
+            <li class="list-group-item ${todo.completed ? 'bg-success' : ''}">
                 <div class="row">
                     <div class="col-3">
                         <input onchange="handleComplete(event,${todo.id})" type="checkbox" ${todo.completed ? 'checked' : ''} />
                     </div>
                     <div class="col-6">${todo.title}</div>
                     <div class="col-3">
-                        <button onclick="handleDelete(event,${todo.id})" ${todo.completed?'':'disabled'} class="btn btn-sm btn-danger float-right">delete</button>
+                        <button onclick="handleDelete(event,${todo.id})" ${todo.completed ? '' : 'disabled'} class="btn btn-sm btn-danger float-right">delete</button>
                     </div>
                 </div>
             </li> 

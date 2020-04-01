@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>todo-web-ui</title>
+    <script src="https://kit.fontawesome.com/bff1038fa3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="bootstrap-4.4.1/dist/css/bootstrap.css">
 </head>
 
@@ -25,8 +26,12 @@
     <hr />
     <section class="card">
         <div class="card-body">
+            <button id="toggle-all"><i class="fas fa-check-double"></i></button>
             <ul class="list-group" id="todo-list">
             </ul>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm btn-primary float-right">clear completed</button>
         </div>
     </section>
 
