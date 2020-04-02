@@ -43,7 +43,7 @@
 
 
     <script>
-        
+
         let todosBtn = document.getElementById('todos-btn')
         let todosCountList = document.getElementById('todos-count-list')
         let todosCountInp = document.getElementById('todos-count-inp')
@@ -60,17 +60,38 @@
 
         function fetchTodos(count) {
             let url = `https://jsonplaceholder.typicode.com/todos?_limit=${count}`
-            // Fetch
-            let promise = fetch(url)
-            //document.getElementById('nw-status').innerText = "please wait..loading todos.."
+           
+            //---------------------------------------------
+            // Fetch api
+            //---------------------------------------------
+            // let promise = fetch(url)
+            // //document.getElementById('nw-status').innerText = "please wait..loading todos.."
+            // document.getElementById('nw-status').classList.add('spinner-border')
+            // promise
+            //     .then(response => response.json())
+            //     .then(todos => {
+            //         //document.getElementById('nw-status').innerText = ""
+            //         document.getElementById('nw-status').classList.remove('spinner-border')
+            //         renderTodos(todos)
+            //     })
+            //---------------------------------------------
+            // XHR api
+            //---------------------------------------------    
+
+            const xhr=new XMLHttpRequest()
+            xhr.open('GET',url)
+            xhr.send() 
             document.getElementById('nw-status').classList.add('spinner-border')
-            promise
-                .then(response => response.json())
-                .then(todos => {
-                    //document.getElementById('nw-status').innerText = ""
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState===4 && xhr.status===200){
                     document.getElementById('nw-status').classList.remove('spinner-border')
+                    const jsonText=xhr.responseText;
+                    const todos=JSON.parse(jsonText)
                     renderTodos(todos)
-                })
+                }
+            }
+            //-------------------------------------------------
+
         }
         
         function renderTodos(todos) {
