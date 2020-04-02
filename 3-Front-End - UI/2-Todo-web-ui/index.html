@@ -31,7 +31,14 @@
             </ul>
         </div>
         <div class="card-footer">
-            <button class="btn btn-sm btn-primary float-right">clear completed</button>
+            <ul class="nav" id="todo-filters">
+                <li class="nav-item"><a href="#" class="nav-link">All</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Active</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Completed</a></li>
+            </ul>
+            <hr/>
+            <span class="badge badge-warning" id="todo-left-count">0</span> item(s) left
+            <button id="clear-completed" class="btn btn-sm btn-primary float-right">clear completed</button>
         </div>
     </section>
 

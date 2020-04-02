@@ -28,8 +28,18 @@ class TodoService {
         const newTodo = new Todo(title)
         this.todos = this.todos.concat(newTodo)
     }
+    editTodo(newTitle, id) {
+        this.todos = this.todos.map(todo => {
+            if (todo.id === id)
+                todo.title = newTitle
+            return todo
+        })
+    }
     deleteTodo(id) {
         this.todos = this.todos.filter(todo => todo.id !== id)
+    }
+    clearCompleted() {
+        this.todos = this.todos.filter(todo => !todo.completed)
     }
     completeTodo(id) {
         this.todos = this.todos.map(todo => {
@@ -49,18 +59,49 @@ class TodoService {
     getTodos(flag) {
         if (flag === 'ALL')
             return this.todos
+        if (flag === 'ACTIVE')
+            return this.todos.filter(todo => !todo.completed)
+        if (flag === 'COMPLETED')
+            return this.todos.filter(todo => todo.completed)
     }
 }
+
+
+const todoService = new TodoService()
+
+//------------------------------------------------
+// todoService.addTodo('item1')
+// todoService.addTodo('item2')
+// todoService.addTodo('item3')
+//------------------------------------------------
 
 //-------------------------------------------------------------------------
 // UI
 //-------------------------------------------------------------------------
 const newTodoField = document.querySelector("#new-todo")
-const toggleAllbtn = document.querySelector("#toggle-all")
+const todoListEle = document.getElementById('todo-list')
+const toggleAllBtn = document.querySelector("#toggle-all")
+const clearCompletedBtn = document.querySelector("#clear-completed")
+const todoFiltersEle = document.querySelector("#todo-filters")
+const todoLeftCountEle = document.querySelector("#todo-left-count")
 
-const todoService = new TodoService()
 
-toggleAllbtn.addEventListener('click', e => {
+todoFiltersEle.addEventListener('click', e => {
+    let filter = e.target.innerText
+    if (filter === 'All')
+        renderTodos('ALL')
+    if (filter === "Active")
+        renderTodos('ACTIVE')
+    if (filter === "Completed")
+        renderTodos('COMPLETED')
+})
+
+clearCompletedBtn.addEventListener('click', e => {
+    todoService.clearCompleted()
+    renderTodos('ALL')
+})
+
+toggleAllBtn.addEventListener('click', e => {
     todoService.completeAll()
     renderTodos('ALL')
 })
@@ -85,10 +126,16 @@ function handleComplete(event, id) {
     todoService.completeTodo(id)
     renderTodos('ALL')
 }
+function handleEdit(event, id) {
+    let newTitle = event.target.innerText
+    todoService.editTodo(newTitle, id)
+    renderTodos('ALL')
+}
 
 
 function renderTodos(flag) {
     let todos = todoService.getTodos(flag)
+    let count = todos.reduce((c, nextTodo) => nextTodo.completed ? c : c + 1, 0)
     const todoLiElements = todos.map(todo => {
         return `
             <li class="list-group-item ${todo.completed ? 'bg-success' : ''}">
@@ -96,13 +143,16 @@ function renderTodos(flag) {
                     <div class="col-3">
                         <input onchange="handleComplete(event,${todo.id})" type="checkbox" ${todo.completed ? 'checked' : ''} />
                     </div>
-                    <div class="col-6">${todo.title}</div>
+                    <div class="col-6" contentEditable onblur="handleEdit(event,${todo.id})">${todo.title}</div>
                     <div class="col-3">
-                        <button onclick="handleDelete(event,${todo.id})" ${todo.completed ? '' : 'disabled'} class="btn btn-sm btn-danger float-right">delete</button>
+                        <button onclick="handleDelete(event,${todo.id})" class="btn btn-sm btn-danger float-right">delete</button>
                     </div>
                 </div>
             </li> 
         `
     })
-    document.getElementById('todo-list').innerHTML = todoLiElements.join(" ")
+    todoListEle.innerHTML = todoLiElements.join(" ")
+    todoLeftCountEle.innerText = count
 }
+
+renderTodos('ALL')
