@@ -14,18 +14,20 @@
     <hr />
     <h1>web UI</h1>
     <hr />
-    <div>how to fetch data ( todos ) from backend ( server + database )</div>
+    <div>how to fetch data (todos) from backend ( server + database )</div>
     <hr />
+
     <button id="todos-btn" class="btn btn-dark">Load top-5 todos</button>
     |
-    <select>
+    <select id="todos-count-list">
         <option>5</option>
         <option>15</option>
         <option>25</option>
         <option>50</option>
     </select>
     |
-    <input type="number"/>
+    <input type="number" id="todos-count-inp" />
+
 
     <hr />
 
@@ -41,9 +43,23 @@
 
 
     <script>
+        
         let todosBtn = document.getElementById('todos-btn')
+        let todosCountList = document.getElementById('todos-count-list')
+        let todosCountInp = document.getElementById('todos-count-inp')
+
         todosBtn.addEventListener('click', e => {
-            let url = `https://jsonplaceholder.typicode.com/todos?_limit=5`
+            fetchTodos(5)
+        })
+        todosCountList.addEventListener('change', e => {
+            fetchTodos(e.target.value)
+        })
+        todosCountInp.addEventListener('blur', e => {
+            fetchTodos(e.target.value) 
+        })
+
+        function fetchTodos(count) {
+            let url = `https://jsonplaceholder.typicode.com/todos?_limit=${count}`
             // Fetch
             let promise = fetch(url)
             //document.getElementById('nw-status').innerText = "please wait..loading todos.."
@@ -55,8 +71,8 @@
                     document.getElementById('nw-status').classList.remove('spinner-border')
                     renderTodos(todos)
                 })
-        })
-
+        }
+        
         function renderTodos(todos) {
             const todoLiElements = todos.map(todo => {
                 return `
