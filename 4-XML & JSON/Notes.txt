@@ -1,0 +1,34 @@
+
+
+-------------------------------
+data format standards by w3c
+-------------------------------
+
+ - XML  ( eXtensible Markup Language )
+ - JSON ( JavaScript Object Notation )
+
+ ----------------------------------------------------
+
+
+ --------------                      ----------------
+ |             |                     |              |
+ |  client-app |                     |  server-app  |
+ |             |                     |              |
+ --------------                       ---------------
+
+                 ------------------->
+                 <-------------------    
+
+
+challenges in client-server communication ( interoperabilty ):
+----------------------------------------------------------------
+
+    => data being exchanged b/w 2 end-points i.e data-format issues
+
+     soln :
+             => use XML or JSON
+
+----------------------------------------------------------------------             
+
+         
+

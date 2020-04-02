@@ -79,7 +79,7 @@
             //---------------------------------------------    
 
             const xhr=new XMLHttpRequest()
-            xhr.open('GET',url)
+            xhr.open('GET',url,true)
             xhr.send() 
             document.getElementById('nw-status').classList.add('spinner-border')
             xhr.onreadystatechange=function(){

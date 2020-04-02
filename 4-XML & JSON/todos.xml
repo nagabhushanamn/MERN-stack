@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<todos>
+    <todo>
+        <user-id>1</user-id>
+        <id>1</id>
+        <title>item1</title>
+        <completed>false</completed>
+    </todo>
+    <todo>
+        <user-id>1</user-id>
+        <id>2</id>
+        <title>item2</title>
+        <completed>false</completed>
+    </todo>
+    <todo>
+        <user-id>1</user-id>
+        <id>3</id>
+        <title>item3</title>
+        <completed>false</completed>
+    </todo>
+</todos>

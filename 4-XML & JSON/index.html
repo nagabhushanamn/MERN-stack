@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xml & json</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body class="container">
+
+    <hr />
+    <h1>web ui</h1>
+    <hr />
+    <div> How to read xml & json data at browser using javascript programs</div>
+    <hr />
+
+    <button id="xml-btn" class="btn btn-dark">Load XML</button>
+    <button id="json-btn" class="btn btn-dark">Load JSON</button>
+    <script>
+        
+        let xmlBtn = document.getElementById('xml-btn')
+        let jsonBtn = document.getElementById('json-btn')
+       
+        xmlBtn.addEventListener('click', e => {
+            
+            const xhr = new XMLHttpRequest() // XHR api
+            xhr.open('GET', 'todos.xml')
+            xhr.send() //....
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    const xmldoc = xhr.responseXML
+                    console.log(xmldoc)
+                }
+            }
+
+        })
+
+        jsonBtn.addEventListener('click', e => {
+            
+            const xhr = new XMLHttpRequest() // XHR api
+            xhr.open('GET', 'todos.json')
+            xhr.send() //....
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    const jsonString = xhr.responseText
+                    const todos=JSON.parse(jsonString)// 
+                    // console.log(JSON.stringify(todos))
+                    console.log(todos)
+                }
+            }
+
+        })
+
+    </script>
+
+
+</body>
+
+</html>
