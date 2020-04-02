@@ -87,6 +87,7 @@ const todoLeftCountEle = document.querySelector("#todo-left-count")
 
 
 todoFiltersEle.addEventListener('click', e => {
+    e.stopPropagation()
     let filter = e.target.innerText
     if (filter === 'All')
         renderTodos('ALL')

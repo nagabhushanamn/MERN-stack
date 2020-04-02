@@ -52,7 +52,27 @@ using Timer API
       clearInterval(interval)
       
 
----------------------------------------------------------------------      
+---------------------------------------------------------------------
+XHR ( XMLHttpRequest ) Api / fetch API
+---------------------------------------------------------------------
 
 
+client(browser)                    server
 
+              ------------------->
+              <-------------------
+
+
+2 types communication
+-------------------------
+
+ 1- pull/synchronous/blocking-IO
+
+    by default , browser  always communicate with server sync
+
+ 2. push/asynchronous/non-blocking-IO
+
+    in browser , we can async-communication with server using XHR/Fetch Api
+
+
+------------------------------------------------------------------------------    

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="bootstrap-4.4.1/dist/css/bootstrap.css">
+</head>
+
+<body class="container">
+
+    <hr />
+    <h1>web UI</h1>
+    <hr />
+    <div>how to fetch data ( todos ) from backend ( server + database )</div>
+    <hr />
+    <button id="todos-btn" class="btn btn-dark">Load top-5 todos</button>
+    |
+    <select>
+        <option>5</option>
+        <option>15</option>
+        <option>25</option>
+        <option>50</option>
+    </select>
+    |
+    <input type="number"/>
+
+    <hr />
+
+    <section class="card">
+        <div class="card-body">
+            <hr />
+            <span id="nw-status"></span>
+            <hr />
+            <ul class="list-group" id="todo-list">
+            </ul>
+        </div>
+    </section>
+
+
+    <script>
+        let todosBtn = document.getElementById('todos-btn')
+        todosBtn.addEventListener('click', e => {
+            let url = `https://jsonplaceholder.typicode.com/todos?_limit=5`
+            // Fetch
+            let promise = fetch(url)
+            //document.getElementById('nw-status').innerText = "please wait..loading todos.."
+            document.getElementById('nw-status').classList.add('spinner-border')
+            promise
+                .then(response => response.json())
+                .then(todos => {
+                    //document.getElementById('nw-status').innerText = ""
+                    document.getElementById('nw-status').classList.remove('spinner-border')
+                    renderTodos(todos)
+                })
+        })
+
+        function renderTodos(todos) {
+            const todoLiElements = todos.map(todo => {
+                return `
+                    <li class="list-group-item ${todo.completed ? 'bg-success' : ''}">
+                        <div class="row">
+                            <div class="col-3">
+                                <input onchange="handleComplete(event,${todo.id})" type="checkbox" ${todo.completed ? 'checked' : ''} />
+                            </div>
+                            <div class="col-6" contentEditable onblur="handleEdit(event,${todo.id})">${todo.title}</div>
+                            <div class="col-3">
+                                <button onclick="handleDelete(event,${todo.id})" class="btn btn-sm btn-danger float-right">delete</button>
+                            </div>
+                        </div>
+                    </li> 
+                `
+            })
+            document.getElementById('todo-list').innerHTML = todoLiElements.join(" ")
+        }
+    </script>
+
+</body>
+
+</html>
