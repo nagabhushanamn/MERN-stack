@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "javascript",
+        "duration": 40
+    },
+    {
+        "id": 2,
+        "title": "HTML",
+        "duration": 8
+    },
+    {
+        "id": 3,
+        "title": "CSS",
+        "duration": 40
+    },
+    {
+        "id": 4,
+        "title": "LESS & SASS",
+        "duration": 16
+    },
+    {
+        "id": 5,
+        "title": "bootstrap",
+        "duration": 16
+    },
+    {
+        "id": 6,
+        "title": "browser-apis",
+        "duration": 16
+    }
+]
