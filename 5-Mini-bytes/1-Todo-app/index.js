@@ -70,13 +70,14 @@ class TodoService {
 const todoService = new TodoService()
 
 //------------------------------------------------
-// todoService.addTodo('item1')
-// todoService.addTodo('item2')
-// todoService.addTodo('item3')
+todoService.addTodo('item1')
+todoService.addTodo('item2')
+todoService.addTodo('item3')
 //------------------------------------------------
 
+
 //-------------------------------------------------------------------------
-// UI
+// UI ==> i.e working with DOM
 //-------------------------------------------------------------------------
 const newTodoField = document.querySelector("#new-todo")
 const todoListEle = document.getElementById('todo-list')
@@ -155,5 +156,7 @@ function renderTodos(flag) {
     todoListEle.innerHTML = todoLiElements.join(" ")
     todoLeftCountEle.innerText = count
 }
+
+
 
 renderTodos('ALL')
