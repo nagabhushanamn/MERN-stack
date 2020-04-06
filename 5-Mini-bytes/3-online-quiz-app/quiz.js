@@ -2,33 +2,48 @@
 
 //-----------------------------------------------------------
 
-let questions = [
-    {
-        question: "inside which HTML element do we put the javascript?",
-        choice1: "<script>",
-        choice2: "<javascript>",
-        choice3: "<js>",
-        choice4: "<scripting>",
-        answer: 1
-    },
-    {
-        question: "how do you write 'HelloWorld' in an alert box",
-        choice1: "msgBox('HelloWorld')",
-        choice2: "alertBox('HelloWorld')",
-        choice3: "msg('HelloWorld')",
-        choice4: "alert('HelloWorld')",
-        answer: 4
-    },
-]
+let questions = []
+let url = "questions.json"
+
+// XHR or Fetch
+let xhr = new XMLHttpRequest();
+
+//----------------------------------------
+// sync
+//----------------------------------------
+
+// xhr.open('GET', url, false)
+// xhr.send()
+// let jsonText = xhr.responseText;
+// questions = JSON.parse(jsonText)
+
+//----------------------------------------
+// async
+//----------------------------------------
+xhr.open('GET', url, true)
+xhr.send()
+document.getElementById("loading-status").innerText = "loading...."
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        let jsonText = xhr.responseText;
+        questions = JSON.parse(jsonText)
+        debugger
+        document.getElementById("loading-status").innerText = ""
+        startQuiz()
+    }
+}
+
+
 
 //-----------------------------------------------------------
 
 
 const questionEle = document.querySelector('#question')
 const choiceElements = document.querySelectorAll('.choice-text')
-const questionCounterEle=document.getElementById('question-counter')
-const scoreEle=document.getElementById('score')
-const progressBarFill=document.getElementById('progress-bar-fill')
+const questionCounterEle = document.getElementById('question-counter')
+const scoreEle = document.getElementById('score')
+const progressBarFill = document.getElementById('progress-bar-fill')
 
 
 
@@ -36,12 +51,12 @@ let currentQuestion = {}
 let questionCounter = 0
 let availableQuestions = [] // 
 let acceptingAnswer = false
-let score=0
+let score = 0
 const MAX_QUESTION = 2
 
 
 const startQuiz = () => {
-    score=0
+    score = 0
     questionCounter = 0
     availableQuestions = [...questions] // load questions
     renderNextQuestion()
@@ -51,7 +66,8 @@ const startQuiz = () => {
 const renderNextQuestion = () => {
 
     if (availableQuestions.length === 0 || questionCounter >= 2) {
-        window.location.assign("/quiz-end.html")// <a href="/quiz-end.html"><a>
+        localStorage.setItem("mostRecentScore", score);
+        location.assign("/quiz-end.html")// <a href="/quiz-end.html"><a>
         return
     }
 
@@ -59,10 +75,8 @@ const renderNextQuestion = () => {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionIndex]
 
-    questionCounterEle.innerText=`${questionCounter}/${MAX_QUESTION}`
+    questionCounterEle.innerText = `${questionCounter}/${MAX_QUESTION}`
     questionEle.innerText = currentQuestion.question
-    progressBarFill.style.width=`${(questionCounter/MAX_QUESTION*100)}%`
-    // progressBarFill.innerText=`${(questionCounter/MAX_QUESTION)*100}%`
     choiceElements.forEach(choiceEle => {
         const number = choiceEle.dataset["number"]
         choiceEle.innerText = currentQuestion[`choice${number}`]
@@ -83,9 +97,20 @@ choiceElements.forEach(choiceEle => {
         const selectedAnswer = Number.parseInt(selectedChoice.dataset['number'])
 
 
-        const classToApply = Number.parseInt(selectedAnswer) === currentQuestion.answer ? 'correct' : 'incorrect'
+        //const classToApply = Number.parseInt(selectedAnswer) === currentQuestion.answer ? 'correct' : 'incorrect'
+        let classToApply = ''
+        if (Number.parseInt(selectedAnswer) === currentQuestion.answer) {
+            classToApply = "correct"
+            score++
+        } else {
+            classToApply = "incorrect"
+        }
 
+        scoreEle.innerText = score
         selectedChoice.parentElement.classList.add(classToApply)
+
+        progressBarFill.style.width = `${(questionCounter / MAX_QUESTION * 100)}%`
+        // progressBarFill.innerText=`${(questionCounter/MAX_QUESTION)*100}%`
 
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
@@ -95,4 +120,3 @@ choiceElements.forEach(choiceEle => {
     })
 })
 
-startQuiz()

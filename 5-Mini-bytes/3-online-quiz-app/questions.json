@@ -1,0 +1,18 @@
+[
+    {
+        "question": "inside which HTML element do we put the javascript?",
+        "choice1": "<script>",
+        "choice2": "<javascript>",
+        "choice3": "<js>",
+        "choice4": "<scripting>",
+        "answer": 1
+    },
+    {
+        "question": "how do you write 'HelloWorld' in an alert box",
+        "choice1": "msgBox('HelloWorld')",
+        "choice2": "alertBox('HelloWorld')",
+        "choice3": "msg('HelloWorld')",
+        "choice4": "alert('HelloWorld')",
+        "answer": 4
+    }
+]
