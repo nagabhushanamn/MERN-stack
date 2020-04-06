@@ -149,3 +149,17 @@
 .hud-main-text{
   text-align: center;
 }
+
+
+
+#progress-bar{
+  width: 50rem;
+  height: 4rem;
+  border: 0.3rem solid #56a5eb;
+}
+
+#progress-bar-fill{
+  height: 3.4rem;
+  background-color: #56a5eb;
+  width: 0%;
+}

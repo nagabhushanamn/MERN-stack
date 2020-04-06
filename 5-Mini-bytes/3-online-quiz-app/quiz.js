@@ -18,7 +18,7 @@ let questions = [
         choice3: "msg('HelloWorld')",
         choice4: "alert('HelloWorld')",
         answer: 4
-    }
+    },
 ]
 
 //-----------------------------------------------------------
@@ -28,6 +28,7 @@ const questionEle = document.querySelector('#question')
 const choiceElements = document.querySelectorAll('.choice-text')
 const questionCounterEle=document.getElementById('question-counter')
 const scoreEle=document.getElementById('score')
+const progressBarFill=document.getElementById('progress-bar-fill')
 
 
 
@@ -59,9 +60,9 @@ const renderNextQuestion = () => {
     currentQuestion = availableQuestions[questionIndex]
 
     questionCounterEle.innerText=`${questionCounter}/${MAX_QUESTION}`
-
     questionEle.innerText = currentQuestion.question
-
+    progressBarFill.style.width=`${(questionCounter/MAX_QUESTION*100)}%`
+    // progressBarFill.innerText=`${(questionCounter/MAX_QUESTION)*100}%`
     choiceElements.forEach(choiceEle => {
         const number = choiceEle.dataset["number"]
         choiceEle.innerText = currentQuestion[`choice${number}`]
