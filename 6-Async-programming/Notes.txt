@@ -1,4 +1,9 @@
 
+
+Async Programming in javascript
+--------------------------------
+
+
 ----------------------------------------------------------------
 javascript language :
 ----------------------------------------------------------------
@@ -15,4 +20,36 @@ javascript language :
     - http://latentflip.com/loupe/
 
 ------------------------------------------------------------------    
+
+
+
+------------------------------------------------------------------------------
+browser/Node.js internal arch :
+------------------------------------------------------------------------------
+
+e.g chrome browser
+
+  1. javascript-engine/runtime ( v8 )     ==> ecma spec 
+
+     - single-call-stack  ( fixed size )
+     - heap / free-memory ( extendible memory )
+
+  2. browser web apis ( e.g DOM,Timer,XHR,...)    ==> w3c recommendations    
+
+  3. event/message/callback queue
+
+  4. event-loop
+
+  ------------------------------------------------------------------------------
+     
+
+
+ ----------------
+ Async Apis
+ ----------------
+
+   -> promise api
+   -> rxjs
+
+ ------------------------------------------------------------------  
 
