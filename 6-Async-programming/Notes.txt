@@ -1,0 +1,18 @@
+
+----------------------------------------------------------------
+javascript language :
+----------------------------------------------------------------
+
+- by default, all IO operations ( read /write ) are non-blocking/asynchrnous
+- by default, single-threaded process / light-weight process,
+  but can execute concurrent actions due to non-blocking IO  
+
+----------------------------------------------------------------  
+
+ reference :
+
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+    - http://latentflip.com/loupe/
+
+------------------------------------------------------------------    
+

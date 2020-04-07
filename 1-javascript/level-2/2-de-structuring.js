@@ -3,11 +3,11 @@
 // a. object des-structuring
 //--------------------------------
 
-let person = {
-    name: 'Nag',
-    age: 36,
-    address: 'chennai'
-}
+// let person = {
+//     name: 'Nag',
+//     age: 36,
+//     address: 'chennai'
+// }
 
 // de-structuring
 
@@ -30,7 +30,7 @@ let person = {
 // b. Array des-structuring
 //--------------------------------
 
-let numbers = [10, 20, 30, 40, 50, 60, 70, 80, [90, 100]]
+// let numbers = [10, 20, 30, 40, 50, 60, 70, 80, [90, 100]]
 
 // let n1 = numbers[0]
 // let n2 = numbers[1]
@@ -39,7 +39,7 @@ let numbers = [10, 20, 30, 40, 50, 60, 70, 80, [90, 100]]
 
 // ------- or ---------
 
-let [n1, n2, n3, n4, n5, n6 = 600, , n8, [n9, n10]] = numbers
+// let [n1, n2, n3, n4, n5, n6 = 600, , n8, [n9, n10]] = numbers
 
 
 // ------------------------------------------------------------------

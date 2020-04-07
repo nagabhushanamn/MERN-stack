@@ -1,13 +1,25 @@
 
 
-
-ECMAScript-2015 => ES6 features
---------------------------------
-
-
-=> spread operator
-=> de-structuring
+-----------------------------------
+ECMA community-2015 => ES6 version
+-----------------------------------
 
 
+ -> let & const keyword with block scope
+ -> string interpolation / template literals
+ -> function with default & rest params
+ -> class syntax
+ -> arrow function
+ -> spread operator
+ -> de-structuring
+ -> obj-literal enhancents
+ -> symbol & iterable objects & for-of-loop
+ -> generator functions
 
-----------------------------------------
+
+
+ - Async programming in javascript 
+
+ -----------------------------------------------
+
+ 

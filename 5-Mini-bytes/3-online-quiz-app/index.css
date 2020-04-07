@@ -20,7 +20,7 @@ h4 {
 
 h1 {
   font-size: 5.4rem;
-  color: #b3b7bb;
+  color: #8cbef0;
   margin-bottom: 5rem;
 }
 
@@ -83,10 +83,10 @@ h3 {
   padding: 1rem 0;
   width: 20rem;
   text-align: center;
-  border: 0.1rem solid #b3b7bb;
+  border: 0.1rem solid #8cbef0;
   margin-bottom: 1rem;
   text-decoration: none;
-  color: #b3b7bb;
+  color: #8cbef0;
   background-color: white;
 }
 
@@ -101,6 +101,10 @@ h3 {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
+}
+
+#question{
+  font-size: 2rem;
 }
 
 .choice-container {
@@ -120,7 +124,7 @@ h3 {
 
 .choice-prefix {
   padding: 1.5rem 2.5rem;
-  background-color: #b3b7bb;
+  background-color: #8cbef0;
   color: white;
 }
 
@@ -154,12 +158,12 @@ h3 {
 #progress-bar {
   width: 50rem;
   height: 4rem;
-  border: 0.3rem solid #b3b7bb;
+  border: 0.3rem solid #8cbef0;
 }
 
 #progress-bar-fill {
   height: 3.4rem;
-  background-color: #b3b7bb;
+  background-color: #8cbef0;
   width: 0%;
 }
 

@@ -12,8 +12,8 @@
 <body>
     <div class="container">
         <div id="end" class="flex-center flex-column">
-            score : <h1 id="final-score"></h1>
-            <a class="btn" href="/quiz.html">Retry</a>
+            Final score : <h1 id="final-score"></h1>
+            <a class="btn" href="quiz.html">Retry</a>
             <a class="btn" href="/">Home</a>
         </div>
     </div>
@@ -21,7 +21,7 @@
 
     <script>
         const finalScore = document.getElementById("final-score");
-        const mostRecentScore = localStorage.getItem("mostRecentScore");
+        const mostRecentScore = localStorage.getItem("score");
         finalScore.innerText = mostRecentScore;
     </script>
 

@@ -5,7 +5,7 @@
 let questions = []
 let url = "questions.json"
 
-// XHR or Fetch
+// XHR or Fetch Api
 let xhr = new XMLHttpRequest();
 
 //----------------------------------------
@@ -28,7 +28,6 @@ xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
         let jsonText = xhr.responseText;
         questions = JSON.parse(jsonText)
-        debugger
         document.getElementById("loading-status").innerText = ""
         startQuiz()
     }
@@ -66,8 +65,8 @@ const startQuiz = () => {
 const renderNextQuestion = () => {
 
     if (availableQuestions.length === 0 || questionCounter >= 2) {
-        localStorage.setItem("mostRecentScore", score);
-        location.assign("/quiz-end.html")// <a href="/quiz-end.html"><a>
+        localStorage.setItem("score", score);
+        location.assign("quiz-end.html")// <a href="/quiz-end.html"><a>
         return
     }
 
@@ -77,6 +76,7 @@ const renderNextQuestion = () => {
 
     questionCounterEle.innerText = `${questionCounter}/${MAX_QUESTION}`
     questionEle.innerText = currentQuestion.question
+    
     choiceElements.forEach(choiceEle => {
         const number = choiceEle.dataset["number"]
         choiceEle.innerText = currentQuestion[`choice${number}`]
