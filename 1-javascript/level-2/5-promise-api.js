@@ -24,35 +24,34 @@ let trainer = {
 }
 
 
-// #1
 
 //--------------------------------------
 // consumer / dependent
 //--------------------------------------
 
-// let student = {
-//     learn() {
+let student = {
+    learn() {
 
-//         //--------------------------------------------------------------
-//         // let ans = trainer.askQuesSync("Q1")// pull / synchronous
-//         // console.log(ans)
-//         //--------------------------------------------------------------
+        //--------------------------------------------------------------
+        // let ans = trainer.askQuesSync("Q1")// pull / synchronous
+        // console.log(ans)
+        //--------------------------------------------------------------
 
 
-//         console.log("student asking question on tnr")
-//         let promise = trainer.askQuesAsync("Q1")
-//         console.log("student got promise from tnr, defer actions to future")
-//         promise
-//             .then(answer => {
-//                 console.log(answer)
-//                 console.log("thank u tnr for an ans")
-//             })
-//             .catch(error => {
-//                 console.log(error)
-//             })
-//         console.log("cont.. with other learning...")
-//     }
-// }
+        console.log("student asking question on tnr")
+        let promise = trainer.askQuesAsync("Q1")
+        console.log("student got promise from tnr, defer actions to future")
+        promise
+            .then(answer => {
+                console.log(answer)
+                console.log("thank u tnr for an ans")
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        console.log("cont.. with other learning...")
+    }
+}
 
 // student.learn()
 
@@ -125,7 +124,83 @@ function renderTodos() {
         })
 }
 
-renderTodos()
+// renderTodos()
+
+
+let swiggy = {
+    getFood: function () {
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                setTimeout(() => {
+                    console.log('hotel resolving/rejecting promise')
+                    resolve("biryani")
+                    //reject("No Food")
+                }, 3000)
+            }, 2000)
+        })
+        return promise
+    }
+}
+
+const bar = {
+    getBeer: function () {
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log('bar resolving/rejecting promise')
+                resolve("BEER")
+                // reject('corona issue, no beer')
+            }, 3000)
+        })
+        return promise
+    }
+}
+
+
+let person = {
+    live: function () {
+        console.log('person living....')
+        console.log("person feels hungry & requesting food on swiggy")
+        let promise1 = swiggy.getFood()
+        let promise2 = bar.getBeer()
+        console.log('person got promise for food, defer actions to future ')
+        // Promise.all([promise1, promise2])
+        Promise.race([promise1, promise2])
+            .then(result => {
+                console.log(result)
+                console.log('person yummy with ' + result[0])
+                return result[1]
+            })
+            .then(beer => {
+                console.log("happy with " + beer)
+            })
+            .catch(error => {
+                console.log('person oops with ' + error)
+            })
+
+        console.log('cont...')
+
+    }
+}
+
+person.live()
+
+
+
+
+//-----------------------------------------------
+
+
+Promise.resolve("result")
+    .then(r => { console.log(r) })
+
+
+Promise.reject("error")
+    .catch(e => { console.log(e) })
+
+// ----------------------------------------------    
+
+
+
 
 // ----------------------------------------------------------------
 
@@ -134,16 +209,8 @@ renderTodos()
 /**
  * 
  *  to keep async commn ( push ) b/w 2 javascript modules, 
- *  then prefer Promise API
+ *  then prefer Promise API  ( Es6 )
  * 
  */
 
-
-
-
-
-
-
-
-
-
+//--------------------------------------------------------------
