@@ -68,7 +68,6 @@ getHomePageData_v2("nag")
 // Ex
 // -------------------------------------------------------------
 
-
 function fetchTodos_v1() {
     let promise = new Promise((resolve, reject) => {
         fetch("https://jsonplaceholder.typicode.com/todos?_limit=5")

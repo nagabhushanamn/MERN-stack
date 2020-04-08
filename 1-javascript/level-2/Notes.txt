@@ -16,8 +16,9 @@ ECMA community-2015 => ES6 version
  -> symbol & iterable objects & for-of-loop
  -> generator functions
  -> promise api
- 
  -> async & await keywords ( ES7 )
+
+ -> RxJs lib  ( async-api )
 
 
  -----------------------------------------------
