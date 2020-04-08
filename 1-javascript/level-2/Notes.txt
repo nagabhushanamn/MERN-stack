@@ -15,10 +15,8 @@ ECMA community-2015 => ES6 version
  -> obj-literal enhancents
  -> symbol & iterable objects & for-of-loop
  -> generator functions
+ -> promise api
 
-
-
- - Async programming in javascript 
 
  -----------------------------------------------
 

@@ -42,14 +42,8 @@ e.g chrome browser
 
   ------------------------------------------------------------------------------
      
-
-
- ----------------
- Async Apis
- ----------------
-
-   -> promise api
-   -> rxjs
+  imp-note : on event, the event handler/listener/callback, 
+             always executes async
 
  ------------------------------------------------------------------  
 
