@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body class="container">
+
+    <hr />
+    <h1> rxjs - demo</h1>
+    <hr />
+
+    <div class="alert alert-danger">
+        <input placeholder="search course" />
+    </div>
+
+    <div class="card card-body" id="search-result">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.5.5/rxjs.umd.js"></script>
+    <script>
+        let searchField = document.querySelector('input')
+        let searchStream =
+            rxjs.fromEvent(searchField, 'input')
+                .pipe(
+                    rxjs.operators.map(e => e.target.value),
+                    rxjs.operators.filter(inp => inp.length > 2),
+                    rxjs.operators.debounceTime(1000),
+                    rxjs.operators.distinctUntilChanged(),
+                    rxjs.operators.switchMap((inp) => rxjs.ajax.ajax(`http://localhost:8080/search?q=${inp}`))
+                )
+
+        searchStream.subscribe(data => {
+            document.getElementById('search-result')
+                .innerHTML = data.response.map(item => {
+                    return `
+                        <div class="list-group-item">${item}</div>
+                    `
+                }).join(" ")
+        })            
+    </script>
+</body>
+
+</html>

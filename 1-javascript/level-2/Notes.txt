@@ -17,9 +17,10 @@ ECMA community-2015 => ES6 version
  -> generator functions
  -> promise api
  -> async & await keywords ( ES7 )
-
  -> RxJs lib  ( async-api )
 
+ - modules & packages
+ - Tools : NPM & YARN
 
  -----------------------------------------------
 
