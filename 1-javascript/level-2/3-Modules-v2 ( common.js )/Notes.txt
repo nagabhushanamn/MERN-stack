@@ -1,0 +1,68 @@
+
+
+
+----------------------------------------------------------------------
+problems with .js-dev without module standards & Loaders
+----------------------------------------------------------------------
+
+==> global Naming collisions
+
+        soln : self-executable function / IIFE
+
+==> loading dependency modules in order is manual & its difficult    
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+Solutions : 
+----------------------------------------------------------------------
+
+using module standards & loaders from third-parties
+
+
+        => AMD ( Async Module Definition )
+        => common.js module standard (  simple & pupular  )
+
+
+
+------------------------------------------------------------------------------
+common.js module standard/spec
+------------------------------------------------------------------------------
+
+
+ rules
+
+ ==> every .js file is module
+ ==> all variables/functions in a .js file are private by default
+ ==> to abstract/export any member(s) ( var / function ) to other module,
+     use 'module.exports' object 
+ ==> to require/import any module , use 'require()' function
+ ==> group related modules as package with description file ( package.json )
+
+ imp-note : Node.js runtime already implemented this standard as default module standard, 
+            but not not browser
+
+
+
+ -----------------------------------------------------------------------------
+  Tool => javascript package manager   ( NPM | YARN )
+ -----------------------------------------------------------------------------
+ 
+
+     NPM ( Node Package Manager )
+
+       ==> cli(command line tool )  tool
+       ==> part of Node.js runtime
+
+
+    why we need this tool ?   
+
+        ==> to publish/install javascript packages to/from  'repository' (https://registry.npmjs.org/)
+        ==> to manage project build cycle 
+ 
+-----------------------------------------------------------------------------------    
+              
+
+        
+ 
+

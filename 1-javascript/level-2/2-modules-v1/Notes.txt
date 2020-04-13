@@ -1,14 +1,30 @@
 
 
 
-
-problems with .js-dev without module standards
-----------------------------------------------
+----------------------------------------------------------------------
+problems with .js-dev without module standards & Loaders
+----------------------------------------------------------------------
 
 ==> global Naming collisions
 
         soln : self-executable function / IIFE
 
+==> loading dependency modules in order is manual & its difficult    
 
-==>         
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+Solutions : 
+----------------------------------------------------------------------
+
+using module standards & loaders from third-parties
+
+
+        => AMD ( Async Module Definition )
+        => common.js module standard (  simple & pupular  )
+
+------------------------------------------------------------------------------
+
+
+
 

@@ -1,0 +1,15 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nag",
+  "license": "ISC",
+  "dependencies": {
+    "intern-batch-greet": "^2.0.0",
+    "lodash": "^4.17.15"
+  }
+}
