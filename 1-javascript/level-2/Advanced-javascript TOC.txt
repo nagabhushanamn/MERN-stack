@@ -17,11 +17,17 @@
  -> promise api
  -> async & await keywords ( ES7 )
  -> RxJs lib  ( async-api )
+ -> modules & packages
+ -> Tools : NPM & YARN
 
+ -> Webpack & babel  tools
 
- - modules & packages
- - Tools : NPM & YARN
+ -----------------------------------------------
+ --> UI application without third-party lib/F.W
+ -----------------------------------------------
 
+ -----------------------------------------------
+ --> UI application with third-party lib/F.W  (React.js/Angular/Vue.js)
  -----------------------------------------------
 
 

@@ -17,7 +17,7 @@ problems with .js-dev without module standards & Loaders
 Solutions : 
 ----------------------------------------------------------------------
 
-using module standards & loaders from third-parties
+using module standards & loaders from third-party-javascript-community
 
 
         => AMD ( Async Module Definition )
@@ -30,7 +30,6 @@ common.js module standard/spec
 ------------------------------------------------------------------------------
 
 
- rules
 
  ==> every .js file is module
  ==> all variables/functions in a .js file are private by default
@@ -58,7 +57,7 @@ common.js module standard/spec
     why we need this tool ?   
 
         ==> to publish/install javascript packages to/from  'repository' (https://registry.npmjs.org/)
-        ==> to manage project build cycle 
+ 
  
 -----------------------------------------------------------------------------------    
 NPM commands              
@@ -76,4 +75,23 @@ https://docs.npmjs.com/cli-documentation/
 
         
  
+
+
+------------------------------------------------------------------------------
+ECMA , in ES6,  ES-modules
+------------------------------------------------------------------------------
+
+
+
+ ==> every .js file is module
+ ==> all variables/functions in a .js file are private by default
+ ==> to abstract/export any member(s) ( var / function ) to other module,
+     use 'export' keyword 
+ ==> to require/import any module , use 'import' keyword
+ ==> group related modules as package with description file ( package.json )
+
+ imp-note : neither Node.js nor browser  implemented this standard as default module standard, 
+            
+--------------------------------------------------------------------------------            
+
 
