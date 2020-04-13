@@ -1,9 +1,8 @@
 
 
 -----------------------------------
-ECMA community-2015 => ES6 version
+ New syntax & apis
 -----------------------------------
-
 
  -> let & const keyword with block scope
  -> string interpolation / template literals
@@ -19,9 +18,13 @@ ECMA community-2015 => ES6 version
  -> async & await keywords ( ES7 )
  -> RxJs lib  ( async-api )
 
+
  - modules & packages
  - Tools : NPM & YARN
 
  -----------------------------------------------
+
+
+ 
 
  

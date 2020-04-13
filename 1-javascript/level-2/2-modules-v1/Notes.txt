@@ -1,0 +1,14 @@
+
+
+
+
+problems with .js-dev without module standards
+----------------------------------------------
+
+==> global Naming collisions
+
+        soln : self-executable function / IIFE
+
+
+==>         
+
