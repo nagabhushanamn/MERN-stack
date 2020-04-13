@@ -61,7 +61,18 @@ common.js module standard/spec
         ==> to manage project build cycle 
  
 -----------------------------------------------------------------------------------    
-              
+NPM commands              
+-----------------------------------------------------------------------------------    
+
+
+> npm init   => to create  package.json
+> npm login
+> npm version pacth|minor|major
+> npm i/install <package-name1> <package-name2>
+
+https://docs.npmjs.com/cli-documentation/
+
+
 
         
  
