@@ -8,5 +8,8 @@ npm install html-webpack-plugin --save-dev
 npm install sass-loader sass css-loader style-loader --save-dev
 
 
+create 'webpack.config.js' file
+
+    
 
 npm start
