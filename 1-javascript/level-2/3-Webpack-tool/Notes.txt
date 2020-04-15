@@ -1,0 +1,33 @@
+
+
+why we need build tools ? 
+
+-> too many http calls to load page resources ( css , .js , font , img ,...)
+-> un-compressed files being txred from server to client ,
+   will increate n/w bandwidth, leads to latency
+-> plain code in browser is vulanerable thru hackers, we must uglify / obfuscation
+-> code with advaced javascript features, we must transpile to satisfy all browsers
+-> code quality check / linting
+...
+
+-------------------------------------------------------
+build tools :
+-------------------------------------------------------
+
+    => grunt 
+    => gulp
+    => brunch
+
+    ---------------
+
+    => Webpack
+
+        i.e module bundler & loader
+        
+------------------------------------------------------- 
+
+
+
+
+
+
