@@ -1,0 +1,24 @@
+
+
+
+
+
+MVC  : s/w appln arch
+------------------------------------------------
+
+
+   M - Model  : application's state / data 
+   V - View   : User Interface 
+   C - COntroller  : bridgle to bind Model & View
+  
+
+
+advantages of mvc pattern:
+
+    => easy to extend with new features
+    => easy to test
+    => east to apply rapid dev
+    => well known / proven
+
+
+

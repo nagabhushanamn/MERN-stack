@@ -18,10 +18,10 @@ using browser provided 'web-apis',
 
 web-apis ==> w3c standards to use web
 
-=>  DOM,XHR,Timer
+=>  DOM,XHR/Fetch,Timer
 
-web-apis are implented by browser vendors (chrome,firefox,IE/Edge..) natively,
-abstracted as 'javascript' objects & functions
+-> web-apis are implented by browser vendors (chrome,firefox,IE/Edge..) natively,
+   abstracted as 'javascript' objects & functions
 
 
 
@@ -93,3 +93,94 @@ HTML-5 APIs
 
 ---------------------------------------------------------------------
 
+
+
+
+
+//------------------------------------------------------------------
+ complexities/challanges of plain-js( your code ) with browser-apis
+//------------------------------------------------------------------
+
+ ==> browser compatability issues
+     - www.caniuse.com
+ ==> memory issues
+      i.e not claning unused-DOM elements,.. 
+ ==> performance issues      
+      i.e too many un-necessary DOM query & manipulation  
+ ==> tight-coupling b/w UI ( HTML layout & CSS ) and javascript-code
+ ==> too much code for simple pages
+
+ -------------------------------------------------------------------
+ legacy soln :
+----------------------------------------------------------------------   
+            ==> server-side page techonologies
+
+               e.g jsp, asp, php , ....
+
+
+-------------------------------------------------------------------
+limitations of server-side page techonologies
+-------------------------------------------------------------------
+
+
+ ==> on every response, we are loading same static resources ( .css , images ),
+     will increase n/w bandwidth
+
+ ==> on every new page response, 
+     by default browsers re-load current pgase with new-page 
+
+ ==> on every request, server-side programs should re-generate new-page with new info,
+     by keeping client session (prev req status )
+
+
+----------------------------------------------------------------------
+modern solution :
+----------------------------------------------------------------------    
+
+
+   ==> using client-side ( browser ) page techonologies
+
+
+     How ?
+
+      in recent days >
+
+      ==> javascript improved by ECMA spec ( ES6 , Es7 features ) 
+      ==> modern browsers improved by HTML-5 Apis ( canvas , drag-drop , audio , ...) by w3c 
+      +
+      ==> using third-party's javascript lib,F.W and tools
+
+
+--------------------------------------------------------------------      
+javascript lib,F.W and tools
+--------------------------------------------------------------------
+
+
+  --> jQuery
+
+       i.e DOM & XHR utility lib
+
+
+  MVC - pattern based javascript lib lib
+  -------------------------------------
+
+  --> knockout.js
+  --> backbone.js
+  --> ember.js
+  --> sencha Ext.js  ( commercial )
+  --> DOJO javascript toolkit
+  --> Angular.js : 1.x   from google team
+
+
+--------------------------------------------------------------------
+component based arch for UI appln
+--------------------------------------------------------------------
+  
+
+  --> React.js  : v16  from facebook     ( our focus )
+  --> Angular   : v9  from google-team
+  --> Vue.js
+
+------------------------------------------------------------------  
+
+   
