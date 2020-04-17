@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Read Text</title>
+
+<style>
+body {
+  font-family: 'Palatino Linotype', serif;
+  max-width: 600px;
+  padding: 0px 30px;
+}
+
+fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+label {
+  width: 140px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+
+input {
+  margin-top: 12px;
+  width: 300px;
+}
+</style>
+<script>
+function saveData() {
+  var localData = document.getElementById("localData").value;
+  var sessionData = document.getElementById("sessionData").value;
+
+  localStorage.setItem("localData", localData);  
+  sessionStorage.setItem("sessionData", sessionData);
+}
+
+function loadData() {
+  var localData = localStorage.getItem("localData");  
+  var sessionData = sessionStorage.getItem("sessionData");
+
+  if (localData != null) {
+    document.getElementById("localData").value = localData;
+  }
+  if (sessionData != null) {
+    document.getElementById("sessionData").value = sessionData;
+  }
+}
+</script>
+
+<body>
+  <fieldset>
+    <legend>Web Storage</legend>
+    <label for="localData">This goes into local storage:</label>
+    <input id="localData"><br>
+    <label for="sessionData">This goes into session storage:</label>
+    <input id="sessionData">
+  </fieldset>
+  <div>
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="loadData()">Load Data</button>
+  </div>
+</body>
+</html>

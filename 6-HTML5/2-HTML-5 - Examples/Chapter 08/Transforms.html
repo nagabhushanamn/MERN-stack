@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- saved from url=(0014)about:internet -->
+  <meta charset="utf-8">
+  <title>Transforms</title>
+
+  <style>
+canvas {
+  border: 1px dashed black;
+}
+  </style>
+
+  <script>
+window.onload = function() {
+  var canvas = document.getElementById("drawingCanvas");
+  var context = canvas.getContext("2d");
+
+  // Move the (0,0) point. This is important, because
+  // the rotate transform turns around this point.
+  context.translate(100, 100);
+
+  // Draw 10 squares.
+  var copies = 10;
+  for (var i=1; i<copies; i++) {
+    // Before drawing the square, rotate the coordinate system.
+    // A complete rotation is 2*Math.PI. This code does a fraction of this for each square,
+    // so that it has rotated around completely by the time it's drawn the last one.
+    context.rotate(2 * Math.PI * 1/(copies-1));
+
+    // Draw the square.
+    context.rect(0, 0, 60, 60);
+  }
+  context.strokeStyle = "red";
+  context.stroke();
+};
+
+  </script>
+</head>
+
+<body>
+  <canvas id="drawingCanvas" width="300" height="200"></canvas>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lines</title>
+
+  <style>
+canvas {
+  border: 1px dashed black;
+}
+  </style>
+
+  <script>
+ 
+window.onload = function() {
+  var canvas = document.getElementById("drawingCanvas");
+  var context = canvas.getContext("2d");
+
+  context.moveTo(250,50);
+  context.lineTo(50,250);
+  context.lineTo(450,250);
+  //context.lineTo(250,50);
+  context.closePath();
+
+  // Paint the inside.
+  context.fillStyle = "blue";
+  context.fill();
+
+  // Draw the outline.
+  context.lineWidth = 10;
+  context.strokeStyle = "red";
+  context.stroke();
+};
+
+  </script>
+</head>
+
+<body>
+  <canvas id="drawingCanvas" width="500" height="300"></canvas>
+</body>
+</html>

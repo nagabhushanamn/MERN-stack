@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Site Tracker</title>
+
+  <link rel="stylesheet" href="FavoriteSiteTracker.css">
+  <script src="FavoriteSiteTracker.js"></script>
+
+
+</head>
+
+<body>
+
+<h1>These are a few of my favorite links...</h1>
+<p>This page shows a serious example of HTML5 overkill. It uses a browser-powered database to let you keep track of your own personal list of links. (Kind of like your browser's bookmark list, but with a bit more information.)</p>
+
+<form action="#">
+  <fieldset>
+    <legend>Contact Details</legend>
+      <label for="name">Name of the site:</label>
+      <input id="name" placeholder="Some website"><br>
+      <label for="url">URL (web address):</label>
+      <input id="url" placeholder="http://somesite.somedomain.com"><br>
+      <label for="Description">Description:</label>
+      <input id="description" placeholder="A site about something"><br>
+      <label for="Notes">Why you like it:</label>
+      <textarea id="notes" placeholder="It has secret tricks for HTML5 ninjas."></textarea><br>
+  </fieldset>
+  <div><input type="button" value="Add Link" onclick="addLink()">
+  <input type="button" value="Show Links" onclick="showLinks()"></div>
+</form>
+
+<div class="resultBox" id="links">
+  &nbsp;
+</div>
+
+<div class="resultBox" id="linkDetails">
+  &nbsp;
+</div>
+
+</body>
+</html>

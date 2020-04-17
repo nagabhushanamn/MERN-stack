@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pattern</title>
+
+  <style>
+canvas {
+  border: 1px dashed black;
+}
+
+img {
+  display: none;
+}
+  </style>
+
+  <script>
+ 
+window.onload = function() {
+  var canvas = document.getElementById("drawingCanvas");
+  var context = canvas.getContext("2d");
+
+  var img = document.getElementById("brickTile");
+  var pattern = context.createPattern(img, "repeat");
+
+  context.fillStyle = pattern;
+
+  context.rect(0, 0, canvas.width, canvas.height);
+  context.fill();
+};
+
+  </script>
+</head>
+
+<body>
+  <canvas id="drawingCanvas" width="500" height="350"></canvas>
+  <img id="brickTile" src="brick_tile.gif">
+</body>
+</html>

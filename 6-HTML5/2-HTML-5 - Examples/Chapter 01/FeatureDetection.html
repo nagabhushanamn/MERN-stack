@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- saved from url=(0014)about:internet -->
+
+  <title>HTML5 Feature Detection</title>
+  <script src="modernizr-latest.js"></script>
+</head>
+
+<body>
+  <p>The verdict is... <span id="result"></span></p>
+
+<script>
+// Find an element on the page (named result) where you can report the results.
+var result = document.getElementById("result");
+
+if (Modernizr.draganddrop) {
+    result.innerHTML = "Rejoice! Your browser supports drag-and-drop.";
+}
+else {
+    result.innerHTML = "Sadly, your feeble browser does not support drag-and-drop.";
+}
+</script>
+</body>
+
+</html>

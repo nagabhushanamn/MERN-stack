@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<html lang="en" manifest="personality.appcache">
+<head>
+  <meta charset="utf-8">
+  <title>Personality Test</title>
+
+  <link rel="stylesheet" href="PersonalityTest.css">
+  <script src="PersonalityTest.js"></script>
+
+
+</head>
+
+<body>
+
+<h1>Five Factor Personality Test</h1>
+
+<div data-questionNumber="1">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I don’t mind being the center of attention.</span>
+</div>
+
+<div data-questionNumber="2">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I feel little concern for others.</span>
+</div>
+
+<div data-questionNumber="3">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I’m always prepared.</span>
+</div>
+
+<div data-questionNumber="4">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I get stressed out easily.</span>
+</div>
+
+<div data-questionNumber="5">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I have a rich vocabulary.</span>
+</div>
+
+<div data-questionNumber="6">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I don’t talk a lot.</span>
+</div>
+
+<div data-questionNumber="7">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I make people feel at ease.</span>
+</div>
+
+<div data-questionNumber="8">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I leave my belongings lying around.</span>
+</div>
+
+<div data-questionNumber="9">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I’m relaxed most of the time.</span>
+</div>
+
+<div data-questionNumber="10">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I have difficulty understanding abstract ideas.</span>
+</div>
+
+<div data-questionNumber="11">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I feel comfortable around people.</span>
+</div>
+
+<div data-questionNumber="12">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I insult people.</span>
+</div>
+
+<div data-questionNumber="13">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I pay attention to details.</span>
+</div>
+
+<div data-questionNumber="14">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I worry about things.</span>
+</div>
+
+<div data-questionNumber="15">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I have a vivid imagination.</span>
+</div>
+
+<div data-questionNumber="16">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I keep in the background.</span>
+</div>
+
+<div data-questionNumber="17">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I sympathize with others’ feelings.</span>
+</div>
+
+<div data-questionNumber="18">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I tend to make a mess of things.</span>
+</div>
+
+<div data-questionNumber="19">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I seldom feel blue.</span>
+</div>
+
+<div data-questionNumber="20">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I’m not interested in abstract ideas.</span>
+</div>
+
+<div data-questionNumber="21">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I start conversations.</span>
+</div>
+
+<div data-questionNumber="22">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I’m not interested in other people’s problems.</span>
+</div>
+
+<div data-questionNumber="23">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I follow a schedule.</span>
+</div>
+
+<div data-questionNumber="24">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I’m easily disturbed.</span>
+</div>
+
+<div data-questionNumber="25">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I have excellent ideas.</span>
+</div>
+
+<div data-questionNumber="26">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I keep quiet around strangers.</span>
+</div>
+
+<div data-questionNumber="27">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I have a soft heart.</span>
+</div>
+
+<div data-questionNumber="28">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I often forget to put things back in their proper place.</span>
+</div>
+
+<div data-questionNumber="29">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I seldom get mad.</span>
+</div>
+
+<div data-questionNumber="30">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I don’t have a good imagination.</span>
+</div>
+
+<div data-questionNumber="31">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I talk to a lot of different people at parties.</span>
+</div>
+
+<div data-questionNumber="32">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I’m not really interested in others.</span>
+</div>
+
+<div data-questionNumber="33">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I like order.</span>
+</div>
+
+<div data-questionNumber="34">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I get irritated easily.</span>
+</div>
+
+<div data-questionNumber="35">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I’m quick to understand things.</span>
+</div>
+
+<div data-questionNumber="36">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I don’t like to draw attention to myself.</span>
+</div>
+
+<div data-questionNumber="37">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I take time out for others.</span>
+</div>
+
+<div data-questionNumber="38">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I shirk my duties.</span>
+</div>
+
+<div data-questionNumber="39">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I rarely have mood swings.</span>
+</div>
+
+<div data-questionNumber="40">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I try to avoid complex people.</span>
+</div>
+
+<div data-questionNumber="41">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I am skilled at handling social situations.</span>
+</div>
+
+<div data-questionNumber="42">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I am hard to get to know.</span>
+</div>
+
+<div data-questionNumber="43">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I do things according to a plan.</span>
+</div>
+
+<div data-questionNumber="44">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I grumble about things.</span>
+</div>
+
+<div data-questionNumber="45">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I love to think up new ways of doing things.</span>
+</div>
+
+<div data-questionNumber="46">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I find it difficult to approach others.</span>
+</div>
+
+<div data-questionNumber="47">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I show my gratitude.</span>
+</div>
+
+<div data-questionNumber="48">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">My office or workspace is cluttered.</span>
+</div>
+
+<div data-questionNumber="49">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I feel at peace with the world.</span>
+</div>
+
+<div data-questionNumber="50">
+  <input type="button" value="1" onclick="setAnswer(this)">
+  <input type="button" value="2" onclick="setAnswer(this)">
+  <input type="button" value="3" onclick="setAnswer(this)">
+  <input type="button" value="4" onclick="setAnswer(this)">
+  <input type="button" value="5" onclick="setAnswer(this)">
+  <span class="Question">I avoid difficult reading material.</span>
+</div>
+
+<br>
+<button onclick="getScores()">Get Score</button>
+
+</body>
+</html>

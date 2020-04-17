@@ -1,0 +1,161 @@
+﻿article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary {   
+  display: block;   
+}
+
+body {
+  font-size: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.SiteHeader {
+  border: 0.12em solid #6B6E3F;
+}
+
+.SiteHeader img {
+  width: 100%;
+  /* Below is a fix to prevent whitespace appearing under the picture. */
+  display: block;
+}
+
+.NavSidebar {
+  float: left;
+  width: 22%;
+  min-height: 100em;
+  background-color:#eee;
+  font-size: small;
+}
+
+.NavSidebar_InnerBox {
+  padding: 0.1em 1.2em 0em 1em;
+}
+
+.NavSidebar_InnerBox h2 {
+  color: #6B6E3F;
+  border-bottom: thin #6B6E3F solid;
+  margin-bottom: 0em;
+  margin-top: 1.3em;
+}
+
+.NavSidebar_InnerBox ul {
+  padding-left: 1.2em;
+}
+
+.NavSidebar_InnerBox li {
+  padding-bottom: 0.3em;
+}
+
+.NavSidebar_InnerBox img {
+  margin-top: 0.3em;
+  border: white solid 0.1em;
+}
+
+.Content {
+  float: right;
+  width: 78%;
+}
+
+.Content_InnerBox {
+  padding: 0.2em 1.3em 0.3em 1.3em;
+}
+
+.Content_InnerBox .LeadIn {
+  font-weight: bold;
+  font-size: large;
+  font-variant: small-caps;
+}
+
+.Content_InnerBox h3 {
+  color: #24486C;
+  margin-bottom: 0.1em;
+  font-size: medium;
+}
+
+.Content_InnerBox p {
+  margin-top: 0em;
+}
+
+.ArticleHeader {
+  padding: 0.8em;
+  margin: 0.5em;
+  text-align: center;
+}
+
+.ArticleHeader h2 {
+  margin: 0em;
+  font-size: xx-large;
+}
+
+.ArticleHeader h3 {
+  margin: 0em;
+  font-weight: bold;
+}
+
+.ArticleHeader .Byline {
+  font-style: italic;
+  font-size: small;
+  margin: 0em;
+}
+
+footer {
+  text-align: center;
+  font-size: x-small;	
+}
+
+footer .Disclaimer {
+  font-style: italic;
+}
+
+footer p {
+  margin: 0.5em;
+}
+
+.FloatFigure {
+  float: left;
+  margin-top: 0em;
+  margin-left: 0em;
+  margin-right: 1.2em;
+  margin-bottom: 0em;
+} 
+
+.FloatFigure figcaption {
+  max-width: 20em;
+  font-size: 0.8em;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.PullQuote {
+  float: right;
+  max-width: 11em;
+  border-top: thin black solid;
+  border-bottom: thick black solid;
+  font-size: 2em;
+  line-height: 130%;
+  font-style: italic;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;	
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+}
+
+.PullQuote img {
+  vertical-align: bottom;
+}
+
+@media (max-width: 568px) {
+  .NavSidebar {
+    float: none;
+    width: 100%;
+    min-height: 0em;
+  }
+
+  .Content {
+    float: none;
+    width: 100%;
+  }
+}

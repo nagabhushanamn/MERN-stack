@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+</head>
+
+<body class="container">
+
+    <hr />
+    <h1> Web Worker _ Ex</h1>
+    <hr />
+
+    <button class="btn btn-primary" id="btn1">compute on .js main-thread</button>
+    <span class="badge badge-danger" id="sum1"></span>
+
+    <hr />
+
+    <button class="btn btn-danger" id="btn2">compute on web-worker</button>
+    <span class="badge badge-danger" id="progress"></span>
+    <span class="badge badge-danger" id="sum2"></span>
+
+    <hr />
+
+    <button id="play-btn" class="btn btn-warning">play here</button>
+
+    <script>
+
+        document.getElementById('play-btn')
+            .addEventListener('click', function () {
+                console.log("play..")
+            })
+
+        let btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', e => {
+            let sum = 0;
+            for (let i = 0; i < 20000000000; i++) {
+                sum += i
+            }
+            document.getElementById("sum1").innerHTML = sum
+        })
+
+        let btn2 = document.getElementById('btn2');
+        let p = 0
+        btn2.addEventListener('click', e => {
+            const webWorker = new Worker("worker-sum.js")
+            webWorker.onmessage = message => {
+                let { data } = message
+                if (data.progress) {
+                    p += data.progress
+                    document.getElementById('progress').innerHTML = p
+                }
+                if (data.sum) {
+                    document.getElementById('sum2').innerHTML = data.sum
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

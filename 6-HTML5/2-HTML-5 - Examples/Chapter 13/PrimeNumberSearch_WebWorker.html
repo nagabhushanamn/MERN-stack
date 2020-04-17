@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Prime Number Search</title>
+
+<style>
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin: 20px;
+}
+
+#primeContainer {
+  border: solid 1px black;
+  padding: 3px;
+  height: 300px;
+  max-width: 500px;
+  overflow: scroll;
+  overflow-x: hidden;
+  font-size: x-small;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 60px;
+}
+
+button {
+  padding: 3px;
+}
+
+p {
+  margin-bottom: 3px;
+}
+
+#status {
+  color: darkred;
+}
+</style>
+
+<script>
+var statusDisplay;
+var worker;
+var searchButton;
+
+window.onload = function() {
+  statusDisplay = document.getElementById("status");
+  searchButton = document.getElementById("searchButton");
+};
+
+function doSearch() {
+  searchButton.disabled = true;
+
+  var fromNumber = document.getElementById("from").value;
+  var toNumber = document.getElementById("to").value;
+
+  worker = new Worker("PrimeWorker.js");
+  worker.onmessage = receivedWorkerMessage;
+  worker.onerror = workerError;
+  
+  worker.postMessage(
+   { from: fromNumber,
+     to: toNumber
+   }
+  );
+
+  statusDisplay.innerHTML = "A web worker is on the job ("+
+   fromNumber + " to " + toNumber + ") ...";  
+}
+
+function receivedWorkerMessage(event) {
+  var message = event.data;
+
+  if (message.messageType == "PrimeList") {
+    var primes = message.data;
+
+    var primeList = "";
+    for (var i=0; i<primes.length; i++) {
+      primeList += primes[i];
+      if (i != primes.length-1) primeList += ", ";
+    }
+    var displayList = document.getElementById("primeContainer");
+    displayList.innerHTML = primeList;
+
+    if (primeList.length == 0) {
+      statusDisplay.innerHTML = "Search failed to find any results.";
+    }
+    else {
+      statusDisplay.innerHTML = "The results are here!";
+    }
+    searchButton.disabled = false;
+  }
+  else if (message.messageType == "Progress") {
+    statusDisplay.innerHTML = message.data + "% done ...";
+  }
+}
+
+function workerError(error) {
+  statusDisplay.innerHTML = error.message;
+}
+
+function cancelSearch() {
+  worker.terminate();
+  worker = null;
+  statusDisplay.innerHTML = "";
+  searchButton.disabled = false;
+}
+</script>
+</head>
+
+<body>
+  <p>Do a prime number search from <input id="from" value="1"> to <input id="to" value="200000">.</p>
+  <button id="searchButton" onclick="doSearch()">Start Searching</button>
+  <button onclick="cancelSearch()">Cancel</button>
+
+  <div id="primeContainer">
+  </div>
+
+  <div id="status"></div>
+</body>
+</html>

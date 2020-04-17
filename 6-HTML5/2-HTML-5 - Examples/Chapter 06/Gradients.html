@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gradients</title>
+
+<style>
+body {
+  font-family: Verdana;
+  font-size: small;
+}
+
+div {
+  padding: 30px;
+  margin: 20px;
+}
+
+.gradient1  {
+  background: yellow;
+  background: -webkit-radial-gradient(circle, yellow, green);
+  background: radial-gradient(circle, yellow, green);
+}
+.gradient2  {
+  background: -webkit-linear-gradient(top left, white, lightblue);
+  background: linear-gradient(from top left, white, lightblue);
+}
+.gradient3 {
+  background: -webkit-linear-gradient(top, red 0%, orange 20%, yellow 80%, violet 100%);
+  background: linear-gradient(from top, red 0%, orange 20%, yellow 80%, violet 100%);  
+}
+.gradient4 {
+  background: -webkit-repeating-linear-gradient(to top, red, orange, white, yellow, red 30px);  
+  background: repeating-linear-gradient(to top, red, orange, white, yellow, red 30px);  
+}
+
+</style>
+</head>
+
+<body>
+<div class="gradient1">
+A simple radial gradient has sophistication.<br>
+background: radial-gradient(circle, yellow, green);
+</div>
+<div class="gradient2">
+This linear gradient goes from corner to corner. Light colors make for a subtle effect.<br>
+background: linear-gradient(from top left, white, lightblue)
+</div>
+<div class="gradient3">
+With a bit more ambition, you can create a striped gradient like this.<br>
+background: linear-gradient(from top, red 0%, orange 20%, yellow 80%, violet 100%);  
+</div>
+<div class="gradient4">
+A repeating gradient gives even more options.<br>
+background: repeating-linear-gradient(to top, red, orange, white, yellow, red 30px);  
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ugly Player</title>
+<style>
+h1 {
+  font-size: x-large;
+  margin: 6px 0px 6px 0px;
+}
+
+video {
+  border: double 8px lightgray;
+}
+
+.videoContainer {
+  max-width: 445px;
+}
+
+#positionBar {
+height: 30px;
+  color: white;
+  font-weight: bold;
+  background: steelblue;
+  text-align: center;
+}
+
+#positionBar span {
+  display: inline-block;
+  margin-top: 7px;
+}
+
+#durationBar {
+  border: solid 1px black;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#bufferBar {
+  background: lightsteelblue;
+  position: absolute;
+}
+</style>
+
+<script>
+var video;
+var display;
+
+window.onload = function() {
+  video = document.getElementById("videoPlayer");
+
+  display = document.getElementById("displayStatus");
+
+  video.onplaying = function() {
+    display.innerHTML = "Playing ...";
+  }
+  video.onpause = function() {
+    display.innerHTML = "Paused";
+  }
+}
+
+function progressUpdate() {
+    var positionBar = document.getElementById("positionBar");
+    positionBar.style.width = (video.currentTime / video.duration * 100)  + "%";
+displayStatus.innerHTML = (Math.round(video.currentTime*100)/100) + " sec";
+  }
+
+function play() {
+  video.play();
+}
+
+function pause() {
+  video.pause();
+}
+
+function stop() {
+  video.pause();
+  video.currentTime = 0;
+}
+
+function speedUp() {
+  video.play();
+  video.playbackRate = 2;
+}
+
+function slowDown() {
+  video.play();
+  video.playbackRate = 0.5;
+}
+
+function normalSpeed() {
+  video.play();
+  video.playbackRate = 1;
+}
+
+</script>
+</head>
+
+<body>
+  <h1>World's Ugliest Video Player</h1>
+<div class="videoContainer">
+  <video id="videoPlayer" ontimeupdate="progressUpdate()">
+    <source src="butterfly.mp4" type="video/mp4">
+    <source src="butterfly.webm" type="video/webm">
+  </video>
+</div>
+
+<div class="barContainer">
+  <div id="durationBar">
+    <div id="positionBar"><span id="displayStatus">Idle.</span></div>
+  </div>
+</div>
+
+  <div>
+&nbsp;&nbsp;&nbsp;
+    <button onclick="play()">Play</button>
+    <button onclick="pause()">Pause</button>
+    <button onclick="stop()">Stop</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="speedUp()">Fast</button>
+    <button onclick="slowDown()">Slow</button>
+    <button onclick="normalSpeed()">Normal Speed</button>
+  </div>
+
+
+</div>
+</body>
+</html>

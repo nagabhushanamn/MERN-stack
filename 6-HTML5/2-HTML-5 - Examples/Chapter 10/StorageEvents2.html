@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Storage Events</title>
+
+<style>
+body {
+  font-family: 'Palatino Linotype', serif;
+  max-width: 400px;
+  padding: 10px;
+}
+
+#updateMessage {
+  font-weight: bold;
+  color: red;
+}
+</style>
+<script>
+window.onload = function() {
+  window.addEventListener("storage", storageChanged, false);
+};
+
+function storageChanged(e) {
+  var message = document.getElementById("updateMessage");
+  message.innerHTML = "Local storage updated.";
+  message.innerHTML += "<br>Key: " + e.key;
+  message.innerHTML += "<br>Old Value: " + e.oldValue;
+  message.innerHTML += "<br>New Value: " + e.newValue;
+  message.innerHTML += "<br>URL: " + e.url;
+}
+</script>
+
+<body>
+
+ 
+  <div id="updateMessage">No updates yet.</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Shadows</title>
+
+  <style>
+canvas {
+  border: 1px dashed black;
+}
+
+img {
+  display: none;
+}
+  </style>
+
+  <script>
+ 
+window.onload = function() {
+  var canvas = document.getElementById("drawingCanvas");
+  var context = canvas.getContext("2d");
+
+  // Draw the shadowed rectangle.
+  context.rect(20, 20, 200, 100);
+  context.fillStyle = "#8ED6FF";
+  context.shadowColor = "#bbbbbb";
+  context.shadowBlur = 20;
+  context.shadowOffsetX = 15;
+  context.shadowOffsetY = 15;
+  context.fill();
+
+  // Draw the shadowed star.
+  context.shadowOffsetX = 10;
+  context.shadowOffsetY = 10;
+  context.shadowBlur = 4;
+  img = document.getElementById("star");
+  context.drawImage(img, 250, 30);
+
+  context.textBaseline = "top";
+  context.font = "bold 20px Arial";
+
+  // Draw three pieces of shadowed text.
+  context.shadowBlur = 3;
+  context.shadowOffsetX = 2;
+  context.shadowOffsetY = 2;
+  context.fillStyle = "steelblue";
+  context.fillText("This is a subtle, slighly old-fashioned shadow.", 10, 175);
+
+  context.shadowBlur = 5;
+  context.shadowOffsetX = 20;
+  context.shadowOffsetY = 20;
+  context.fillStyle = "green";
+  context.fillText("This is a distant shadow...", 10, 225);
+
+  context.shadowBlur = 15;
+  context.shadowOffsetX = 0;
+  context.shadowOffsetY = 0;
+  context.shadowColor = "black";
+  context.fillStyle = "white";
+  context.fillText("This shadow isn't offset. It creates a halo effect.", 10, 300);
+};
+
+  </script>
+</head>
+
+<body>
+  <canvas id="drawingCanvas" width="500" height="350"></canvas>
+  <img id="star" src="star.png">
+</body>
+</html>

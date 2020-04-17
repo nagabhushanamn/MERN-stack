@@ -1,0 +1,18 @@
+﻿CACHE MANIFEST
+
+# ver 1.0.0
+PersonalityTest.html
+PersonalityTest_Score.html
+
+# styles
+PersonalityTest.css
+PersonalityTest_Score.css
+
+# scripts
+PersonalityTest.js
+PersonalityTest_Score.js
+
+# images
+arrow_left.png
+arrow_right.png
+star.png

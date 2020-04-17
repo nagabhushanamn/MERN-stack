@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Read Image</title>
+
+<style>
+#dropBox {
+  margin: 15px;
+  width: 300px;
+  height: 300px;
+  border: 5px dashed gray;
+  border-radius: 8px;
+  background: lightyellow;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+ 
+#dropBox div {
+  margin: 100px 70px;
+  color: orange;
+  font-size: 25px;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+input {
+  margin: 15px;
+}
+</style>
+
+<script>
+var dropBox;
+
+window.onload = function() {
+  dropBox = document.getElementById("dropBox");
+  dropBox.ondragenter = ignoreDrag;
+  dropBox.ondragover = ignoreDrag;
+  dropBox.ondrop = drop;
+}
+
+function ignoreDrag(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+
+function drop(e) {
+  e.stopPropagation();
+  e.preventDefault();
+ 
+  var data = e.dataTransfer;
+  var files = data.files;
+	 
+  processFiles(files);
+}
+
+
+function processFiles(files) {
+  var file = files[0];
+  var output = document.getElementById("fileOutput");
+ 
+  var reader = new FileReader();
+  reader.onload = function (e) {
+    dropBox.style.backgroundImage = "url('" + e.target.result + "')";
+  };
+
+  reader.readAsDataURL(file);
+}
+
+function showFileInput() {
+  var fileInput = document.getElementById("fileInput");
+  fileInput.click();
+} 
+</script>
+</head>
+
+<body>
+<div id="dropBox">
+  <div>Drop your image here...</div>
+</div>
+
+<input id="fileInput" type="file" onchange="processFiles(this.files)">
+<img id="thumbnail">
+
+</body>
+</html>

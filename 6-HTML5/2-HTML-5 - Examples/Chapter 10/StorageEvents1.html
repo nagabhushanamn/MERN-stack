@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Storage Events</title>
+
+<style>
+body {
+  font-family: 'Palatino Linotype', serif;
+  max-width: 400px;
+  padding: 10px;
+}
+
+fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+label {
+  width: 40px;
+  display: inline-block;
+  margin: 6px;
+}
+
+
+input {
+  margin-top: 12px;
+  width: 300px;
+}
+
+button {
+  margin-top: 15px;
+  margin-left: 55px;
+  padding: 5px;
+}
+</style>
+<script>
+
+
+function addValue() {
+  // Get the values from both text boxes.
+  var key = document.getElementById("key").value;
+  var item = document.getElementById("item").value;
+
+  // Put the item in local storage.
+  // (If the key already exists, the new item replaces the old.)
+  localStorage.setItem(key, item);
+}
+
+</script>
+
+<body>
+
+  <fieldset>
+    <legend>Local Storage</legend>
+    <label for="key">Key:</label>
+    <input id="key"><br>
+    <label for="item">Value:</label>
+    <input id="item">
+    <br>
+    <button onclick="addValue()">Add</button>
+  </fieldset>
+
+</body>
+</html>

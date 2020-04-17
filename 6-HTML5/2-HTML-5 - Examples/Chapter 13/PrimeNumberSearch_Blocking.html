@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Prime Number Search</title>
+  <script src="FindPrimes.js"></script>
+
+<style>
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin: 20px;
+}
+
+#primeContainer {
+  border: solid 1px black;
+  padding: 3px;
+  height: 300px;
+  max-width: 500px;
+  overflow: scroll;
+  overflow-x: hidden;
+  font-size: x-small;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 50px;
+}
+
+button {
+  padding: 3px;
+}
+
+p {
+  margin-bottom: 3px;
+}
+
+</style>
+
+<script>
+function doSearch() {
+  var fromNumber = document.getElementById("from").value;
+  var toNumber = document.getElementById("to").value;
+
+  var primes = findPrimes(fromNumber, toNumber);
+
+  var primeList = "";
+  for (var i=0; i<primes.length; i++) {
+    primeList += primes[i];
+    if (i != primes.length-1) primeList += ", ";
+  }
+  var primeContainer = document.getElementById("primeContainer");
+  primeContainer.innerHTML = primeList;
+
+  var statusDisplay = document.getElementById("status");
+  if (primeList.length == 0) {
+    statusDisplay.innerHTML = "Search failed to find any results.";
+  }
+  else {
+    statusDisplay.innerHTML = "The results are here!";
+  }
+}
+</script>
+</head>
+
+<body>
+  <p>Do a prime number search from <input id="from" value="1"> to <input id="to" value="200000">.</p>
+  <button onclick="doSearch()">Start Searching</button>
+
+  <div id="primeContainer">
+  </div>
+
+  <div id="status"></div>
+</body>
+</html>

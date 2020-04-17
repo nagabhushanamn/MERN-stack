@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Transparency</title>
+
+<style>
+body {
+  font-family: Verdana;
+  font-size: 15px;
+  background: url('lemon-tile.jpg');
+}
+
+div {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.transparent1  {
+  opacity: 0.5;
+}
+
+.transparent1 img {
+  float: left;
+  margin-right: 20px;
+}
+
+.transparent1 p {
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+.transparent2  {
+  background-color: rgba(34,234,0,0.5);
+  border: thin #336699 solid;
+  padding: 18px;
+}
+
+.shadow3 {
+  background-color: #7695FE;
+  border: thin black solid;
+  padding: 13px;
+  width: 100px;
+  text-align: center;
+  background: yellow;
+  box-shadow: 0px 0px 20px lime inset;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="transparent2">
+The background shows through this box, partially.<br>
+However, the text and border are opaque.
+</div>
+
+
+<div class="transparent1">
+<img src="Dog.png">
+<p>The background shows through this dog (and this text).</p>
+
+</div>
+
+</body>
+</html>

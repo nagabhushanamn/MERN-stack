@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Find All Items</title>
+
+<style>
+body {
+  font-family: 'Palatino Linotype', serif;
+  max-width: 600px;
+  padding: 0px 30px;
+}
+button {
+  padding: 5px;
+}
+</style>
+
+<script>
+function findAllItems() {
+  var itemList = document.getElementById("itemList");
+  itemList.innerHTML = "";
+
+  for (var i=0; i<localStorage.length; i++) {
+    var key = localStorage.key(i);
+    var item = localStorage.getItem(key);
+
+    var newItem = document.createElement("li");
+    newItem.innerHTML = key + ": " + item;
+    itemList.appendChild(newItem);
+  }
+}
+</script>
+
+<body>
+<button onclick="findAllItems()">Dump the contents of Local Storage</button>
+<ul id="itemList">
+</ul>
+</body>
+</html>

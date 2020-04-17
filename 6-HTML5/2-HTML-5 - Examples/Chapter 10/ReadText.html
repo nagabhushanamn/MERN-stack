@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Read Text</title>
+
+<style>
+div {
+ margin-top: 30px;
+ border: solid 1px black;
+ padding: 5px;
+}
+</style>
+
+<script>
+
+function processFiles(files) {
+  var file = files[0];
+  
+  var reader = new FileReader();
+
+  reader.onload = function (e) {
+    // When this event firest, the data is ready.
+    // Copy it to a <div> on the page.
+    var output = document.getElementById("fileOutput");   
+    output.textContent = e.target.result;
+  };
+  reader.readAsText(file);
+}
+
+function showFileInput() {
+  var fileInput = document.getElementById("fileInput");
+  fileInput.click();
+}
+</script>
+</head>
+
+<body>
+  <input id="fileInput" type="file" size="50" onchange="processFiles(this.files)">
+<!--<button onclick="showFileInput()">Analyze a File</button>-->
+  <div id="fileOutput"></div>
+</body>
+</html>

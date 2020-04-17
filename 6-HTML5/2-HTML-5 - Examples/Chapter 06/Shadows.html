@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Shadows</title>
+
+<style>
+body {
+  font-family: Verdana;
+  font-size: small;
+}
+
+div {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.shadow1  {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: gray 10px 10px 7px;
+}
+
+.shadow2  {
+  background-color: #7695FE;
+  border: thin #336699 solid;
+  padding: 13px;
+  text-align: center;
+  background: yellow;
+  border-bottom-left-radius: 150px 30px;
+  border-bottom-right-radius: 150px 30px;
+  box-shadow: 8px 8px 10px 1px gray;
+}
+
+.shadow3 {
+  background-color: #7695FE;
+  border: thin black solid;
+  padding: 13px;
+  width: 100px;
+  text-align: center;
+  background: yellow;
+  box-shadow: 0px 0px 20px lime inset;
+}
+
+</style>
+</head>
+
+<body>
+<div class="shadow1">
+Shadowed Text.
+</div>
+<div class="shadow2">
+This shadow follows the rounded edge of a &lt;div&gt;.
+</div>
+<div class="shadow3">
+Fake Button
+</div>
+
+</body>
+</html>

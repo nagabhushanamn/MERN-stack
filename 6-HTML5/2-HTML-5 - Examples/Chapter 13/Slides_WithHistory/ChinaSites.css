@@ -1,0 +1,37 @@
+﻿body {
+  color: white;
+  font-family: Lucida Sans Unicode, serif;
+  font-size: small;
+  background-image: url('background.jpg');
+  background-size: 100%;
+  padding: 10px 50px;
+}
+
+h1 {
+  font-family: Palatino, serif;
+  font-size: 35px;
+  margin: 0px;
+  border-bottom: double 5px rgb(218,165,32);
+}
+
+#slide {
+  background: rgba(218,165,32,0.8);
+  border: solid 1px black;
+  width: 530px;
+  min-height: 300px;
+  padding: 10px;
+}
+
+#slide h2 {
+  font-family: Lucida Sans Unicode, serif;
+}
+
+#slide img {
+  margin-top: 10px;
+  border: solid 1px white;
+ 
+}
+
+a {
+  color: yellow;
+}

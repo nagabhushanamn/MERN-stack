@@ -1,0 +1,36 @@
+﻿body {
+  font-family: "Lucida Console";
+  margin: 0px
+}
+
+hgroup {
+  background: black;
+  color: white;
+  margin: 0px;
+  padding: 20px;
+  font-size: smaller;
+}
+
+hgroup h1, h2 {
+  margin: 0px;
+}
+
+.score {
+  margin: 25px;
+}
+
+.score h2 {
+  font-weight: normal;
+  margin-bottom: 5px;
+  font-size: 18px;
+
+}
+
+canvas {
+  border-radius: 15px;
+  background: #FFF8DC;
+}
+
+img {
+  visibility: hidden;
+}

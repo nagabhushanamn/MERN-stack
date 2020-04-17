@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+</head>
+
+<body class="container">
+
+    <hr />
+    <h1> Storage Api</h1>
+    <hr />
+
+
+    <button>theme-1</button>
+    <button>theme-2</button>
+    <button>theme-3</button>
+
+    <hr />
+
+    <a href="welcome.html">welcome</a>
+
+    <script>
+
+        //let theme = sessionStorage.getItem('theme') || "#FFF"
+        let theme = localStorage.getItem('theme') || '#FFF'
+        let body = document.querySelector('body')
+
+        function setTheme(theme) {
+            if (theme === "theme-1") {
+                body.style.backgroundColor = "#656565"
+            }
+            if (theme === "theme-2") {
+                body.style.backgroundColor = "#DEF"
+            }
+            if (theme === "theme-3") {
+                body.style.backgroundColor = "yellow"
+            }
+        }
+
+        let themeButtons = document.querySelectorAll('button')
+        themeButtons.forEach(button => {
+            button.addEventListener('click', e => {
+                let theme = e.target.innerText
+                setTheme(theme)
+                //sessionStorage.setItem('theme', theme)
+                localStorage.setItem('theme', theme)
+            })
+        })
+        setTheme(theme)
+
+    </script>
+
+</body>
+
+</html>

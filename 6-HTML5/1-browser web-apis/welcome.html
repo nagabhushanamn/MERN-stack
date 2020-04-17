@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+</head>
+
+<body class="container">
+
+    <hr />
+    <h1> welcome</h1>
+    <hr />
+
+    <script>
+        let theme = localStorage.getItem('theme') || '#FFF'
+        let body = document.querySelector('body')
+        function setTheme(theme) {
+            if (theme === "theme-1") {
+                body.style.backgroundColor = "#656565"
+            }
+            if (theme === "theme-2") {
+                body.style.backgroundColor = "#DEF"
+            }
+            if (theme === "theme-3") {
+                body.style.backgroundColor = "yellow"
+            }
+        }
+        setTheme(theme)
+
+        window.addEventListener('storage', e => {
+            setTheme(e.newValue)
+        })
+
+    </script>
+
+</body>
+
+</html>

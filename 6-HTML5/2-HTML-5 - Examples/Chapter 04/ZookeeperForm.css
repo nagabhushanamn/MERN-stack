@@ -1,0 +1,62 @@
+﻿body {
+  font-family: 'Palatino Linotype', serif;
+  max-width: 600px;
+  padding: 0px 30px;
+}
+
+h1 {
+  margin-bottom: 0px;
+}
+
+p {
+  margin-top: 0px;
+}
+
+fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+label {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+
+input:focus {
+  background: #eaeaea;
+}
+
+input, textarea {
+  width: 249px;
+}
+
+textarea {
+  height: 100px;
+}
+
+select {
+  width: 254px;
+}
+
+input[type=checkbox] {
+  width: 10px;
+}
+
+input[type=submit] {
+  width: 150px;
+  padding: 10px;
+}

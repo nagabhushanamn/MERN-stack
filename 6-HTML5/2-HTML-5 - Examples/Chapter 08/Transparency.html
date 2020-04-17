@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Transparency</title>
+
+  <style>
+canvas {
+  border: 1px dashed black;
+}
+  </style>
+
+  <script>
+ 
+window.onload = function() {
+  var canvas = document.getElementById("drawingCanvas");
+  var context = canvas.getContext("2d");
+
+  context.fillStyle = "rgb(100,150,185)";
+  context.lineWidth = 10;
+  context.strokeStyle = "red";
+
+  // Draw the circle.
+  context.arc(110, 120, 100, 0, 2*Math.PI);
+  context.fill();
+  context.stroke();
+
+  // Remember to call beginPath() before adding a new shape.
+  // Otherwise, the outlines of both shapes will
+  // be merged together in an unpredicatable way.
+  context.beginPath();
+
+  // Draw the triangle.
+  context.moveTo(215,50);
+  context.lineTo(15,250);
+  context.lineTo(315,250);
+  context.closePath();
+
+  // Give it a transparent fill (but keep the solid outline).
+  context.fillStyle = "rgba(100,150,185,0.5)";
+
+  context.fill();
+  context.stroke();
+};
+
+  </script>
+</head>
+
+<body>
+  <canvas id="drawingCanvas" width="330" height="300"></canvas>
+</body>
+</html>

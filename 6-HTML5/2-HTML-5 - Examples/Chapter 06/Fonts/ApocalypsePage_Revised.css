@@ -1,0 +1,133 @@
+﻿article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary {   
+  display: block;   
+}
+
+body {
+  font-family: "MetrophobicRegular", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  max-width: 800px;
+}
+
+header {
+  background-color: darkkhaki;
+  border: 2px gray solid;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+
+  border-top-left-radius: 150px 30px;
+  border-top-right-radius: 150px 30px;
+
+  /* Other possible settings, which are currently commented out.
+  border-radius: 25px 50px 25px 85px;
+  box-shadow: 5px 5px 5px gray;
+  */
+}
+
+header h1 {
+  font-family: "ZeroZeroIsRegular", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  margin: 0px;
+  color: white;
+  font-size: 50px;
+}
+
+header p {
+  margin: 0px;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: "ImpactLabelReversedRegular";
+}
+
+header .Byline {
+  font-style: italic;
+  font-size: small;
+  margin: 0px;
+}
+
+.Content {
+  font-size: medium;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 120%;
+
+  text-align: justify;
+  -moz-column-width: 10em;
+  -webkit-column-width: 10em;
+  column-width: 10em;
+
+  -webkit-column-rule: 1px solid red;
+  -moz-column-rule: 1px solid red;
+  column-rule: 1px solid red; 
+}
+
+.Content .LeadIn {
+  font-weight: bold;
+  font-size: large;
+  font-variant: small-caps;
+}
+
+.Content h2 {
+  font-family: "ImpactLabelRegular";
+  font-weight: normal;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.Content p {
+  margin-top: 0px;
+}
+
+footer {
+  text-align: center;
+  font-size: x-small;	
+}
+
+footer .Disclaimer {
+  font-style: italic;
+}
+
+footer p {
+  margin: 3px;
+}
+
+.SpanFigure {
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+
+  -moz-column-span: all;
+  -webkit-column-span: all;
+  column-span: all;
+} 
+
+.SpanFigure figcaption {
+  font-size: small;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.PullQuote {
+  max-width: 300px;
+  border-top: thin black solid;
+  border-bottom: thick black solid;
+  font-size: 14px;
+  line-height: 130%;
+  font-style: italic;
+  padding-top: 5px;	
+  padding-bottom: 5px;	
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.PullQuote img {
+  vertical-align: bottom;
+  width: 20px;
+}

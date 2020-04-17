@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cropped Picture</title>
+
+  <style>
+canvas {
+  border: 1px dashed black;
+}
+
+img {
+  display: none;
+}
+  </style>
+
+  <script>
+ 
+window.onload = function() {
+  var canvas = document.getElementById("drawingCanvas");
+  var context = canvas.getContext("2d");
+
+  var img = document.getElementById("portrait");
+  context.drawImage(img, 0, 0, 200, 100, 75, 25, 200, 100);
+};
+
+  </script>
+</head>
+
+<body>
+  <canvas id="drawingCanvas" width="300" height="200"></canvas>
+  <img id="portrait" src="darwin.jpg">
+</body>
+</html>

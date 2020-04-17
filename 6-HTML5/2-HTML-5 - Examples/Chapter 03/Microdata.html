@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Microdata Example</title>
+<style>
+body {
+  font-family: verdana;
+  font-size: small;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+  </style>
+</head>
+
+<body>
+
+<h1>About Me</h1>
+
+<div itemscope itemtype="http://schema.org/Person">
+  <img itemprop="image" src="face.jpg" alt="Mike's Face">
+  <p>This website is the work of
+  <span itemprop="jobTitle" style="display:none">Web Developer</span>
+  <b itemprop="name">Mike Rowe Formatte</b>.
+  His friends know him as <b itemprop="additionalName">The Big M</b>.</p>
+
+  <p>You can contact him where he works, at
+  <span itemprop="affiliation" itemscope
+   itemtype="http://schema.org/Organization">
+    <span itemprop="name">The Magic Semantic Company</span>
+  (phone 
+  <span itemprop="telephone">641-545-0234</span> and ask for Mike)
+   or email <span itemprop="email">mike-f@magicsemantics.com</span>.</p>
+
+  <p>Or, visit Mike on the job at:<br>
+  <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress">42 Jordan Gordon Street, 6th Floor</span><br>
+    <span itemprop="addressLocality">San Francisco</span>,
+    <span itemprop="addressRegion">CA</span>
+    <span itemprop="PostalCode">94105</span><br>
+    <span itemprop="addressCountry">USA</span><br>
+  </span>
+  <a itemprop="url" href="http://www.magicsemantics.com">www.magicsemantics.com</a>
+  </p>
+</div>
+
+
+</body>
+</html>

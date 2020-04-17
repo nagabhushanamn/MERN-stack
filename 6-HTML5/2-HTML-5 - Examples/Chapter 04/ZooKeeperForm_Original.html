@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Zookeeper Form</title>
+  <link href="ZookeeperForm.css" rel="stylesheet">
+</head>
+
+<body>
+
+<h1>Zoo Keeper Application Form</h1>
+<form action="#">
+  <p><i>Please complete the form. Mandatory fields are marked with a </i><em>*</em></p>
+  <fieldset>
+    <legend>Contact Details</legend>
+      <label for="name">Name <em>*</em></label>
+      <input id="name"><br>
+      <label for="telephone">Telephone</label>
+      <input id="telephone"><br>
+      <label for="email">Email <em>*</em></label>
+      <input id="email"><br>
+  </fieldset>
+  <fieldset>
+    <legend>Personal Information</legend>
+      <label for="age">Age<em>*</em></label>
+      <input id="age"><br>
+      <label for="gender">Gender</label>
+      <select id="gender">
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select><br>
+      <label for="comments">When did you first know you wanted to be a zoo-keeper?</label>
+      <textarea id="comments"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <legend>Pick Your Favorite Animals</legend>
+    <label for="zebra"><input id="zebra" type="checkbox"> Zebra</label>
+    <label for="cat"><input id="cat" type="checkbox"> Cat</label>
+    <label for="anaconda"><input id="anaconda" type="checkbox"> Anaconda</label>
+    <label for="human"><input id="human" type="checkbox"> Human</label>
+    <label for="elephant"><input id="elephant" type="checkbox"> Elephant</label>
+    <label for="wildebeest"><input id="wildebeest" type="checkbox"> Wildebeest</label>
+    <label for="pigeon"><input id="pigeon" type="checkbox"> Pigeon</label>
+    <label for="crab"><input id="crab" type="checkbox"> Crab</label>
+  </fieldset>
+  <p><input type="submit" value="Submit Application"></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paint</title>
+  <link rel="stylesheet" href="Paint.css">
+  <script src="Paint.js"></script>
+</head>
+
+<body>
+  <div class="Toolbar">
+    - Pen Color -<br>
+    <img id="redPen" src="pen_red.gif" alt="Red Pen" onclick="changeColor('rgb(212,21,29)', this)">
+    <img id="greenPen" src="pen_green.gif" alt="Green Pen" onclick="changeColor('rgb(131,190,61)', this)"> 
+    <img id="bluePen" src="pen_blue.gif" alt="Blue Pen" onclick="changeColor('rgb(0,86,166)', this)">
+  </div>
+  <div class="Toolbar">
+    - Pen Thickness -<br>
+    <img src="pen_thin.gif" alt="Thin Pen" onclick="changeThickness(1, this)">
+    <img src="pen_medium.gif" alt="Medium Pen" onclick="changeThickness(5, this)"> 
+    <img src="pen_thick.gif" alt="Thick Pen" onclick="changeThickness(10, this)">
+  </div>
+  <div class="CanvasContainer">
+    <canvas id="drawingCanvas" width="500" height="300"></canvas>
+  </div>
+  <div class="Toolbar">
+    - Operations -<br>
+    <button onclick="saveCanvas()">Save the Canvas</button>
+    <button onclick="clearCanvas()">Clear the Canvas</button>
+    <div id="savedCopyContainer">
+      <img id="savedImageCopy"><br>
+      Right-click to save ...
+    </div>
+  </div>
+</body>
+</html>

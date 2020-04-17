@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ask The Server</title>
+  <style>
+body {
+  font-family: Verdana;
+  font-size: 12px;
+}
+
+div {
+  margin: 20px;
+  border: black 1px solid;
+  padding: 10px;
+  background-color: #FBF3CB;
+}
+
+input {
+  width: 75px;
+}
+
+#result {
+  color: darkred;
+  font-weight: bold;
+}
+  </style>
+  <script>
+  var req = new XMLHttpRequest();
+
+function askServer() {
+
+  var number1 = document.getElementById("number1").value;
+  var number2 = document.getElementById("number2").value;
+
+  var dataToSend = "?number1=" + number1 + "&number2=" + number2;
+  req.open("GET", "WebCalculator.php" + dataToSend, true);
+  req.onreadystatechange = handleServerResponse;
+  req.send();
+
+  document.getElementById("result").innerHTML = "The request has been sent.";
+}
+
+
+function handleServerResponse() {
+  if ((req.readyState == 4) && (req.status == 200))
+ {
+    var result = 
+req.responseText;
+    document.getElementById("result").innerHTML = "The answer is: " + result;
+  }
+}
+
+  </script>
+</head>
+
+<body>
+<div>
+  <p>Enter two numbers:
+    <input id="number1" type="number">
+    <input id="number2" type="number">
+  </p>
+  <p>To ask the server to add them, without refreshing the page, click
+this button:
+    <button onclick="askServer()">Ask the Server</button>
+  </p>
+</div>
+  <p id="result"></p>
+</body>
+</html>

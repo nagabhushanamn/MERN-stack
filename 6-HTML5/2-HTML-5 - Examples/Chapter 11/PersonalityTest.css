@@ -1,0 +1,52 @@
+﻿
+
+body {
+  font-family: "Lucida Console";
+  font-size: 14px;
+}
+div {
+  margin-top: 10px;
+  border-top: 1px solid #D8EEFE;
+  max-width: 600px;
+}
+
+div img {
+text-align: bottom;
+}
+
+div span {
+  margin: 10px;
+}
+
+input {
+  border-top: 1px solid #96d1f8;
+  background: #65a9d7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+  background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+  padding: 2px 5px;
+  border-radius: 8px;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 14px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-top: 1px;
+}
+
+input:hover {
+ border-top-color: #28597a;
+ background: #28597a;
+ color: #ccc;
+}
+
+.Selected {
+  border: 1px outset;color:#369;
+  background: #efefef;
+  margin: 1px;
+}
+
+button {
+  padding: 5px;
+}

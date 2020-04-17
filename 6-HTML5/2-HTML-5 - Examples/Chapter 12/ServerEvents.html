@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Server-Sent Events</title>
+
+<style>
+body {
+  font-family: Verdana;
+  font-size: 12px;
+}
+
+div {
+  float: left;
+}
+
+#messageLog {
+  width: 400px;
+  height: 230px;
+  border: darkgray 2px solid;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#timeDisplay {
+  color: darkblue;
+  font-size: 50px;
+  font-weight: bold;
+  border: black 1px solid;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #FBF3CB;
+}
+
+#controls {
+  padding-top: 30px;
+}
+
+button {
+  padding: 5px;
+  margin: 2px;
+}
+</style>
+
+<script>
+var messageLog;
+var timeDisplay;
+var source;
+
+window.onload = function() {
+  messageLog = document.getElementById("messageLog");
+  timeDisplay = document.getElementById("timeDisplay");
+}
+
+function startListening() {
+  source = new EventSource("TimeEvents.php");
+  source.onmessage = receiveMessage;
+  messageLog.innerHTML += "<br>" + "Started listening for messages."
+}
+
+function stopListening() {
+  source.close();
+  messageLog.innerHTML += "<br>" + "No longer listening for messages."
+}
+
+function receiveMessage(event) {
+  messageLog.innerHTML += "<br>" + "New web server time received: " + event.data;
+  timeDisplay.innerHTML = event.data;
+}
+
+</script>
+</head>
+
+<body>
+<div id="messageLog">
+[Page Created]
+</div>
+<div id="timeDisplay">
+[No Time.]
+</div>
+<div id="controls">
+<button onclick="startListening()">Start Listening</button>
+<br>
+<button onclick="stopListening()">Stop Listening</button>
+</div>
+</body>
+</html>

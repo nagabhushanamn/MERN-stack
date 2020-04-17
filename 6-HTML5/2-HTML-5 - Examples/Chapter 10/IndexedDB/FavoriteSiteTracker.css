@@ -1,0 +1,64 @@
+﻿
+
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+  max-width: 670px;
+}
+
+legend {
+  padding: 0px 3px;
+  font-weight: bold;
+}
+
+label {
+  width: 125px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
+}
+
+input:focus {
+  background: #eaeaea;
+}
+
+input {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  width: 300px;
+}
+
+textarea {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  height: 100px;
+  width: 500px;
+}
+
+input[type=button] {
+  width: 150px;
+  padding: 8px;
+}
+
+div.resultBox {
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #D8EEFE;
+  border-radius: 15px;
+  max-width: 500px;
+}
+
+.linkButton {
+ cursor:pointer;
+ color:blue;
+ text-decoration:underline;
+}

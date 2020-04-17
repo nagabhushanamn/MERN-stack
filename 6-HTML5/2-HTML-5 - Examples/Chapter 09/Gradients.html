@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gradients</title>
+
+  <style>
+canvas {
+  border: 1px dashed black;
+}
+
+img {
+  display: none;
+}
+  </style>
+
+  <script>
+
+var canvas;
+var context;
+
+window.onload = function() {
+  canvas = document.getElementById("drawingCanvas");
+  context = canvas.getContext("2d");
+
+  var gradient = context.createLinearGradient(10, 0, 100, 0);
+  gradient.addColorStop(0, "magenta");
+  gradient.addColorStop(1, "yellow");
+
+  drawHeart(60, 50);
+  context.fillStyle = gradient;
+  context.fill();
+  context.stroke();
+
+  gradient = context.createRadialGradient(180, 100, 10, 180, 100, 50);
+  gradient.addColorStop(0, "magenta");
+  gradient.addColorStop(1, "yellow"); 
+
+  drawHeart(180, 80);
+  context.fillStyle = gradient;
+  context.fill();
+  context.stroke();
+
+  gradient = context.createLinearGradient(10, 0, 100, 0);
+  gradient.addColorStop("0","magenta");
+  gradient.addColorStop(".25","blue");
+  gradient.addColorStop(".50","green");
+  gradient.addColorStop(".75","yellow");
+  gradient.addColorStop("1.0","red");
+
+  drawHeart(60, 200);
+  context.fillStyle = gradient;
+  context.fill();
+  context.stroke();
+
+  gradient = context.createRadialGradient(180, 250, 10, 180, 250, 50);
+  gradient.addColorStop("0","magenta");
+  gradient.addColorStop(".25","blue");
+  gradient.addColorStop(".50","green");
+  gradient.addColorStop(".75","yellow");
+  gradient.addColorStop("1.0","red");
+
+  drawHeart(180, 230);
+  context.fillStyle = gradient;
+  context.fill();
+  context.stroke();  
+};
+
+
+function drawHeart(x, y) {
+  context.beginPath();
+  context.moveTo(x, y);
+  context.bezierCurveTo(x, y - 40, x - 45, y - 40, x - 48, y);
+  context.bezierCurveTo(x - 45, y + 30, x, y + 40, x, y + 80);
+  context.bezierCurveTo(x, y + 90, x + 45, y + 40, x + 45, y);
+  context.bezierCurveTo(x + 45, y - 30, x, y - 30, x, y);
+  context.closePath();
+}
+
+  </script>
+</head>
+
+<body>
+  <canvas id="drawingCanvas" width="300" height="350"></canvas>
+</body>
+</html>

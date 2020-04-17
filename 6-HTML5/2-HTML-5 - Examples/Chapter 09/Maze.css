@@ -1,0 +1,12 @@
+﻿canvas {
+  border: 6px double black;
+  background: white;
+}
+
+img {
+  display: none;
+}
+
+button {
+  padding: 3px;
+}

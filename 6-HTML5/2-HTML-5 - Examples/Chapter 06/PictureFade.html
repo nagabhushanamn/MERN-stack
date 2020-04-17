@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Transition Button</title>
+
+<style>
+div {
+  position: relative;
+  height: 240px;
+  margin: 5px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+img {
+  position: absolute;
+  -webkit-transition: opacity 10s;
+  transition: opacity 10s;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.solid {
+  opacity: 1;
+}
+</style>
+
+<script>
+function toNight() {
+  var nightImage = document.getElementById("nightImage");
+  nightImage.className = "solid";
+}
+
+function toDay() {
+  var nightImage = document.getElementById("nightImage");
+  nightImage.className = "transparent";
+}
+</script>
+
+</head>
+
+<body>
+<div>
+  <img src="day.png" alt="Daytime view">
+  <img id="nightImage" src="night.png" alt="Night-time view" class="transparent">
+</div>
+
+<button onclick="toNight()">Go to Night</button>
+<button onclick="toDay()">Go to Day</button>
+</body>
+</html>
