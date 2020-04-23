@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
-
+import Greeting from './components/Greeting'
 
 //-------------------------------------
 // Function syntax
@@ -32,18 +32,34 @@ class App extends React.Component {
     super();
     console.log("App :: constructor");
     //console.log(props);
+    this.state = {
+      message: 'greetings'
+    }
+  }
+  changeMessage(message) {
+    this.setState({ message: message });  // re-render component to V-DOM & triggers diffing algorithm to find differences
   }
   render() {
     console.log("App :: render");
-    // this.props.title="TITLE" // Error , i.e comp cannot mutate given props
     let { title, trainer } = this.props;
-    // const tnr = trainer.toUpperCase()
+    let { message } = this.state;
     return (
-      <div className="container">
+      <div className="jumbotron">
+
         <hr />
         <h1>{title} : <small>by {trainer}</small></h1>
         <hr />
-        im app component
+
+        <button onClick={e => this.changeMessage("good morning")} className="btn btn-primary">GM</button>&nbsp;
+        <button onClick={e => this.changeMessage("good noon")} className="btn btn-primary">GN</button>&nbsp;
+        <button onClick={e => this.changeMessage("good evening")} className="btn btn-primary">GE</button>&nbsp;
+
+        <hr />
+
+        <Greeting message={message} />
+
+
+        <hr />
       </div>
     )
   }
