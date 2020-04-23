@@ -1,0 +1,29 @@
+
+
+
+design issues with UI
+----------------------
+
+    ==> code duplications
+    ==> cannot re-use ui-fragment in other page/application with customizations
+
+
+solns :  using proper Architecture/Patterns
+
+        => mvc ( model view controller)
+        => component based architecture  ( our fucus )
+
+
+---------------------------------------------------------------------------
+component based UI arch
+---------------------------------------------------------------------------
+
+
+      what is component in UI ?
+
+      ==> any UI-fragment with single responsibility 
+         ( i.e simpler & smaller)
+
+           e.g
+
+        <clock /> .....
