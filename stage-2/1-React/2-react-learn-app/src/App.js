@@ -45,7 +45,6 @@ class App extends React.Component {
     let { message } = this.state;
     return (
       <div className="jumbotron">
-
         <hr />
         <h1>{title} : <small>by {trainer}</small></h1>
         <hr />
@@ -53,12 +52,8 @@ class App extends React.Component {
         <button onClick={e => this.changeMessage("good morning")} className="btn btn-primary">GM</button>&nbsp;
         <button onClick={e => this.changeMessage("good noon")} className="btn btn-primary">GN</button>&nbsp;
         <button onClick={e => this.changeMessage("good evening")} className="btn btn-primary">GE</button>&nbsp;
-
         <hr />
-
         <Greeting message={message} />
-
-
         <hr />
       </div>
     )

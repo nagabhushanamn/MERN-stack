@@ -14,7 +14,6 @@ principles of component(s)
 1. can take props to customize
 
     e.g
-
     <input type="password"/>
     <App title="" trainer=""/>
 
