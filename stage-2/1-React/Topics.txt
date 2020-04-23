@@ -1,0 +1,23 @@
+
+
+
+
+React Topics
+-------------------
+
+ => UI with components  & principles of component(s)
+
+
+
+
+principles of component(s)
+----------------------------
+
+1. can take props for customizations
+
+    e.g
+
+    <input type="password"/>
+    <App title="" trainer=""/>
+
+
