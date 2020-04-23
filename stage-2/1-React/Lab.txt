@@ -1,0 +1,35 @@
+
+-----------------------------------------------------
+
+> node -v
+> npm -v
+> npm i yarn -g
+
+To create react appln :
+
+> npx create-react-app <app-name>
+
+--- or -- 
+
+> npm i create-react-app -g
+> create-react-app <app-name>
+
+
+-----------------------------------------------------
+
+react topics
+--------------
+
+level-1
+
+    => thinking ui as components
+    => component's props & state
+    => lifecycle methods / hooks
+    => context 
+
+level-2
+
+   => higher order components  ( pattern )
+
+--------------------------------------------------   
+
