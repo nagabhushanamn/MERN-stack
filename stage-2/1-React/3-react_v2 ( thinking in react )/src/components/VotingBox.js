@@ -8,7 +8,8 @@ class VotingBox extends Component {
         super(props);
         console.log("VotingBox :: constructor");
         this.state = {
-            items: []
+            items: [],
+            totalCount: 0
         }
 
         //------------------------------------------------
@@ -25,20 +26,30 @@ class VotingBox extends Component {
         //------------------------------------------------
 
     }
+    incrementTotalCount(event) {
+        let { value } = event
+        let { totalCount } = this.state
+        totalCount += value
+        this.setState({ totalCount })
+    }
     renderVotingItems(items) {
         return items.map((item => {
-            return <VotingItem key={item} value={item} />
+            return <VotingItem key={item}
+                value={item}
+                onVote={event => this.incrementTotalCount(event)} />;
         }))
     }
     render() {
         console.log("VotingBox :: render");
         let { title } = this.props
-        let { items } = this.state
+        let { items, totalCount } = this.state
+        let className = `card ${totalCount < 0 ? 'bg-warning' : ''}`
         return (
-            <div className="card">
-                <div className="card-header">{title} - VotingBox  : <span className="badge badge-danger">0</span></div>
-                <div className="card-body">
-                    {/* 
+            <div>
+                <div className={className}>
+                    <div className="card-header">{title} - VotingBox  : <span className="badge badge-danger">{totalCount}</span></div>
+                    <div className="card-body">
+                        {/* 
                     <VotingItem value={items[0]} />
                     <VotingItem value={items[1]} />
                     <VotingItem value={items[2]} />
@@ -46,10 +57,11 @@ class VotingBox extends Component {
                     <VotingItem value={items[4]} />
                     <VotingItem value={items[5]} /> 
                     */
-                    }
-                    {
-                        this.renderVotingItems(items)
-                    }
+                        }
+                        {
+                            this.renderVotingItems(items)
+                        }
+                    </div>
                 </div>
             </div>
         );

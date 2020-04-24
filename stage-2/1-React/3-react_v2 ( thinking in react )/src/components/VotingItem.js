@@ -14,13 +14,20 @@ class VotingItem extends Component {
         let { count } = this.state
         count += n
         this.setState({ count });
+        let { onVote, value } = this.props
+        if (onVote) {
+            let event = { item: value, value: n }
+            onVote(event)
+        }
+
     }
     render() {
         console.log("VotingItem :: render");
         let { value } = this.props
         let { count } = this.state
+        let className = `voting-item ${count < 0 ? 'bg-warning' : ''}`
         return (
-            <div className="voting-item">
+            <div className={className}>
                 <button className="btn btn-primary">
                     {value}
                 </button>

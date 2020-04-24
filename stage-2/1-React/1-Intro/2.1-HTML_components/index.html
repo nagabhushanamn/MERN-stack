@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body class="container">
+
+    <hr />
+    <h1>HTML comp arch</h1>
+    <hr />
+
+    <div id="box1" class="alert alert-info" style="width:300px;height: 120px;">
+        <input id="inp1" type="number" onchange="callme(event)" />
+        <hr />
+        <span id="disp" class="badge badge-danger">0</span>
+    </div>
+
+
+    <script>
+        let inp1 = document.getElementById('inp1');
+        let number = 0;
+        setInterval(() => {
+            number++
+            inp1.value = number // state change
+            inp1.dispatchEvent(new Event('change'))
+        }, 2000)
+
+        function callme(event) {
+            document.getElementById('disp').innerHTML = number
+        }
+    </script>
+
+</body>
+
+</html>
