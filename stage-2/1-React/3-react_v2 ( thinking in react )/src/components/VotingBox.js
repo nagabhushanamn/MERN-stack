@@ -36,7 +36,7 @@ class VotingBox extends Component {
         let { items } = this.state
         return (
             <div className="card">
-                <div className="card-header">{title} - VotingBox</div>
+                <div className="card-header">{title} - VotingBox  : <span className="badge badge-danger">0</span></div>
                 <div className="card-body">
                     {/* 
                     <VotingItem value={items[0]} />
