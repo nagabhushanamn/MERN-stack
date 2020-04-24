@@ -27,6 +27,24 @@ import Greeting from './components/Greeting'
  * 
  */
 
+
+
+// class Greeting extends React.Component {
+//   constructor(props) {
+//       super(props)
+//       console.log("Greeting :: constructor()")
+//   }
+//   render() {
+//       const { message } = this.props
+//       console.log("Greeting :: render()")
+//       return (
+//           <div className="alert alert-danger">
+//               {message}
+//           </div>
+//       )
+//   }
+// }
+
 class App extends React.Component {
   constructor(props) {
     super();

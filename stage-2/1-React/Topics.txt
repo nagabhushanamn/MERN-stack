@@ -5,26 +5,12 @@
 React Topics
 -------------------
 
- => UI with components  & principles of component(s)
+ - component's props & state
 
 
 principles of component(s)
 ----------------------------
 
-1. can take props to customize
-
-    e.g
-    <input type="password"/>
-    <App title="" trainer=""/>
-
-
-2. can have data/state 
-
-    -> state is mutable
-
-3. always re-render, if there is state change   
-
-------------------------------------------------------------
 
 
 

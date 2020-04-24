@@ -1,0 +1,18 @@
+
+
+https://reactjs.org/docs/thinking-in-react.html
+
+
+
+e.g Voting App
+
+Step 1: Break The UI Into A Component Hierarchy
+
+         - VotingBox
+             - VotingItem
+         
+
+Step 2: Build A Static Version in React
+
+
+
