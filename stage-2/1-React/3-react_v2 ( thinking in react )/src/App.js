@@ -9,7 +9,9 @@ class App extends React.Component {
         <hr />
         <h1>Voting App ( thinking in react.js )</h1>
         <hr />
-        <VotingBox title="MERN-stack" />
+        <VotingBox title="VEG_ITEMS" />
+        <hr />
+        <VotingBox title="NON_VEG_ITEMS" />
       </div>
     )
   }
