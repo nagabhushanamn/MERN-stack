@@ -13,12 +13,14 @@ class VotingItem extends Component {
     doCount(e, n) {
         let { count } = this.state
         count += n
+        // if (count >= 0) {
         this.setState({ count });
-        let { onVote, value } = this.props
+        let { onVote, value: item } = this.props
         if (onVote) {
-            let event = { item: value, value: n }
+            let event = { item, count, value: n }
             onVote(event)
         }
+        // }
 
     }
     render() {

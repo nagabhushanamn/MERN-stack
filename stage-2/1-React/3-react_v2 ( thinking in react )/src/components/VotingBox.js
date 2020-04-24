@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import VotingItem from './VotingItem'
+import VotingTable from './VotingTable';
 
 class VotingBox extends Component {
 
@@ -9,7 +10,8 @@ class VotingBox extends Component {
         console.log("VotingBox :: constructor");
         this.state = {
             items: [],
-            totalCount: 0
+            totalCount: 0,
+            totalSummary: []
         }
 
         //------------------------------------------------
@@ -27,10 +29,22 @@ class VotingBox extends Component {
 
     }
     incrementTotalCount(event) {
-        let { value } = event
-        let { totalCount } = this.state
+
+        let { item, count, value } = event
+
+        let { totalCount, totalSummary } = this.state
         totalCount += value
-        this.setState({ totalCount })
+
+        let idx = totalSummary.findIndex(line => line.item === item)
+        let line
+        if (idx !== -1) {
+            line = totalSummary.splice(idx, 1)[0]
+            line = { item: line.item, count }
+        } else {
+            line = { item, count }
+        }
+        totalSummary = totalSummary.concat(line)
+        this.setState({ totalCount, totalSummary })
     }
     renderVotingItems(items) {
         return items.map((item => {
@@ -42,7 +56,7 @@ class VotingBox extends Component {
     render() {
         console.log("VotingBox :: render");
         let { title } = this.props
-        let { items, totalCount } = this.state
+        let { items, totalCount, totalSummary } = this.state
         let className = `card ${totalCount < 0 ? 'bg-warning' : ''}`
         return (
             <div>
@@ -61,6 +75,12 @@ class VotingBox extends Component {
                         {
                             this.renderVotingItems(items)
                         }
+
+                        <div className="clearfix"></div>
+                        <hr />
+
+                        <VotingTable value={totalSummary} />
+
                     </div>
                 </div>
             </div>

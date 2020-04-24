@@ -11,7 +11,7 @@ class App extends React.Component {
         <hr />
         <VotingBox title="VEG_ITEMS" />
         <hr />
-        <VotingBox title="NON_VEG_ITEMS" />
+        {/* <VotingBox title="NON_VEG_ITEMS" /> */}
       </div>
     )
   }

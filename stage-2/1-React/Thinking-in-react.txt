@@ -11,6 +11,7 @@ Step 1: Break The UI Into A Component Hierarchy
 
          - VotingBox
              - VotingItem
+             - VotingTable
          
 
 Step 2: Build A Static Version in React
