@@ -1,0 +1,9 @@
+
+
+npm i -g yarn
+
+create-react-app app_v1
+cd app_v1
+yarn add bootstrap font-awesome
+
+yarn start
