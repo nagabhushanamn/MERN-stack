@@ -8,11 +8,9 @@ React Topics
  - component's props & state
 
 
-principles of component(s)
-----------------------------
-
-
-
+ - component's life cycle
+ - component's context
+ 
 
 
 
