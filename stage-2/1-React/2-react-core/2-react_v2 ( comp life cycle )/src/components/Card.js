@@ -23,17 +23,20 @@ class Card extends Component {
         );
     }
 
+    // 
     componentDidMount() {
         console.log("Card :: componentDidMount");
         this.interval = setInterval(() => {
             this.forceUpdate()
         }, 1000)
     }
+
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log("Card :: componentDidUpdate");
         // console.log(this.props)
         // console.log(prevProps)
     }
+    
     componentWillUnmount() {
         clearInterval(this.interval)
         console.log("Card :: componentWillUnmount");
