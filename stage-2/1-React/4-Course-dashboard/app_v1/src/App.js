@@ -6,6 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentTab: 1,
       courses: [
         {
           id: 1,
@@ -26,6 +27,9 @@ class App extends Component {
       ]
     }
   }
+  changeTab(tabIndex) {
+    this.setState({ currentTab: tabIndex })
+  }
   renderLearnButton(course) {
     let { isAvailable } = course
     if (isAvailable) {
@@ -35,8 +39,17 @@ class App extends Component {
       return null
     }
   }
+  renderTabPanel(course) {
+    let { currentTab } = this.state
+    switch (currentTab) {
+      case 1: return (<div>{course.description}</div>)
+      case 2: return (<div>{"Not Yet"}</div>)
+      case 3: return (<div>{"None Yet"}</div>)
+      default: return null
+    }
+  }
   renderCourses() {
-    let { courses } = this.state
+    let { courses, currentTab } = this.state
     let elements = courses.map(course => {
       return (
         <div className="list-group-item" key={course.id}>
@@ -47,9 +60,19 @@ class App extends Component {
             <div className="col-9">
               <h5>{course.title}</h5>
               <h6>&#8377;{course.price}</h6>
-              <div>{course.description}</div>
-              {/* {course.isAvailable ? <button className="btn btn-sm btn-dark">Learn</button> : null} */}
               {this.renderLearnButton(course)}
+              <ul className="nav nav-tabs">
+                <li className="nav-item">
+                  <a onClick={e => this.changeTab(1)} className={currentTab === 1 ? 'nav-link active' : 'nav-link'} href="#">Description</a>
+                </li>
+                <li className="nav-item">
+                  <a onClick={e => this.changeTab(2)} className={currentTab === 2 ? 'nav-link active' : 'nav-link'} href="#">Syllabus</a>
+                </li>
+                <li className="nav-item">
+                  <a onClick={e => this.changeTab(3)} className={currentTab === 3 ? 'nav-link active' : 'nav-link'} href="#">Reviews</a>
+                </li>
+              </ul>
+              {this.renderTabPanel(course)}
             </div>
           </div>
         </div>
