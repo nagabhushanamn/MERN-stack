@@ -15,10 +15,17 @@ class Item extends Component {
     changeTab(tabIndex) {
         this.setState({ tab: tabIndex })
     }
+    handleBuy(e) {
+        let { onBuy, value: item } = this.props
+        if (onBuy) {
+            let event = { item }
+            onBuy(event)
+        }
+    }
     renderLearnButton(item) {
         let { isAvailable } = item
         if (isAvailable) {
-            return (<button className="btn btn-sm btn-dark">Learn</button>)
+            return (<button onClick={e => this.handleBuy(e)} className="btn btn-sm btn-dark">buy</button>)
         }
         else {
             return null
@@ -45,7 +52,7 @@ class Item extends Component {
         let { value: item } = this.props
         let { tab } = this.state
         return (
-            <div>
+            <div style={{ marginBottom: '10px' }}>
                 <div className="list-group-item">
                     <div className="row">
                         <div className="col-3">
@@ -55,7 +62,8 @@ class Item extends Component {
                             <h5>{item.title}</h5>
                             <h6>&#8377;{item.price}</h6>
                             {this.renderLearnButton(item)}
-                            <ul className="nav nav-tabs">
+
+                            <ul style={{ margin: '10px 0px 10px' }} className="nav nav-tabs">
                                 <li className="nav-item">
                                     <a onClick={e => this.changeTab(1)} className={tab === 1 ? 'nav-link active' : 'nav-link'} href="#">Overview</a>
                                 </li>
