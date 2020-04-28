@@ -2,12 +2,15 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar'
 import Item from './components/Item'
+import CartBadge from './components/CartBadge'
+import CartView from './components/CartView'
 
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      isCartOpen: false,
       cart: [],
       courses: [
         {
@@ -30,40 +33,77 @@ class App extends Component {
     }
   }
 
-  addToCart(course) {
-    let { cart } = this.state
+  toggleCart() {
+    let { isCartOpen } = this.state
+    this.setState({ isCartOpen: !isCartOpen })
+  }
+
+  addToCart(event) {
+    let { item: course } = event
+    let { cart } = this.state 
+    // if (!cart.includes(course)) {
     cart = cart.concat(course)
+    this.setState({ cart })
+    // }
+  }
+
+  deleteCartLine(event) {
+    let { id } = event
+    let { cart } = this.state
+    cart = cart.filter(line => line.id !== id)
     this.setState({ cart })
   }
 
   renderCourses() {
-    let { courses, currentTab } = this.state
-    let elements = courses.map(course => {
-      return (
-        <div key={course.id}>
-          <Item value={course} onBuy={event => this.addToCart(event.item)} />
-          {/* <input value="Nag" onchange="func(event)"/> */}
-        </div >
-      )
-    })
-    return elements
+    let { cart, courses, isCartOpen } = this.state
+    if (!isCartOpen) {
+      let elements = courses.map(course => {
+        let isOwned = cart.includes(course)
+        return (
+          <div key={course.id}>
+            <Item value={course} isOwned={isOwned} onBuy={e=>{this.addToCart(e)}} />
+            {/* <input value="Nag" onchange="func(event)"/> */}
+          </div >
+        )
+      })
+      return elements
+    }
   }
+
+  renderCart() {
+    let { isCartOpen, cart } = this.state
+    if (isCartOpen)
+      return <CartView value={cart} onDelete={e => this.deleteCartLine(e)} />
+  }
+
   render() {
-    let { cart } = this.state
+    let { cart, isCartOpen } = this.state
     let count = cart.length
     return (
       <div>
         <Navbar title="course dashboard" />
         <hr />
         <div className="container">
-          <i className="fa fa-shopping-cart"></i>&nbsp;
-        <span className="badge badge-danger">{count}</span> item(s) in cart
+          <CartBadge value={count} />
+        </div>
+        <hr />
+        <div className="container">
+          <ul className="nav nav-pills">
+            <li className="nav-item">
+              <a
+                className="nav-link" href="#"
+                onClick={e => this.toggleCart()}>
+                {isCartOpen ? 'view courses' : 'view cart'}
+              </a>
+            </li>
+          </ul>
         </div>
         <hr />
         <div className="container">
           {this.renderCourses()}
+          {this.renderCart()}
         </div>
-      </div>
+      </div >
     );
   }
 }

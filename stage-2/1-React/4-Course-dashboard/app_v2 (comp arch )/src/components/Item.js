@@ -25,7 +25,12 @@ class Item extends Component {
     renderLearnButton(item) {
         let { isAvailable } = item
         if (isAvailable) {
-            return (<button onClick={e => this.handleBuy(e)} className="btn btn-sm btn-dark">buy</button>)
+            let { isOwned } = this.props
+            return (
+                <button disabled={isOwned ? true : false} onClick={e => this.handleBuy(e)} className="btn btn-sm btn-dark">
+                    {isOwned ? "Item in cart" : "Buy"}
+                </button>
+            )
         }
         else {
             return null
