@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import Review from './Review'
 
 class Item extends Component {
     constructor(props) {
         super(props);
         this.state = {
             tab: 1,
+            reviews: [
+                { stars: 5, author: 'who1@mail.com', body: 'sample review-1' },
+                { stars: 3, author: 'who2@mail.com', body: 'sample review-2' }
+            ]
         }
     }
     changeTab(tabIndex) {
@@ -19,12 +24,20 @@ class Item extends Component {
             return null
         }
     }
+    renderReviews() {
+        let { reviews } = this.state
+        return reviews.map((review, idx) => {
+            return (
+                <Review value={review} key={idx} />
+            )
+        })
+    }
     renderTabPanel(item) {
         let { tab } = this.state
         switch (tab) {
             case 1: return (<div>{item.overview}</div>)
             case 2: return (<div>{"Not Yet"}</div>)
-            case 3: return (<div>{"None Yet"}</div>)
+            case 3: return (<div>{this.renderReviews()}</div>)
             default: return null
         }
     }

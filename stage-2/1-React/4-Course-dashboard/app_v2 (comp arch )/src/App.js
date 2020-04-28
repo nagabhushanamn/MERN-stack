@@ -28,7 +28,7 @@ class App extends Component {
       ]
     }
   }
-
+ 
   renderCourses() {
     let { courses, currentTab } = this.state
     let elements = courses.map(course => {
