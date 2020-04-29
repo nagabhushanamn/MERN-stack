@@ -15,8 +15,8 @@ class C extends Component {
                                 return (
                                     <div style={{ backgroundColor: bgColor }} className="card card-body">
                                         <span>C component</span>
-                                        <span className="badge badge-danger">{user}</span>
-                                        <br/>
+                                        <span>{user}</span>
+                                        <br />
                                         <D />
                                     </div>
                                 )
