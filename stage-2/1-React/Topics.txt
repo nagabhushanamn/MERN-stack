@@ -9,6 +9,12 @@ React Topics
  - component's props & state
  - component's life cycle
  - SPA with react-router
+ - container components
+ - context
+ - error boundary components
+ - hoc pattern
+ - function syntax components
+ - hooks
 
  --------------------------------------
  

@@ -31,6 +31,8 @@ const Reviews = (props) => {
         return reviews.map((item, idx) => {
             return (
                 <div key={idx} className="alert alert-info">
+                    <span>{item.review.review_time_friendly}</span>
+                    <hr />
                     <span className="badge badge-dark">{item.review.rating}</span>
                     &mdash; <span>{item.review.user.name}</span>
                     <hr />

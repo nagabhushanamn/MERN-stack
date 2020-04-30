@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+
+
+const computeExpensiveValue = (a, b) => {
+    console.log("computeExpensiveValue func invoked..")
+    /// expensive computation
+    return a + b
+}
 
 const VotingBox = () => {
 
     let [count, setCount] = useState(10)
+
+    let a = 10
+    let b = 20
+
+    let result = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+    console.log(result)
 
     const increment = () => {
         count += 1
