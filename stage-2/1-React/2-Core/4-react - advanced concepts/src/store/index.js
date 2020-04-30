@@ -4,11 +4,10 @@
  * 
  *  store
  * 
- *   ==> a object contains UI application state
+ *   ==> a object-tree contains UI application's state
  * 
  */
 
- // Redux
 
 const store = {
     state: {
@@ -20,22 +19,26 @@ const store = {
         messages: {
             'channel-1': [
                 "whats is channel 1",
-                "whats is channel one",
             ],
             'channel-2': [
                 "whats is channel 2",
                 "whats is channel two",
+            ],
+            'channel-3': [
+                "whats is channel 3",
+                "whats is channel three",
+                "whats is channel treee",
             ]
         }
     },
     getState() {
         return this.state
     },
-    listeners: [],
+    subscribers: [],
     subscribe: function (listener) {
-        this.listeners.push(listener)
+        this.subscribers.push(listener)
         return function () {
-            this.listeners = this.listeners.filter(e => e !== listener)
+            this.subscribers = this.subscribers.filter(e => e !== listener)
         }
     }
 
@@ -44,7 +47,7 @@ const store = {
 
 
 //-------------------------------------------
-
+//-------------------------------------------
 // let idx = 3
 // setInterval(() => {
 //     idx++
@@ -59,6 +62,7 @@ const store = {
 
 
 
+//-------------------------------------------
 //-------------------------------------------
 
 // let messageIdx = 0

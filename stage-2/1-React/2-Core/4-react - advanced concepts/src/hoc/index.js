@@ -10,7 +10,39 @@ import store from '../store'
 // }
 
 
-function connect(InputComponent, callback) {
+export function withBackground(InputComponent) {
+    class Container extends React.Component {
+        render() {
+            return (
+                <div style={{ backgroundColor: "#DEF" }} className="card card-body">
+                    <InputComponent />
+                </div>
+            )
+        }
+    }
+    return Container
+}
+
+
+
+
+export function withCard(InputComponent) {
+    class Container extends React.Component {
+        render() {
+            return (
+                <div className="card card-body">
+                    <InputComponent />
+                </div>
+            )
+        }
+    }
+    return Container
+}
+
+
+
+
+export function connect(InputComponent, callback) {
 
     class Container extends React.Component {
         constructor(props) {
@@ -27,7 +59,6 @@ function connect(InputComponent, callback) {
             this.unsubscribe()
         }
         componentDidUpdate(prevProps) {
-            // Home work..
             if (this.props !== prevProps) {
                 const state = callback(store.getState(), this.props)
                 this.setState(state)
@@ -46,4 +77,3 @@ function connect(InputComponent, callback) {
 
 }
 
-export { connect }

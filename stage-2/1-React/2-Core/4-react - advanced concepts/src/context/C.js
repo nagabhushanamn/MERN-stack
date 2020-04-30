@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ColorContext from './ColorContext'
+import ThemeContext from './ThemeContext'
 import UserContext from './UserContext'
 import D from './D';
 
@@ -7,13 +7,13 @@ class C extends Component {
     render() {
         // let { bgColor } = this.props
         return (
-            <ColorContext.Consumer>
-                {({ bgColor }) => {
+            <ThemeContext.Consumer>
+                {(theme) => {
                     return (
                         <UserContext.Consumer>
                             {user => {
                                 return (
-                                    <div style={{ backgroundColor: bgColor }} className="card card-body">
+                                    <div style={{ backgroundColor: theme }} className="card card-body">
                                         <span>C component</span>
                                         <span>{user}</span>
                                         <br />
@@ -24,7 +24,7 @@ class C extends Component {
                         </UserContext.Consumer>
                     )
                 }}
-            </ColorContext.Consumer>
+            </ThemeContext.Consumer>
         );
     }
 }

@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import B from './B'
-import ColorContext from './ColorContext'
+import ThemeContext from './ThemeContext'
 
 class A extends Component {
     render() {
-        let { bgColor } = this.props
+        // let { bgColor } = this.props
         return (
-            <div style={{ backgroundColor: bgColor }} className="card card-body">
-                <span>A component</span>
-                {/* <B bgColor={bgColor} /> */}
-                <ColorContext.Provider value={{ bgColor }}>
-                    <B />
-                </ColorContext.Provider>
-              
-            </div>
+            <ThemeContext.Consumer>
+                {theme => {
+                    return (
+                        <div style={{ backgroundColor: theme }} className="card card-body">
+                            <span>A component</span>
+                            <B />
+                        </div>
+                    )
+                }}
+            </ThemeContext.Consumer>
         );
     }
 }

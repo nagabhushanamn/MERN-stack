@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from './index'
 
 class NewChannelList extends Component {
-
+    
     renderTopics() {
         let { channels } = this.props
         let { onChange, currentChannel } = this.props
@@ -31,7 +31,7 @@ class NewChannelList extends Component {
 }
 
 // export default NewChannelList;
-const mapStateToProps = state => {
+const mapStateToProps = (state,props) => {
     return {
         channels: state.channels
     }

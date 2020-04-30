@@ -1,21 +1,21 @@
 
 import React, { Component } from 'react';
-import ColorContext from './ColorContext'
+import ThemeContext from './ThemeContext'
 
 class D extends Component {
     render() {
         let context = this.context
-        let bgColor = "#FFF"
+        let theme = "#FFF"
         if (context)
-            ({ bgColor } = context)
+            (theme = context)
         return (
-            <div style={{ backgroundColor: bgColor }} className="card card-body">
+            <div style={{ backgroundColor: theme }} className="card card-body">
                 <span>D component</span>
             </div>
         )
     }
 }
 
-D.contextType = ColorContext
+D.contextType = ThemeContext
 
 export default D;
