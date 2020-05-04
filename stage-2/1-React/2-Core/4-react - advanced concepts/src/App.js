@@ -48,15 +48,6 @@ class App extends Component {
         <h1> react.js advanced concepts </h1>
         <hr />
 
-
-        <hr />
-        6. <h6> Hooks </h6>
-        <hr />
-
-
-        <VotingBox />
-
-
         <hr />
         5. <h6>  class vs function syntax for react components </h6>
         <hr />
