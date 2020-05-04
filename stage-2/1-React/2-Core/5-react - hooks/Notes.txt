@@ -1,0 +1,23 @@
+
+
+useState
+---------------------
+
+useState(state)
+useState(prevState=>newState)
+
+useEffect
+---------------------
+
+useEffect(()=>{})    // every render
+
+useEffect(()=>{},[dependency1,dependency1])    // when dependency change
+
+useEffect(()=>,[]) // one time
+
+useEffect(()=>{
+    //...
+    return ()=>{
+        // clean up
+    }
+},[])
