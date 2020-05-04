@@ -1,10 +1,10 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const HookTitleChange = () => {
     let [count, setCount] = useState(0)
-    useEffect(()=>{
+    useEffect(() => {
         document.title = `count - ${count}`
-    })
+    }, [count])
     const increment = () => {
         setCount(count + 1)
     }

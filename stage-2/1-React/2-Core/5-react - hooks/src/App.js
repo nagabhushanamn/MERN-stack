@@ -8,13 +8,18 @@ import HookUserForm from './use-state/HookUserForm';
 import HookList from './use-state/HookList';
 import ClassTitleChange from './use-effect/ClassTitleChange';
 import HookTitleChange from './use-effect/HookTitleChange';
-import HookTitleAndNameChange from './use-effect/HookTitleAndNameChange';
 import ClassMousePosition from './use-effect/ClassMousePosition';
 import HookMousePosition from './use-effect/HookMousePosition';
 import ClassAutoCount from './use-effect/ClassAutoCount';
 import HookAutoCount from './use-effect/HookAutoCount';
 
 import Root from './use-context/Root'
+import HookVotingBox from './use-reducer/HookVotingBox';
+import Box from './use-context and reducer/Box';
+import TodoApp from './use-callback/TodoApp';
+import NumberCheck from './use-memo/NumberCheck';
+import Comp1 from './use-cusom-hook/Comp1';
+import Comp2 from './use-cusom-hook/Comp2';
 
 function App() {
 
@@ -34,7 +39,7 @@ function App() {
 
         <CollapsibleItem
           expanded={false}
-          header="useState"
+          header="useState  - to manage state "
           icon={<Icon>filter_drama</Icon>}
           node="div"
         >
@@ -58,11 +63,10 @@ function App() {
 
         <CollapsibleItem
           expanded={false}
-          header="useEffect"
+          header="useEffect - to add side effects"
           icon={<Icon>filter_drama</Icon>}
           node="div"
         >
-
 
           <div className="row">
             <div className="col s6">
@@ -70,9 +74,6 @@ function App() {
             </div>
             <div className="col s6">
               <HookTitleChange />
-            </div>
-            <div className="col s6">
-              <HookTitleAndNameChange />
             </div>
             <div className="col s6">
               <ClassMousePosition />
@@ -91,53 +92,71 @@ function App() {
         </CollapsibleItem>
 
         <CollapsibleItem
-          expanded={true}
-          header="useContext"
+          expanded={false}
+          header="useContext - to connsume conext"
           icon={<Icon>filter_drama</Icon>}
           node="div"
         >
-
           <Root />
 
         </CollapsibleItem>
 
         <CollapsibleItem
-          expanded={true}
-          header="useCallback"
+          expanded={false}
+          header="useReducer - to manage comp's complex state on different action(s)"
           icon={<Icon>filter_drama</Icon>}
           node="div"
         >
+          <HookVotingBox />
+        </CollapsibleItem>
+
+        <CollapsibleItem
+          expanded={false}
+          header="useReducer + useContext"
+          icon={<Icon>filter_drama</Icon>}
+          node="div"
+        >
+          <Box />
+        </CollapsibleItem>
+
+        <CollapsibleItem
+          expanded={false}
+          header="useCallback - to cache function to pass as props"
+          icon={<Icon>filter_drama</Icon>}
+          node="div"
+        >
+
+          <TodoApp />
+
 
         </CollapsibleItem>
 
         <CollapsibleItem
-          expanded={true}
-          header="useMemo"
+          expanded={false}
+          header="useMemo  - to invoke expensive-function only if there is change in dependency"
           icon={<Icon>filter_drama</Icon>}
           node="div"
         >
+          <NumberCheck />
 
         </CollapsibleItem>
 
         <CollapsibleItem
-          expanded={true}
-          header="useRef"
+          expanded={false}
+          header="customHook  - to share same logic on multiple components"
           icon={<Icon>filter_drama</Icon>}
           node="div"
         >
-
+          <div className="row">
+            <div className="col s6">
+              <Comp1 />
+            </div>
+            <div className="col s6">
+              <Comp2 />
+            </div>
+          </div>
         </CollapsibleItem>
 
-        <CollapsibleItem
-          expanded={true}
-          header="useReducer"
-          icon={<Icon>filter_drama</Icon>}
-          node="div"
-        >
-
-        </CollapsibleItem>
-
-        
 
       </Collapsible>
 
