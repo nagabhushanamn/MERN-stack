@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "price": 149000,
+        "currency": "INR",
+        "canBuy": true,
+        "description": "Mac pro",
+        "image": "images/laptop.png"
+    },
+    {
+        "id": 2,
+        "name": "Mobile",
+        "price": 47000,
+        "currency": "INR",
+        "canBuy": true,
+        "description": "iphone-7",
+        "image": "images/mobile.png"
+    }
+]

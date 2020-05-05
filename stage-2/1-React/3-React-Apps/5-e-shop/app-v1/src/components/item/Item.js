@@ -8,7 +8,7 @@ import getSymbolFromCurrency from 'currency-symbol-map'
 
 
 
-const Item = ({ value: item, onBuy }) => {
+const Item = ({ value: item, onBuy, cartItemQty }) => {
 
 
     const handleBuy = item => {
@@ -34,7 +34,7 @@ const Item = ({ value: item, onBuy }) => {
                 <div className="col-6">
                     <h5>{item.name}</h5>
                     <h6>{renderPrice(item)}</h6>
-                    {renderBuyBtn(item)}
+                    {renderBuyBtn(item)} &nbsp; <span className="badge badge-warning">{cartItemQty}</span>
                     <br />
                     <ItemTabs value={item} />
                 </div>

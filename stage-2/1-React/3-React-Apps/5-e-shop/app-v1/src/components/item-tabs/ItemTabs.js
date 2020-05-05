@@ -1,18 +1,28 @@
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import Review from '../review/Review';
 import ReviewForm from '../review-form/ReviewForm_v2';
 
+import axios from 'axios'
+
 const ItemTabs = ({ value: item }) => {
 
     const [tab, setTab] = useState(1)
+    const [reviews, setReviews] = useState([])
 
-    const [reviews, setReviews] = useState([
-        { author: 'who1', stars: 5, body: 'sample-review-1' },
-        { author: 'who2', stars: 3, body: 'sample-review-2' }
-    ])
+    useEffect(() => {
+        if (tab === 3) {
+            axios.get('/data/reviews.json')
+                .then((response) => {
+                    let allReviews = response.data || []
+                    let reviews = allReviews[item.id] || []
+                    setReviews(reviews)
+                })
+        }
+    }, [tab])
+
 
     const addNewReview = review => {
         setReviews(reviews.concat(review))
@@ -36,7 +46,7 @@ const ItemTabs = ({ value: item }) => {
                 <div>
                     <div className="row">
                         <div className="col-12">
-                            <br/>
+                            <br />
                             {renderReviews(item.reviews)}
                             <ReviewForm onNewReview={review => addNewReview(review)} />
                         </div>

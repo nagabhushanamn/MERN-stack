@@ -1,0 +1,17 @@
+
+
+
+design issues & performance issues
+------------------------------------
+
+
+1.
+2. 
+3.
+4.
+
+
+
+solution:
+
+    => redux library

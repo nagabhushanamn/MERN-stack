@@ -21,12 +21,6 @@ const Navbar = ({ title }) => {
                         <li className="nav-item active">
                             <NavLink className="nav-link" to="/cart">Cart</NavLink>
                         </li>
-                        <li className="nav-item active">
-                            <NavLink className="nav-link" to="/orders">Orders</NavLink>
-                        </li>
-                        <li className="nav-item active">
-                            <NavLink className="nav-link" to="/login">Login</NavLink>
-                        </li>
                     </ul>
                 </div>
             </nav>
