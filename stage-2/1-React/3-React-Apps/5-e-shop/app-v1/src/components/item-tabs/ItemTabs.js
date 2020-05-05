@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import Review from '../review/Review';
-import ReviewForm from '../review-form/ReviewForm';
+import ReviewForm from '../review-form/ReviewForm_v2';
 
 const ItemTabs = ({ value: item }) => {
 
@@ -34,8 +34,14 @@ const ItemTabs = ({ value: item }) => {
             )
             case 3: return (
                 <div>
-                    {renderReviews(item.reviews)}
-                    <ReviewForm onNewReview={review => addNewReview(review)} />
+                    <div className="row">
+                        <div className="col-12">
+                            <br/>
+                            {renderReviews(item.reviews)}
+                            <ReviewForm onNewReview={review => addNewReview(review)} />
+                        </div>
+                    </div>
+
                 </div>
             )
             default: return null

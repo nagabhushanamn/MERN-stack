@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
 
+// un-controlled form
+
 const ReviewForm = ({ onNewReview }) => {
 
     const [isOpen, setOpen] = useState(false);

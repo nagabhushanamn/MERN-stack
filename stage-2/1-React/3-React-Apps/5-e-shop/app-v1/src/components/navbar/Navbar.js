@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = ({ title }) => {
     return (
@@ -13,10 +13,19 @@ const Navbar = ({ title }) => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <Link className="nav-link" to="/">Home</Link>
+                            <NavLink className="nav-link" to="/">Home</NavLink>
                         </li>
                         <li className="nav-item active">
-                            <Link className="nav-link" to="/items">Items</Link>
+                            <NavLink className="nav-link" to="/items">Items</NavLink>
+                        </li>
+                        <li className="nav-item active">
+                            <NavLink className="nav-link" to="/cart">Cart</NavLink>
+                        </li>
+                        <li className="nav-item active">
+                            <NavLink className="nav-link" to="/orders">Orders</NavLink>
+                        </li>
+                        <li className="nav-item active">
+                            <NavLink className="nav-link" to="/login">Login</NavLink>
                         </li>
                     </ul>
                 </div>

@@ -19,7 +19,7 @@ const renderStars = n => {
 const Review = ({ value: review }) => {
     return (
         <div>
-            <div className="alert alert-danger">
+            <div className="alert alert-dark">
                 <span>{review.author}</span> &mdash; {renderStars(review.stars)}
                 <hr />
                 <div>{review.body}</div>

@@ -3,17 +3,8 @@
 import React, { useState } from 'react';
 import Item from '../item/Item'
 
-const renderItems = (items) => {
-    return items.map((item => {
-        return (
-            <div key={item.id} className="list-group-item">
-               <Item value={item}/>
-            </div>
-        )
-    }))
-}
 
-const ItemList = () => {
+const ItemList = ({ onBuy }) => {
 
     const [items] = useState([
         {
@@ -30,15 +21,30 @@ const ItemList = () => {
             name: 'Mobile',
             price: 47000,
             currency: 'INR',
-            canBuy: false,
+            canBuy: true,
             description: 'iphone-7',
             image: 'images/mobile.png'
         }
     ])
 
+
+    const renderItems = (items) => {
+        return items.map((item => {
+            return (
+                <div key={item.id}>
+                    <div key={item.id} className="list-group-item">
+                        <Item value={item} onBuy={item => onBuy(item)} />
+                    </div>
+                </div>
+            )
+        }))
+    }
+
     return (
-        <div className="list-group">
-            {renderItems(items)}
+        <div>
+            <div className="list-group">
+                {renderItems(items)}
+            </div>
         </div>
     );
 };
