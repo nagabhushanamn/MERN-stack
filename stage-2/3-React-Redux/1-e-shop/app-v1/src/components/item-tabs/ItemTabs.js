@@ -5,27 +5,24 @@ import classnames from 'classnames';
 import Review from '../review/Review';
 import ReviewForm from '../review-form/ReviewForm_v2';
 
-import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
+import { loadReviews, addNewReview } from '../../actions/reviews'
 
 const ItemTabs = ({ value: item }) => {
 
     const [tab, setTab] = useState(1)
-    const [reviews, setReviews] = useState([])
+    const reviews = useSelector((state) => state.reviews[item.id] || [])
+    const dispatch = useDispatch()
 
     useEffect(() => {
         if (tab === 3) {
-            axios.get('/data/reviews.json')
-                .then((response) => {
-                    let allReviews = response.data || []
-                    let reviews = allReviews[item.id] || []
-                    setReviews(reviews)
-                })
+            dispatch(loadReviews(item.id))
         }
-    },[tab,item])
+    }, [tab, item])
 
 
-    const addNewReview = review => {
-        setReviews(reviews.concat(review))
+    const handleNewReview = review => {
+        dispatch(addNewReview(item.id, review))
     }
 
     const renderReviews = (reviews) => {
@@ -47,7 +44,7 @@ const ItemTabs = ({ value: item }) => {
                     <div className="row">
                         <div className="col-12">
                             {renderReviews(item.reviews)}
-                            <ReviewForm onNewReview={review => addNewReview(review)} />
+                            <ReviewForm onNewReview={review => handleNewReview(review)} />
                         </div>
                     </div>
 

@@ -1,7 +1,6 @@
 
 
 export function cartReducer(state = {}, action) {
-    console.log('cartReducer')
     let { type } = action
     switch (type) {
         case 'BUY': {

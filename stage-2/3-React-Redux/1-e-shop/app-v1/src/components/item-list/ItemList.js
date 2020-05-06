@@ -1,19 +1,19 @@
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Item from '../item/Item'
-import axios from 'axios'
 
+import { useSelector, useDispatch } from 'react-redux'
+import { loadItems } from '../../actions/items'
 
-const ItemList = ({ onBuy, cart }) => {
+const ItemList = () => {
 
-    const [items, setItems] = useState([])
+    const items = useSelector(state => state.items)
+    const cart = useSelector(state => state.cart)
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        axios.get('/data/items.json')
-            .then(response => {
-                setItems(response.data)
-            })
+        dispatch(loadItems('elec', 2))
     }, [])
 
     const renderItems = (items) => {
@@ -23,7 +23,7 @@ const ItemList = ({ onBuy, cart }) => {
             return (
                 <div key={item.id}>
                     <div key={item.id} className="list-group-item">
-                        <Item value={item} cartItemQty={cartItemQty} onBuy={item => onBuy(item)} />
+                        <Item value={item} cartItemQty={cartItemQty} />
                     </div>
                 </div>
             )

@@ -2,6 +2,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
+import CartBadge from '../cart-badge/CartBadge';
+
+
 const Navbar = ({ title }) => {
     return (
         <div>
@@ -23,6 +26,7 @@ const Navbar = ({ title }) => {
                         </li>
                     </ul>
                 </div>
+                <CartBadge />
             </nav>
         </div>
     );

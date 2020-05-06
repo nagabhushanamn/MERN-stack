@@ -1,6 +1,7 @@
 
 
 
-export function buy(item) {
-    return { type: 'BUY', item: item }
+export function buy(item, qty) {
+    //..
+    return { type: 'BUY', item, qty }
 }

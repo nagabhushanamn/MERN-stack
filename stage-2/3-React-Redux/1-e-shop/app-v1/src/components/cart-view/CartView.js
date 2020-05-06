@@ -1,6 +1,11 @@
 import React from 'react';
 
-const CartView = ({ value: cart, history, onBuy }) => {
+import { useSelector, useDispatch } from 'react-redux'
+import { buy } from '../../actions/cart'
+const CartView = ({ history }) => {
+
+    const cart = useSelector(state => state.cart)
+    const dispatch = useDispatch()
 
     if (Object.keys(cart).length === 0) {
         return (
@@ -9,8 +14,7 @@ const CartView = ({ value: cart, history, onBuy }) => {
     }
 
     const handleBuy = (item, qty) => {
-        if (onBuy)
-            onBuy(item, qty)
+        dispatch(buy(item, qty))
     }
 
     const renderCartItems = cart => {

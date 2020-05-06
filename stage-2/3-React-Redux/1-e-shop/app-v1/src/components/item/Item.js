@@ -6,14 +6,15 @@ import getSymbolFromCurrency from 'currency-symbol-map'
 
 // import styles from './Item.module.css'
 
+import { useDispatch } from 'react-redux'
+import { buy } from '../../actions/cart'
 
+const Item = ({ value: item, cartItemQty }) => {
 
-const Item = ({ value: item, onBuy, cartItemQty }) => {
-
+    const dispatch = useDispatch()
 
     const handleBuy = item => {
-        if (onBuy)
-            onBuy(item)
+        dispatch(buy(item))
     }
 
     const renderBuyBtn = (item) => {
