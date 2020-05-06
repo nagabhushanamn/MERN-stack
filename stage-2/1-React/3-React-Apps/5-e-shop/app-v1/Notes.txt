@@ -1,17 +1,47 @@
+ 
+ 
+ Arch.. design issues  with 'react.js' only
+ ------------------------------------------
+
+    
+
+    ==> state/model/ui-data is scattered across UI components
+    ==> if same state is required in multiple components 
+        either we should duplicate that state in components or we should pass via input properties
+    ==> state & state-change logic & network/service calls 
+        are tightly-coupled with UI components    
+    ==> Unit-Testing is very difficult in components    
+    ==> we cant re-use same components across diffent pages or applications
 
 
+ 
+        soln:
 
-design issues & performance issues
-------------------------------------
+        ==> isolate state & state change & n/w-ing logic 
+            from UI components
+
+    How ?
+
+        way-1 : using MVC Arch pattern
+
+                --> bi-directional data-flow b/w view & state/model
+        
+        way-2 : Flux pattern  ( from facebook )
+
+                 --> uni-directional data-flow b/w view & state/model        
 
 
-1.
-2. 
-3.
-4.
+        ----------------------------------------------------------
+
+        Dan Abramov  
+        
+            ==> reducer + flux = redux library
+
+        ----------------------------------------------------------------
 
 
+        why we need redux ?
 
-solution:
+            => to manage javascript's UI appln state effectively
 
-    => redux library
+        -------------------------------------------------------------         

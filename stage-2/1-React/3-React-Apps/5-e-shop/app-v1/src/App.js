@@ -22,10 +22,15 @@ function App() {
         name: 'Laptop',
         price: 149000,
         currency: 'INR',
-        canBuy: true,
-        description: 'Mac pro',
-        image: 'images/laptop.png'
       }, qty: 1
+    },
+    2: {
+      item: {
+        id: 1,
+        name: 'Laptop',
+        price: 149000,
+        currency: 'INR',
+      }, qty: 2
     }
   })
 

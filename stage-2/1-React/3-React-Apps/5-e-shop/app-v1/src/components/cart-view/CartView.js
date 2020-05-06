@@ -55,7 +55,9 @@ const CartView = ({ value: cart, history, onBuy }) => {
                     </tbody>
                 </table>
             </div>
+            <hr />
             <button className="btn btn-dark" onClick={e => history.goBack()}>back</button>
+            <hr />
         </div>
     );
 };

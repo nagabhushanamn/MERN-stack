@@ -21,7 +21,7 @@ const ItemTabs = ({ value: item }) => {
                     setReviews(reviews)
                 })
         }
-    }, [tab])
+    },[tab,item])
 
 
     const addNewReview = review => {
@@ -46,7 +46,6 @@ const ItemTabs = ({ value: item }) => {
                 <div>
                     <div className="row">
                         <div className="col-12">
-                            <br />
                             {renderReviews(item.reviews)}
                             <ReviewForm onNewReview={review => addNewReview(review)} />
                         </div>

@@ -1,0 +1,40 @@
+
+
+
+
+
+
+steps to use redux library
+--------------------------------------------------
+
+
+step-1 : identify ui application's state
+
+    e.g counter ui appln
+    --------------------
+
+               - count
+
+
+step-2 : identify force/action(s) that cause state change
+ 
+
+    e.g e-shop ui appln
+    -------------------
+
+                - INCREMENT
+                - DECREMENT
+
+
+step-3: define reducer(s) , to process action(s) 
+
+            - countReducer
+
+
+step-4: combine all reducer(s) as rootReducer    
+
+
+step-5: create store with rootReducer and initialState
+
+
+---------------------------------------------------------------------

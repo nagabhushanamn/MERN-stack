@@ -35,7 +35,7 @@ const Item = ({ value: item, onBuy, cartItemQty }) => {
                     <h5>{item.name}</h5>
                     <h6>{renderPrice(item)}</h6>
                     {renderBuyBtn(item)} &nbsp; <span className="badge badge-warning">{cartItemQty}</span>
-                    <br />
+                    <br /><br />
                     <ItemTabs value={item} />
                 </div>
             </div>
