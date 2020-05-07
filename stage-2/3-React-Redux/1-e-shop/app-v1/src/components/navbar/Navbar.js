@@ -4,8 +4,29 @@ import { NavLink } from 'react-router-dom'
 
 import CartBadge from '../cart-badge/CartBadge';
 
+import { useSelector } from 'react-redux'
 
 const Navbar = ({ title }) => {
+
+    const user = useSelector(state => state.user)
+    const { isLoggedIn } = user
+
+    const renderLoginLink = () => {
+        if (!isLoggedIn) {
+            return (
+                <li className="nav-item active">
+                    <NavLink className="nav-link" to="/login">Login</NavLink>
+                </li>
+            )
+        } else {
+            return (
+                <li className="nav-item active">
+                    <NavLink className="nav-link" to="/logout">Logout</NavLink>
+                </li>
+            )
+        }
+    }
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,6 +45,7 @@ const Navbar = ({ title }) => {
                         <li className="nav-item active">
                             <NavLink className="nav-link" to="/cart">Cart</NavLink>
                         </li>
+                        {renderLoginLink()}
                     </ul>
                 </div>
                 <CartBadge />

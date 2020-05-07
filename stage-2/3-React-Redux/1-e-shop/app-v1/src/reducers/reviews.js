@@ -19,7 +19,7 @@ export function reviewsReducer(state = {}, action) {
         case 'LOAD_REVIEWS': {
             let { itemId, reviews } = action
             let prevReviews = state[itemId] || []
-            return { ...state, [itemId]: [...prevReviews, ...reviews] }
+            return { ...state, [itemId]: [...reviews] }
         }
         case 'ADD_NEW_REVIEW': {
             let { itemId, review } = action
