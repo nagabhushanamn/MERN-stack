@@ -23,6 +23,14 @@ javascript-language unit testing F.Ws
 -----------------------------------------        
 
 
+how to use unit Testing F.W?
+
+  => by writing script / test-case ?
+
+
+ -------------------------------------- 
+
+
 
 
 

@@ -1,13 +1,14 @@
 
-
-
-
 export function todosReducer(state = [], action) {
     let { type } = action
     switch (type) {
+        case 'LOAD_TODOS': {
+            let { todos } = action
+            return [...todos]
+        }
         case 'ADD_TODO': {
             let { todo } = action
-            return [...state, todo]
+            return [...state,todo]
         }
         case 'EDIT_TODO': {
             let { newTitle, id } = action
