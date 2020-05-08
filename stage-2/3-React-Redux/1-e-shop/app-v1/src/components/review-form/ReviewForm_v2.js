@@ -1,17 +1,26 @@
 import React, { useState } from 'react';
 
+import { useSelector } from 'react-redux'
+
 var Filter = require('bad-words'), // 
     filter = new Filter();
 
 // controlled form
 
-const ReviewForm = ({ onNewReview }) => {
+const ReviewForm = ({ onNewReview, history }) => {
 
     const [isOpen, setOpen] = useState(false);
-    const [review, setReview] = useState({ author: 'Nag', stars: 5, body: '' })
+
+    const isLoggedIn = useSelector(state => state.user.isLoggedIn)
+    const profile = useSelector(state => state.user.profile)
+    const [review, setReview] = useState({ author: profile.name, stars: 5, body: '' })
 
     const toggleForm = () => {
-        setOpen(!isOpen);
+        if (isLoggedIn) {
+            setOpen(!isOpen);
+        } else {
+            history.push('login')
+        }
     }
 
     const handleSubmit = e => {
@@ -50,6 +59,7 @@ const ReviewForm = ({ onNewReview }) => {
                             <div className="form-group">
                                 <label className="">Author</label>
                                 <input value={review.author}
+                                    readOnly
                                     onChange={e => setReview({ ...review, author: e.target.value })}
                                     type="text"
                                     className="form-control" />

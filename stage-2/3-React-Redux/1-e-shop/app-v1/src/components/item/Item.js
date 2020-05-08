@@ -9,7 +9,7 @@ import getSymbolFromCurrency from 'currency-symbol-map'
 import { useDispatch } from 'react-redux'
 import { buy } from '../../actions/cart'
 
-const Item = ({ value: item, cartItemQty }) => {
+const Item = ({ value: item, cartItemQty, history }) => {
 
     const dispatch = useDispatch()
 
@@ -37,7 +37,7 @@ const Item = ({ value: item, cartItemQty }) => {
                     <h6>{renderPrice(item)}</h6>
                     {renderBuyBtn(item)} &nbsp; <span className="badge badge-warning">{cartItemQty}</span>
                     <br /><br />
-                    <ItemTabs value={item} />
+                    <ItemTabs history={history} value={item} />
                 </div>
             </div>
         </div>

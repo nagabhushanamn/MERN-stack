@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux'
-import { buy } from '../../actions/cart'
+import { buy, checkout } from '../../actions/cart'
+
 const CartView = ({ history }) => {
 
     const cart = useSelector(state => state.cart)
@@ -15,6 +16,11 @@ const CartView = ({ history }) => {
 
     const handleBuy = (item, qty) => {
         dispatch(buy(item, qty))
+    }
+
+    const handleCheckout = () => {
+        dispatch(checkout())
+        history.push('items')
     }
 
     const renderCartItems = cart => {
@@ -61,6 +67,7 @@ const CartView = ({ history }) => {
             </div>
             <hr />
             <button className="btn btn-dark" onClick={e => history.goBack()}>back</button>
+            <button className="btn btn-dark" onClick={e => handleCheckout(e)}>checkout</button>
             <hr />
         </div>
     );

@@ -6,7 +6,7 @@ import Item from '../item/Item'
 import { useSelector, useDispatch } from 'react-redux'
 import { loadItems } from '../../actions/items'
 
-const ItemList = () => {
+const ItemList = ({ history }) => {
 
     const items = useSelector(state => state.items)
     const cart = useSelector(state => state.cart)
@@ -23,7 +23,7 @@ const ItemList = () => {
             return (
                 <div key={item.id}>
                     <div key={item.id} className="list-group-item">
-                        <Item value={item} cartItemQty={cartItemQty} />
+                        <Item history={history} value={item} cartItemQty={cartItemQty} />
                     </div>
                 </div>
             )

@@ -8,7 +8,7 @@ import ReviewForm from '../review-form/ReviewForm_v2';
 import { useDispatch, useSelector } from 'react-redux'
 import { loadReviews, addNewReview } from '../../actions/reviews'
 
-const ItemTabs = ({ value: item }) => {
+const ItemTabs = ({ value: item, history }) => {
 
     const [tab, setTab] = useState(1)
     const reviews = useSelector((state) => state.reviews[item.id] || [])
@@ -44,7 +44,7 @@ const ItemTabs = ({ value: item }) => {
                     <div className="row">
                         <div className="col-12">
                             {renderReviews(item.reviews)}
-                            <ReviewForm onNewReview={review => handleNewReview(review)} />
+                            <ReviewForm history={history} onNewReview={review => handleNewReview(review)} />
                         </div>
                     </div>
 

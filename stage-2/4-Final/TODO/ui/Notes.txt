@@ -1,0 +1,19 @@
+
+step-1 : identify UI's appln state
+
+         - todos
+
+step-2 : identify actions which cause state change
+
+        - ADD_TODO
+        - EDIT_TODO
+        - DELETE_TODO
+        - COMPLETE_TODO
+        - COMPLETE_ALL
+        - CLEAR_TODO
+
+step-3 : define reducer to make new-state on action(s)
+
+        - todosReducer
+
+step-4 : create store with reducer Optionaly with initial state

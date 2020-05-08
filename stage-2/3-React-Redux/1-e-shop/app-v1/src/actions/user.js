@@ -1,5 +1,9 @@
 
 
+export const doLogout = () => {
+    sessionStorage.removeItem('authToken')
+    return { type: 'LOGOUT' }
+}
 
 export const loadUser = (token) => {
     if (!token)
@@ -7,7 +11,7 @@ export const loadUser = (token) => {
     if (token) {
         //..
         const profile = {
-            name: "Nag",
+            name: "NAG",
             email: 'nagabhushanamn@gmail.com',
             address: 'universe'
         }

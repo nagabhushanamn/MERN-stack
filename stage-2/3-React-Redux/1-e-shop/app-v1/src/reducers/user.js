@@ -8,6 +8,9 @@ export function userReducer(state = { isLoggedIn: false, profile: {} }, action) 
             let { profile, isLoggedIn } = action
             return { profile, isLoggedIn }
         }
+        case 'LOGOUT': {
+            return { isLoggedIn: false, profile: {} }
+        }
         default: return state
     }
 }

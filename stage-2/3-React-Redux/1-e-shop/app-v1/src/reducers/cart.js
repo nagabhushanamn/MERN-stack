@@ -3,6 +3,10 @@
 export function cartReducer(state = {}, action) {
     let { type } = action
     switch (type) {
+        case 'CHECKOUT': {
+            //....
+            return {}
+        }
         case 'BUY': {
             let { item, qty = 1 } = action
             let { id } = item

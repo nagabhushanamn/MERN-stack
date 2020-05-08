@@ -4,12 +4,20 @@ import { NavLink } from 'react-router-dom'
 
 import CartBadge from '../cart-badge/CartBadge';
 
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { doLogout } from '../../actions/user'
 
 const Navbar = ({ title }) => {
 
     const user = useSelector(state => state.user)
     const { isLoggedIn } = user
+
+    const dispatch = useDispatch()
+
+    const handleLogout = () => {
+        let action = doLogout()
+        dispatch(action)
+    }
 
     const renderLoginLink = () => {
         if (!isLoggedIn) {
@@ -21,7 +29,7 @@ const Navbar = ({ title }) => {
         } else {
             return (
                 <li className="nav-item active">
-                    <NavLink className="nav-link" to="/logout">Logout</NavLink>
+                    <NavLink onClick={e => handleLogout()} className="nav-link" to="#">Logout</NavLink>
                 </li>
             )
         }
@@ -47,8 +55,9 @@ const Navbar = ({ title }) => {
                         </li>
                         {renderLoginLink()}
                     </ul>
+                    <CartBadge />
                 </div>
-                <CartBadge />
+
             </nav>
         </div>
     );
