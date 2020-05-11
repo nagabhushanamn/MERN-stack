@@ -1,0 +1,28 @@
+
+
+----------------------------------------------
+  what is Node.js
+----------------------------------------------
+
+    => javascript runtime
+    
+    based on
+
+    => Event-Driven & non-blocking/asynchronous IO model  
+
+----------------------------------------------
+
+why we need Node.js ?
+
+    => to build server-based appln
+        
+        - which are IO intensive appln
+
+            - file upload/download sharing appln
+            - chating
+            - real-time appln ( dashboards)
+            - streaming appln
+            - to build REST Api for client apps ( web UI or Mobile )
+
+
+----------------------------------------------
