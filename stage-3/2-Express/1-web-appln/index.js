@@ -1,6 +1,14 @@
 
 const express = require('express')
+
+// const logger = require('./middlewares/logger')
+const logger = require('morgan')
+var favicon = require('serve-favicon')
+let bodyParser = require('body-parser')
+
 const app = express()
+
+
 
 /* app.get('/', (request, response) => {
     // response.write("welcome")
@@ -62,12 +70,11 @@ const app = express()
 //     res.sendFile(__dirname + "/public/images/expressjs.png") // Non-blocking IO via stream
 // })
 
+var path = require('path')
 
-// -or- 
-
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(logger('dev'));
 app.use(express.static(__dirname + "/public"))
-
-
 app.use((req, res, next) => {
     console.log("Validation...")
     // if validation success
@@ -80,21 +87,46 @@ app.post("/blocks", (req, res, next) => {
     next()
 })
 
-
 app.use((req, res, next) => {
     console.log("Data parsing...")
     // if authentication success
     next()
 })
 
+const blocks = {
+    Fixed: 'Fastened securely in position',
+    Movable: 'Capable of being moved',
+    Rotating: 'Moving in a circle around its center'
+}
+
+
 app.get('/blocks', (request, response) => {
-    var blocks = ['Fixed', 'Movable', 'Rotating'];
-    setTimeout(() => {
-        response.json(blocks);
-    }, 5000)
+    response.json(Object.keys(blocks));
 })
 
 
+app.param(':blockType', (req, res, next) => {
+    let blockType = req.params.blockType
+    blockType = blockType[0].toUpperCase() + blockType.slice(1).toLowerCase()
+    req.blockType = blockType
+    next()
+})
+
+app.get('/blocks/:blockType', (request, response) => {
+    let blockType = request.blockType
+    console.log(blockType)
+    if (blocks[blockType])
+        response.json(blocks[blockType]);
+    else
+        response.status(404).send("No such block")
+})
+
+app.post('/blocks', bodyParser.json(), bodyParser.urlencoded({ extended: false }), (req, res) => {
+    let newBlock = req.body
+    console.log(newBlock)
+    blocks[newBlock.name] = newBlock.description
+    res.status(201).json({ message: 'New Block created successfully' })
+})
 
 
 

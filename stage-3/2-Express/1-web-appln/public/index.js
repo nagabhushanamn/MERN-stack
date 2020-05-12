@@ -15,7 +15,9 @@ blocksBtn.addEventListener('click', e => {
                 .innerHTML =
                 blocks.map(block => {
                     return `
-                     <li class="list-group-item">${block}</li>
+                     <li style="cursor:pointer" class="list-group-item" data-block="${block}" onclick="getBlockDescription(event)">
+                        ${block}
+                     </li>
                     `
                 }).join(" ")
         })
@@ -23,3 +25,37 @@ blocksBtn.addEventListener('click', e => {
 })
 
 
+function getBlockDescription(event) {
+    let blockType = event.target.getAttribute('data-block')
+    fetch('blocks/' + blockType)
+        .then(response => response.json())
+        .then(description => {
+            document.getElementById('block-description').innerHTML = description
+        })
+}
+
+
+
+
+document.getElementById('block-form')
+    .addEventListener('submit', e => {
+        e.preventDefault()
+        let name = document.getElementById('name').value
+        let description = document.getElementById('description').value
+        let newBlock = {
+            name, description
+        }
+        fetch('blocks', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newBlock)
+        })
+            .then(response => response.json())
+            .then(message => {
+                console.log(message)
+                document.getElementById('name').value = ''
+                document.getElementById('description').value = ''
+            })
+    })
