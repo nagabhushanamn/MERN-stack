@@ -1,0 +1,62 @@
+
+
+
+
+
+limitations with server-side page rendering
+----------------------------------------------
+
+
+ ==> on every request, 
+     server-side program should re-construct the UI
+
+ ==> on every response,
+     client/browser should reload the current page with new-page 
+
+ ==> on every response,
+     we are transferring same static resources over n/w , will increase bandwidth
+
+ ==> server-side services are not re-usable to other clients apps ( mobile apps, desktop apps, iot devices )
+
+
+solution:
+
+    ==> never make UI from server-side programs, only expose services/resources as API  ( REST Api)
+
+
+-------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------
+
+
+  REST api
+  --------
+
+  step 1 : Resource identification in requests:
+
+            resouce(s) : user, todo
+
+                  GET  /users
+                  GET  /users/{id}
+                  GET  /users/{id}/todos
+                  POST /users/{id}/todos
+                  GET  /users/{id}/todos/{id}
+                  PUT  /users/{id}/todos/{id}
+
+  step-2 : Resource manipulation through representations
+
+           => application/json | application/xml | csv | html                  
+
+   step-3 : Self-descriptive messages
+
+
+            - Content-Type
+            - Accept
+
+
+
+
+
+
+    
+

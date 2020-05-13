@@ -1,17 +1,15 @@
-
-
-var React = require('react');
+const React = require('react')
 
 const Layout = (props) => {
     return (
         <html>
             <head>
                 <title>{props.title}</title>
-                <link href="css/bootstrap.css" rel="stylesheet" />
+                <link rel="stylesheet" href="stylesheets/css/bootstrap.css" />
             </head>
             <body className="container">
                 <hr />
-                <h1>Todos app</h1>
+                <h1>{props.title}</h1>
                 <hr />
                 {props.children}
             </body>
