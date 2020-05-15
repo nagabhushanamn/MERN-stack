@@ -1,0 +1,47 @@
+
+
+
+Todos appln
+----------------------
+
+ => business data
+
+    1. UserDetails
+       - userId
+       - Name
+       - Email
+
+    2. Todo
+        - id
+        - title
+        - completed 
+
+------------------------------------------------  
+datasource(s)
+------------------------------------------------   
+
+ - Relational / SQL datasource
+
+    => MySQL
+
+    Ref : todos-schema.sql
+
+------------------------------------------------ 
+backend appln
+------------------------------------------------ 
+
+   - REST API
+
+
+      - resource model
+
+            - GET /users/{id}
+            - GET /todos/{id}
+            - DELETE todos/{id}
+            - POST /todos
+            - PUT /todos/{id}
+
+
+            note : input / output representation => json
+
+------------------------------------------------
