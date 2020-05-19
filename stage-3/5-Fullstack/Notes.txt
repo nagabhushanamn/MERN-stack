@@ -45,3 +45,33 @@ backend appln
             note : input / output representation => json
 
 ------------------------------------------------
+
+
+
+Not only SQL    ( NoSql ) datasource
+------------------------------------
+
+  ==> document based   ==> MongoDB , CouchDB 
+  ==> key - value      ==> Redis
+
+-----------------------------------------------
+
+datasource
+
+  -> SQL data source ( MySQL , Oracle, SQL Server , DB2 )
+  -> NoSQL data sources
+      - document based ( MongoDB , CouchDB)
+      - key-value
+
+-------------------------------------------------------------
+
+ relational database            document based databases
+ -------------------            -------------------------
+
+    database                    database
+
+       - table                    - collection
+
+          - row/coluns               - documents
+
+--------------------------------------------------------------
