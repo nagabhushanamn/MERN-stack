@@ -1,0 +1,36 @@
+
+
+
+s/w engineering
+-------------------
+
+ appln : web-ui appln
+
+---------------------------------------------------------
+ sdlc model : waterfall
+ ---------------------------------------------------------
+
+    - requirements analysis
+    - design
+        => UI & UX  i.e sketch  / wireframing
+    - coding
+    - testing
+    - maintenance
+
+ ----------------------------------------------------------   
+
+------------
+ web server
+------------
+
+ => to deploy web application(s)
+
+ e.g
+
+    - Apache HTTP Server
+    - Microsoft IIS Server
+    - Nginx
+
+----------------------------------------------------------    
+
+    

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+   <header class="nav-container" data-testid="AppHeader">
+      <div class="wrapper appBar">
+         <div class="contentContainer contentWrapper">
+            <div class="section sectionLeft">
+
+            </div>
+            <div class="section sectionRight">
+               <div class="headerList showOnDesktop">
+                  <div class="headerTab">
+                     <a class="basicBtn btn btn-brand-dark-blue flat navLink loginButton" data-testid="header-sign-in"
+                        data-btn="true" href="/auth/login">
+                        Log in
+                     </a>
+                  </div>
+                  <div class="headerTab registerButtonTab">
+                     <a class="basicBtn btn btn-brand-purple registerButton navLink" data-testid="header-sign-up"
+                        data-btn="true" href="/auth/register">
+                        Sign up
+                     </a>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </header>
+
+
+
+   <div class="main">
+      <div class="contentContainer container">
+         <div class="collageContainer">
+            <div class="titleContainer">
+               <h1>Join the Millions <br> Learning to Code <br> with CodeAcademy</h1>
+            </div>
+            <img src="/973e3dd1f43e9417e592e2200b978a8c.webp" alt="a happy Codecademy learner" class="learner"><img
+               src="/daecb491e565bc6b7390756d03fc1ee1.svg" alt="" class="bars"><img
+               src="f059ec67021b3dfeea1b6cb2eb373683.svg" alt=""><img src="3ce816c669e3c8a946f0895049a01e44.svg" alt=""
+               class="triangle"><img src="5c537833d79f7065497b565eaa7bca64.svg" alt="" class="rectangle">
+         </div>
+         <div class="formContainer">
+            <div class="formContents">
+               <br />
+               <div style="color:red;font-size: 15px;">
+                  {{#if message}}
+                  {{message}}
+                  {{/if}}
+
+                  {{#if messages.error}}
+                  {{messages.error}}
+                  {{/if}}
+               </div>
+               <br /><br />
+               <h1 class="mobileTitle">Join the Millions Learning to Code With CodeAcdemy</h1>
+               <form action="/auth/login" method="POST" autocomplete="off" novalidate>
+                  <fieldset class="fieldset">
+                     <div class="">
+                        <div class="FormGroup formGroup">
+                           <label for="sign_up_form_email" class="FormGroupLabel">Email</label>
+                           <div class="inputWrapper"><input value="N@N" type="email" name="email"
+                                 data-testid="email-field" name="email" required="" data-resource="user"
+                                 id="sign_up_form_email" class="Input" value=""></div>
+                        </div>
+                        <div class="FormGroup formGroup">
+                           <label for="sign_up_form_password" class="FormGroupLabel">Password</label>
+                           <div class="inputWrapper"><input value="123" type="password" name="password"
+                                 data-testid="password-field" name="password" required="" pattern=".{6,128}"
+                                 data-resource="user" id="sign_up_form_password" class="Input" value=""></div>
+                        </div>
+                     </div>
+
+                     <button class="btn-brand-purple large submitButton" id="sign_up_form_submit">Start coding
+                        now</button>
+                     <p class="tos">By signing up for Codecademy, you agree to Codecademy's <a href="/terms">Terms of
+                           Service</a> &amp; <a href="/policy">Privacy Policy</a>.</p>
+                  </fieldset>
+               </form>
+               <div>
+                  <h2 class="heading">Or, use another account:</h2>
+                  <div class="btnContainer">
+                     <div class="btnContainerItem"><a class="socialAuthButton" data-btn="true"
+                           href="/users/auth/linkedin?signin=true"><img alt="Log in with LinkedIn"
+                              src="/be1606e736b7ae787add1973c386eff6.webp" class="icon"></a></div>
+                     <div class="btnContainerItem"><a class="socialAuthButton" data-btn="true"
+                           href="/users/auth/google_oauth2?signin=true"><img alt="Log in with Google"
+                              src="/009575cb805ae46490ba9b72cf63b22f.svg" class="icon"></a></div>
+                     <div class="btnContainerItem"><a class="socialAuthButton" data-btn="true"
+                           href="/auth/facebook"><img alt="Log in with Facebook"
+                              src="/e44a2755e60f248ec67d963ac2b1af4d.svg" class="icon"></a></div>
+                     <div class="btnContainerItem"><a class="socialAuthButton" data-btn="true"
+                           href="/users/auth/github?scope=public_repo%2Cuser%3Aemail"><img alt="Log in with Github"
+                              src="/1d77ee7d6c14c4a1b3b3737557a71c4a.svg" class="icon"></a></div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
