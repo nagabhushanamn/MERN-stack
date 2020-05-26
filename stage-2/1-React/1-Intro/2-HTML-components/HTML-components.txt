@@ -1,0 +1,52 @@
+
+
+
+
+HTML Tag/Element/Components
+------------------------------
+
+
+      imp-note :
+
+         => by default HTML follows 'component based arch '
+
+
+
+  principles of components
+  ----------------------------------------------------------------
+
+      principles of components
+      -------------------------
+      => must have single-responsibility 
+         -> to keep smaller & simpler
+      => must be loosely from other
+         -> to re-use anywhere
+      => can take props from parent-component
+         -> to customize based on requirement
+      => must not mutate given props   
+         -> to keep data consistency
+      => can be stateless & statefull
+      => state is mutable
+         -> can mutate on event
+      => on state change , component must re-render  
+      => inter-component communication should happen via parent   
+         => parent to child ==> via props
+         => child to parent ==>> via events
+
+      -----------------------------------------
+
+      -----------------------------------------
+
+
+      sometime we need components like 
+
+      <calender /> 
+      <box />
+      <search /> 
+      <graph />
+
+
+      to create this type of custom components,
+      we r going to use react.js 'libray'
+
+      -----------------------------------------

@@ -1,0 +1,11 @@
+
+
+
+.voting-item{
+    float: left;
+    padding:20px;
+    margin:10px;
+    width:170px;
+    border: 1px solid #ccc;
+    border-radius:10px;
+}

@@ -14,22 +14,3 @@ To create react appln :
 > npm i create-react-app -g
 > create-react-app <app-name>
 
-
------------------------------------------------------
-
-react topics
---------------
-
-level-1
-
-    => thinking ui as components
-    => component's props & state
-    => lifecycle methods / hooks
-    => context 
-
-level-2
-
-   => higher order components  ( pattern )
-
---------------------------------------------------   
-

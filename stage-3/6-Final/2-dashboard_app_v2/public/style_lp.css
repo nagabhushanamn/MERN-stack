@@ -1,0 +1,169 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit--text-size-adjust: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.btn-warning{
+    margin-top: 60px;
+    border-radius: 28px;
+    width: 220px;
+    padding: 7px;
+   font-weight: 600;
+   letter-spacing: 0.2rem;
+   font-size: 1.3rem;
+}
+header{   
+    text-align: center;
+    height: 500px;
+    background-color: #3c64c2;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+}
+
+#intro{
+    margin-top: 30px;
+    font-size: 4rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+#sintro{
+    color: honeydew;
+    font-size: 2rem;
+    font-weight: 400;
+}
+footer{
+    height: 200px;
+    text-align: center;
+    background-color: #3c64c2;
+}
+.center{
+    align-items: center;
+}
+.container{
+    margin-top:20px ;
+    margin-bottom:200px ;
+    margin-left: 2rem;
+    z-index: 999;
+    width: 100vw;
+    text-align: center;
+} 
+.topic{
+    margin-left:2.2rem;
+}
+.content{
+    margin-top: 2rem;
+}
+.accordion {
+   cursor: pointer;
+    padding: 1.7rem;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem;
+    transition: 0.4s;
+    border:0.5px solid rgba(0, 0, 0, 0.208) ;
+    background-color: rgba(255, 255, 255, 0.356); 
+  }
+  .active, .accordion:hover {
+    background-color: #ffffff;
+  }
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: left;
+    margin-left: 5px;
+  }
+  .active:after {
+    content: "\2212";
+  }
+  .panel {
+    padding: 0 0px;
+    /* display: ; */
+    overflow: hidden;
+    max-height: 0;
+    /* transition: 1.4s; */
+    border:0.5px solid rgba(0, 0, 0, 0.208) ;
+    transition: max-height 0.5s ease-out;
+  }
+  .subTopic{
+      list-style-type: none;
+      cursor: pointer;
+      padding: 1.4rem;
+      width: 100%;
+      text-align: left;
+      outline: none;
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 0.356); 
+      white-space: nowrap;
+  }
+
+  .subTopic:hover{
+    background-color: #f1f2f3;
+}
+.activity{
+    margin-left:2rem ;
+    color:rgb(114, 113, 113);
+}
+
+.free{
+    float: right;
+    color:white;
+    font-size: 1.3rem;
+    overflow: hidden;
+}
+.subTopic:hover .free{
+    color:rgba(20, 128, 20, 0.801)
+}
+.badge-primary{
+    background-color: #3c64c2;
+    border-radius:0px ;
+    padding: 0.3em;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-right: 0.7rem;
+}
+
+
+.headingTexts{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-content:space-between;
+}
+.headingTexts .ovv{
+    font-weight: 400;
+    font-size: 2rem;
+    background-color: rgba(128, 128, 128, 0.397);
+   height: max-content;
+   align-items:baseline;
+   margin-right: 3rem;
+
+
+}
+.syl{
+    font-weight: 600;
+    border-bottom: 4px solid #3c64c2;
+    padding-bottom: 2px;
+    font-size: 2rem;
+    color: #3c64c2;
+   align-items:baseline;
+}
+.space{
+    position: relative;
+    border-right: 5px solid rgba(128, 128, 128, 0.418);
+    transform: translateX(100px);
+    z-index: -1;
+}
+img{
+    height: 100%;
+    width: 100px;
+    padding-right: 1.5rem;
+    z-index: 9999;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+}

@@ -1,0 +1,15 @@
+
+
+
+ Node.js  
+ ----------------------------------------------------------------
+
+  ==> blocking/sync  vs non-blocking/async  IO
+  ==> Events in Node.js
+
+  ==> creating our own web-server
+  ==> app : video-sreaming server  + web UI support
+ 
+  ==> app : chat application
+
+  ---------------------------------------------------------------

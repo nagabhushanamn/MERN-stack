@@ -1,0 +1,36 @@
+
+
+
+
+
+Unit ==> function / object / module  / component / reducer / utility
+
+
+how to do unit Testing ?
+
+    - we need unit-testing F.Ws
+
+
+javascript-language unit testing F.Ws
+-------------------------------------
+
+
+        - jasmine  
+        - mocha
+        - jest ( from facebook)
+        ...
+
+-----------------------------------------        
+
+
+how to use unit Testing F.W?
+
+  => by writing script / test-case ?
+
+
+ -------------------------------------- 
+
+
+
+
+

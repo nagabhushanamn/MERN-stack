@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "url": "mongodb://user1:user123@ds147450.mlab.com:47450/todos",
+    "database": "todos",
+    "name": "mongodb",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}

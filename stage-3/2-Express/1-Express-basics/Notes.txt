@@ -1,0 +1,22 @@
+
+
+
+
+how to process http-request on server-side ?
+
+
+ ==> based on URL
+ ==> based HTTP-method
+      GET    ==> read resource
+      HEAD   ==> read resource details like size,modifued-date,.. not resource
+      POST   ==> create new resourse e.g create new todo
+      PUT    ==> create / update resourse
+      PATCH  ==> partial update on resourse
+      DELETE ==> delete resourse
+      OPTION ==> return user privileges on resource
+
+==> based on request-header(s)
+     => meta-data about request & response to client/server
+==> based on locale
+==> based on authentication
+==> based input parameters

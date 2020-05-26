@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>building blocks</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body class="container">
+    <hr />
+    <h1>Building blocks</h1>
+    <hr />
+    <img src="images/expressjs.png" />
+    <hr />
+    <div class="row">
+        <div class="col-6">
+            <form id="block-form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text"  id="name" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" id="description"></textarea>
+                </div>
+                <button>Add New Block</button>
+            </form>
+        </div>
+    </div>
+    <hr />
+    <button id="blocks-btn" class="btn btn-dark">Load blocks</button>
+    <hr />
+    <span id="progress-message"></span>
+    <ul id="blocks" class="list-group">
+    </ul>
+    <hr />
+    <div class="alert alert-info" id="block-description">
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

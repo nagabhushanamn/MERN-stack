@@ -1,0 +1,39 @@
+
+
+https://reactjs.org/docs/thinking-in-react.html
+
+
+
+e.g Voting App
+----------------------
+
+Step 1: Break The UI Into A Component Hierarchy
+
+         - VotingBox
+             - VotingItem
+             - VotingTable
+         
+
+Step 2: Build A Static Version in React
+
+
+Step 3: Identify The Minimal (but complete) Representation Of UI State / data
+
+         e.g  VotingApp
+
+                - voting items 
+                - count
+
+
+Step 4: Identify Where Your State Should Live
+
+
+         e.g  VotingApp
+
+                - voting items   ==> VotingBox
+                - count          ==> VotingItem
+
+Step 5: Add Inverse Data Flow
+
+             parent => child    : via props
+             child  => parent : function-call with event 

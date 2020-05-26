@@ -1,0 +1,26 @@
+{
+    "1": [
+        {
+            "author": "who1",
+            "stars": 5,
+            "body": "good laptop"
+        },
+        {
+            "author": "who2",
+            "stars": 3,
+            "body": "good but costly"
+        }
+    ],
+    "2": [
+        {
+            "author": "who1",
+            "stars": 5,
+            "body": "good mobile"
+        },
+        {
+            "author": "who2",
+            "stars": 3,
+            "body": "bad one"
+        }
+    ]
+}
