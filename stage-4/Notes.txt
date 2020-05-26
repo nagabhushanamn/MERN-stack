@@ -30,7 +30,3 @@ s/w engineering
     - Apache HTTP Server
     - Microsoft IIS Server
     - Nginx
-
-----------------------------------------------------------    
-
-    

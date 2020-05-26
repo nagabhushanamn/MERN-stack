@@ -1,0 +1,151 @@
+
+
+----------------------------------
+online booking system
+----------------------------------
+
+
+A.data-model
+-------------------
+
+    user 
+        - Name
+        - Email
+        - Mobile
+        - Password
+        - DOB
+        - Gender
+
+    bus
+
+        - bus-number
+        - bus-type
+        - available-seats    
+        - seat-layout ( 4 x 10 )
+
+    trip / ride / service
+
+            - tripId / service-number 
+            - From
+            - To
+            - bus-id
+            - departure-date & time
+            - arrival-date & time
+            - fare
+
+    seat-reservation
+
+        - bus-id
+        - seat-number 
+        - available = ( yes / no )
+        - isFull = ( yes / no )
+
+    booking history
+
+        - user ( Name , Email , Mobile , ID proof)
+        - travel-date
+        - bus-id
+        - From 
+        - To
+        - seat-number 
+        - fare-amount
+        ...
+
+    Fake Paymentsystem
+
+        - user
+        - card-type
+        - card-number
+        - balance = 1000.00   
+
+
+    Trancation history    ( optional )
+
+        - txnId
+        - date&time
+        - amount
+        - card-type
+        ... 
+
+
+-----------------------------------------------------------------
+database design
+-----------------------------------------------------------------
+
+ - document based database ( Mongodb )
+
+----------------------------------------------------------------
+use-cases :
+----------------------------------------------------------------
+
+    - register
+    - login
+    - plan your trip ( search & choosing trip )
+    - select your seat
+    - pay
+    - view / download ticket
+    - logout
+    - view/cancel booking 
+
+-----------------------------------------------------------------------    
+    
+
+
+
+----------------------------------------------------------------
+backend-appln : Api server
+----------------------------------------------------------------
+
+Tech
+------
+
+ runtime     : Node.js
+ F.W/Lib     : Express.js
+ dbconnector : Mongoose
+ +
+ auth middleware : passport    ( token based auth )
+
+
+----------------------------------------------------------------
+
+    rest-api
+    ---------
+
+    POST /users
+    POST /login
+    POST /search?from=BLR&to=CHN&date=<date>
+    GET  /seat-layout?busid=<12121>
+    POST /payment
+    POST /reserve 
+    GET  /history
+    GET  /history/<date>
+    DELETE /history/<booking-id>
+    
+
+--------------------------------------------------------------------
+Front-End application
+--------------------------------------------------------------------
+
+
+- SPA
+
+    /home
+    /login
+    /register
+    /booking-view
+
+---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+

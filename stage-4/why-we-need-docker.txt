@@ -1,0 +1,93 @@
+
+
+
+
+what we require to run any process?
+
+----------------------------------
+appln-1 => node 11.0.0v
+----------------------------------
+
+high-level
+----------
+
+    - cpu
+    - memory
+    - OS 
+
+low-level
+-----------
+
+    - source code/instructions
+    - runtime
+    - dependencies
+    - configuration files
+    - file system
+    - n/w ports
+    ...
+
+-----------------------------------------------
+e.g 
+-----------------------------------------------    
+    
+    -> process
+        -> server appln
+            
+             -> javascript language using Node.js api
+             -> dependency : express
+             -> ..
+
+          
+
+
+
+----------------------------------
+appln-2 => node 12.0.0v
+----------------------------------
+
+
+high-level
+----------
+
+    - cpu
+    - memory
+    - OS 
+
+low-level
+-----------
+
+    - source code/instructions
+    - runtime
+    - dependencies
+    - configuration files
+    - file system
+    - n/w ports
+    ...
+
+--------------------------------------
+==> process/software isolation  
+--------------------------------------  
+
+ ==> docker  
+
+
+
+
+ -------------------------------------------------------------
+ Hoow to work with docker ?
+ -------------------------------------------------------------
+
+
+    step-1 : build
+
+            => create a image with all required files
+
+    step-2 : ship
+
+            => push the image into docker registry        
+
+    step-3 : run
+
+            => creating containe(s)
+
+---------------------------------------------------------------
