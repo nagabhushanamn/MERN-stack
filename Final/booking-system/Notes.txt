@@ -90,8 +90,6 @@ use-cases :
 -----------------------------------------------------------------------    
     
 
-
-
 ----------------------------------------------------------------
 backend-appln : Api server
 ----------------------------------------------------------------
@@ -105,13 +103,13 @@ Tech
  +
  auth middleware : passport    ( token based auth )
 
-
 ----------------------------------------------------------------
 
     rest-api
     ---------
 
     POST /users
+    GET  /users?email=nag@mail.com
     POST /login
     POST /search?from=BLR&to=CHN&date=<date>
     GET  /seat-layout?busid=<12121>
@@ -137,6 +135,18 @@ Front-End application
 ---------------------------------------------------------------
 
 
+
+
+
+
+2 types of  authentication
+---------------------------
+
+    1- session based authentication
+    2- token based authentication   
+
+         - OAuth
+         - JWT
 
 
 
