@@ -23,22 +23,22 @@ A.data-model
         - available-seats    
         - seat-layout ( 4 x 10 )
 
-    trip / ride / service
+        trip / ride / service
 
-            - tripId / service-number 
-            - From
-            - To
+                - tripId / service-number 
+                - From
+                - To
+                - bus-id
+                - departure-date & time
+                - arrival-date & time
+                - fare
+
+        seat-reservation
+
             - bus-id
-            - departure-date & time
-            - arrival-date & time
-            - fare
-
-    seat-reservation
-
-        - bus-id
-        - seat-number 
-        - available = ( yes / no )
-        - isFull = ( yes / no )
+            - seat-number 
+            - available = ( yes / no )
+            - isFull = ( yes / no )
 
     booking history
 

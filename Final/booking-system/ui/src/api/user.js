@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 export function doSave(user) {
-    let apiUrl = 'http://localhost:8080/signup'
+    let apiUrl = 'http://localhost:8080/register'
     return axios.post(apiUrl, user, {
         headers: {
             'Content-Type': 'application/json'
@@ -22,6 +22,10 @@ export function doLogin(credentials) {
 
 export function loadUserProfile() {
     const authToken = sessionStorage.getItem('authToken') || ''
-    let apiUrl = `http://localhost:8080/user/profile?secret_token=${authToken}`
-    return axios.get(apiUrl)
+    let apiUrl = `http://localhost:8080/user/profile`
+    return axios.get(apiUrl, {
+        headers: {
+            Authorization: `Bearer ${authToken}`
+        }
+    })
 }

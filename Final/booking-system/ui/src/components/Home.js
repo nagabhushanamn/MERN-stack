@@ -1,5 +1,6 @@
 import React from 'react';
 import * as userApi from '../api/user'
+import SearchForm from './SearchForm'
 
 const Home = () => {
 
@@ -12,8 +13,10 @@ const Home = () => {
     }
 
     return (
-        <div className="jumbotron">
+        <div className="">
             <button onClick={e => handleEvent(e)} className="btn btn-primary">View Profile</button>
+            <hr />
+            <SearchForm />
         </div>
     );
 };

@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const cors = require('cors');
 
-const routes = require('./routes/routes');
-const secureRoute = require('./routes/secure-route');
+const authRoute = require('./routes/auth');
+const profileRoute = require('./routes/profile');
 
 const app = express();
 
@@ -16,20 +16,20 @@ mongoose.connection.on('error', error => console.log(error));
 
 app.use(cors())
 
-require('./auth');
-
+require('./auth-config');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/', routes);
+app.use('/', authRoute);
+
 //We plugin our jwt strategy as a middleware so only verified users can access this route
-app.use('/user', passport.authenticate('jwt', { session: false }), secureRoute);
+app.use(passport.authenticate('jwt', { session: false }))
+app.use('/user/profile', profileRoute);
 
 //Handle errors
 app.use(function (err, req, res, next) {
-    res.status(err.status || 500);
-    res.json({ error: err });
+    throw err
 });
 
 module.exports = app;
