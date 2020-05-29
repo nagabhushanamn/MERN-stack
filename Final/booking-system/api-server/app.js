@@ -25,8 +25,8 @@ app.use(bodyParser.json());
 app.use('/', authRoute);
 
 //We plugin our jwt strategy as a middleware so only verified users can access this route
-// app.use(passport.authenticate('jwt', { session: false }))
-// app.use('/user/profile', profileRoute);
+app.use(passport.authenticate('jwt', { session: false }))
+app.use('/user/profile', profileRoute);
 app.use('/bus', busRoute);
 
 //Handle errors

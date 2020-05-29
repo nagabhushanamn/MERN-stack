@@ -34,10 +34,11 @@ router.post('/login', async (req, res, next) => {
   passport.authenticate('login', async (err, user, info) => {
     try {
       if (err || !user) {
-        console.log(info)
+        console.log(user)
         res.status(401).json({ message: info.message })
         return
       }
+    
       req.login(user, { session: false }, async (error) => {
         if (error) return next(error)
         //We don't want to store the sensitive information such as the
