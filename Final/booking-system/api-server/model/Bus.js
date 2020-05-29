@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 
 const reservationSchema = new Schema({
-    seats: {
+    reservedSeats: {
         type: Array
     },
     isFull: {
@@ -27,7 +27,7 @@ const serviceSchema = new Schema({
     },
     fare: {
         type: Number
-    }
+    },
 })
 
 const busSchema = new Schema({
@@ -44,12 +44,12 @@ const busSchema = new Schema({
         type: String,
         default: '4/10'
     },
+    service: {
+        type: serviceSchema
+    },
     reservation: {
         type: reservationSchema
     },
-    service: {
-        type: serviceSchema
-    }
 })
 
 

@@ -39,10 +39,8 @@ async function insertNewService(busNumber, from, to, dep, arr, fare) {
 
 
 async function searchServices(from, to, travelDate) {
-
-    let result = await Bus.find({ 'service.from': from, 'service.to': to,'service.dep':travelDate })
+    let result = await Bus.find({ 'service.from': from, 'service.to': to})
     console.log(result)
-
 }
 
 searchServices('BENGALORE','CHENNAI',new Date())

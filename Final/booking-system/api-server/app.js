@@ -7,6 +7,7 @@ const cors = require('cors');
 
 const authRoute = require('./routes/auth');
 const profileRoute = require('./routes/profile');
+const busRoute = require('./routes/bus');
 
 const app = express();
 
@@ -24,8 +25,9 @@ app.use(bodyParser.json());
 app.use('/', authRoute);
 
 //We plugin our jwt strategy as a middleware so only verified users can access this route
-app.use(passport.authenticate('jwt', { session: false }))
-app.use('/user/profile', profileRoute);
+// app.use(passport.authenticate('jwt', { session: false }))
+// app.use('/user/profile', profileRoute);
+app.use('/bus', busRoute);
 
 //Handle errors
 app.use(function (err, req, res, next) {
