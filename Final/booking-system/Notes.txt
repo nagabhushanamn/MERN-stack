@@ -22,23 +22,25 @@ A.data-model
         - bus-type
         - available-seats    
         - seat-layout ( 4 x 10 )
-
-        trip / ride / service
-
-                - tripId / service-number 
-                - From
-                - To
-                - bus-id
-                - departure-date & time
-                - arrival-date & time
-                - fare
-
+        
         seat-reservation
 
             - bus-id
             - seat-number 
             - available = ( yes / no )
             - isFull = ( yes / no )
+
+        trip / ride / service
+
+                - bus-id
+                - tripId / service-number 
+                - From
+                - To
+                - departure-date & time
+                - arrival-date & time
+                - fare
+
+        
 
     booking history
 
