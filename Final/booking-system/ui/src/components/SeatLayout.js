@@ -1,27 +1,62 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import axios from 'axios'
 
 const SeatLayout = () => {
 
-    let [reservedSeats, setReservedSeats] = useState([1, 2, 3])
-    let [selectedSeats, setSelectedSeats] = useState([])
+    const dispatch = useDispatch()
+
+    const reservedSeats = useSelector(state => state.seats.reservedSeats) || []
+    const selectedSeats = useSelector(state => state.seats.selectedSeats) || []
+
 
     const handleEvent = (e, seatNumber) => {
-        if (reservedSeats.includes(seatNumber)) return
-        setSelectedSeats([...selectedSeats, seatNumber])
+        if (!reservedSeats.includes(seatNumber))
+            dispatch({ type: 'SELECT_SEATS', seatNumber })
+    }
+
+    useEffect(() => {
+
+        axios
+            .get('http://localhost:8080/seats/reserved-seats')
+            .then(response => response.data)
+            .then(data => {
+                let reservedSeats = data.result.reservation.seats
+                dispatch({ type: 'LOAD_RESERVED_SEATS', reservedSeats })
+            })
+
+
+    }, [])
+
+
+    const changeBgColor = (item) => {
+        if (reservedSeats.includes(item))
+            return 'red'
+        if (selectedSeats.includes(item))
+            return 'green'
+        else
+            return 'grey'
+    }
+
+    const renderSeats = () => {
+        return [1, 2, 3, 4, 5, 6, 7, 8].map(item => {
+            return (
+                <span style={{
+                    margin: '12px', fontSize: '15px',
+                    cursor: 'pointer',
+                    backgroundColor: changeBgColor(item)
+                }}
+                    onClick={e => handleEvent(e, item)}
+                    className="badge" key={item}>
+                    {item}
+                </span>
+            )
+        })
     }
 
     return (
-        <div className="card card-body" style={{ width: '200px', height: '400px' }}>
-            <i className="fa fa-shopping-cart"
-                style={{ margin: '5px', cursor: 'pointer', color: reservedSeats.includes(1) ? 'red' : '' }}
-                onClick={e => handleEvent(e, 1)}></i>
-            <i className="fa fa-shopping-cart"
-                style={{ margin: '5px', cursor: 'pointer', color: selectedSeats.includes(2) ? 'green' : '' }}
-                onClick={e => handleEvent(e, 2)}></i>
-            <i className="fa fa-shopping-cart"
-                style={{ margin: '5px', cursor: 'pointer', color: selectedSeats.includes(3) ? 'green' : '' }}
-                onClick={e => handleEvent(e, 3)}
-            ></i>
+        <div className="" style={{ width: '200px', height: '400px' }}>
+            {renderSeats()}
         </div>
     );
 };

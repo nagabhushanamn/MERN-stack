@@ -2,6 +2,7 @@ import React from 'react';
 import * as userApi from '../api/user'
 import SearchForm from './SearchForm'
 import SeatLayout from './SeatLayout';
+import SeatReservation from './SeatReservation';
 
 const Home = () => {
 
@@ -18,8 +19,15 @@ const Home = () => {
             <button onClick={e => handleEvent(e)} className="btn btn-primary">View Profile</button>
             <hr />
             <SearchForm />
-            <hr/>
-            <SeatLayout />
+            <hr />
+            <div className="row">
+                <div className="col-6">
+                    <SeatLayout />
+                </div>
+                <div className="col-6">
+                    <SeatReservation />
+                </div>
+            </div>
         </div>
     );
 };

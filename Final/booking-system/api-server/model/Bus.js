@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 
 const reservationSchema = new Schema({
-    reservedSeats: {
+    seats: {
         type: Array
     },
     isFull: {

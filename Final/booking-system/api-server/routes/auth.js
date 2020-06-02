@@ -34,7 +34,6 @@ router.post('/login', async (req, res, next) => {
   passport.authenticate('login', async (err, user, info) => {
     try {
       if (err || !user) {
-        console.log(user)
         res.status(401).json({ message: info.message })
         return
       }
